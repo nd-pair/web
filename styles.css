@@ -34,6 +34,7 @@ a:hover{text-decoration:underline}
 .hero::before,.hero::after{content:"";position:absolute;border-radius:50%;filter:blur(60px);opacity:.5;z-index:0}
 .hero::before{width:520px;height:520px;background:radial-gradient(circle,#c99700aa,transparent 70%);top:-160px;right:-120px;animation:float1 16s ease-in-out infinite}
 .hero::after{width:460px;height:460px;background:radial-gradient(circle,#1e63c9aa,transparent 70%);bottom:-180px;left:-120px;animation:float2 20s ease-in-out infinite}
+.hero canvas.fx{position:absolute;inset:0;z-index:0;opacity:.75;pointer-events:none}
 .hero .wrap{position:relative;z-index:1;padding:96px 24px 104px}
 .hero h1{color:#fff;font-size:clamp(34px,5.4vw,60px);letter-spacing:.3px;max-width:16ch}
 .hero p.lead{font-size:clamp(16px,2vw,20px);color:#cdd8e8;max-width:60ch;margin-top:14px}
