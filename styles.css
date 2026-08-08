@@ -37,7 +37,7 @@ a:hover{text-decoration:underline}
 .hero::after{width:460px;height:460px;background:radial-gradient(circle,#1e63c9aa,transparent 70%);bottom:-180px;left:-120px;animation:float2 20s ease-in-out infinite}
 .hero canvas.fx{position:absolute;inset:0;z-index:2;opacity:.7;pointer-events:none}
 .hero .wrap{position:relative;z-index:5;padding:96px 24px 104px}
-.hero-logo{position:absolute;z-index:3;top:50%;right:5%;transform:translateY(-50%);height:80%;max-height:440px;width:auto;opacity:.95;pointer-events:none;filter:drop-shadow(0 8px 24px rgba(0,0,0,.35))}
+.hero-logo{position:absolute;z-index:3;top:50%;right:6%;transform:translateY(-50%);height:56%;max-height:310px;width:auto;opacity:.95;pointer-events:none;filter:drop-shadow(0 3px 7px rgba(0,0,0,.28))}
 @media(max-width:900px){.hero-logo{opacity:.16;right:50%;transform:translate(50%,-50%)}}
 /* photographic hero (lab images), ken-burns cross-fade + navy overlay */
 .hero.photo::before,.hero.photo::after{display:none}
