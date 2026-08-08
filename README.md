@@ -45,7 +45,7 @@ workflow). One-time: **Settings → Pages → Source: GitHub Actions**.
 
 - **Roster / photos / labs:** `data/faculty.json`, `assets/faculty/`, `data/labs.json`.
   (Headshots and faculty ids were sourced from `robotics.nd.edu` and OpenAlex.)
-- **Copy:** written for this site; the department's own text is not reproduced.
+- **Copy:** written for this site; robotics.nd.edu's own text is not reproduced.
 
 ## Notes
 

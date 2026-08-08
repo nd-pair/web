@@ -1,11 +1,9 @@
-name: Refresh site & deploy Pages
+name: Refresh lab imagery & deploy
 
+# Pulls fresh imagery from each lab site in data/labs.json once a week.
 on:
-  # Every two weeks (1st and 15th, 06:37 UTC).
   schedule:
-    - cron: "37 6 1,15 * *"
-  push:
-    branches: [main]
+    - cron: "23 7 * * 1"      # Mondays 07:23 UTC
   workflow_dispatch:
 
 permissions:
@@ -26,29 +24,22 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Install dependencies
-        run: pip install -r scripts/requirements.txt
+      - name: Crawl lab sites for imagery (headless Chromium)
+        continue-on-error: true
+        run: |
+          pip install playwright
+          python -m playwright install --with-deps chromium
+          python scripts/crawl_lab_images.py
 
-      - name: Refresh roster from robotics.nd.edu (faculty + students + photos)
-        env:
-          OPENALEX_MAILTO: ${{ secrets.OPENALEX_MAILTO || 'nd-pair@nd.edu' }}
-        run: python scripts/crawl_roster.py
-
-      - name: Pull publications from OpenAlex
-        env:
-          OPENALEX_MAILTO: ${{ secrets.OPENALEX_MAILTO || 'nd-pair@nd.edu' }}
-          PUBS_MIN_YEAR: "2016"
-        run: python scripts/pull_publications.py
-
-      - name: Commit refreshed data
+      - name: Commit refreshed imagery
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data assets
+          git add data/gallery.json assets/img
           if git diff --cached --quiet; then
-            echo "No changes."
+            echo "No image changes."
           else
-            git commit -m "chore: refresh roster, imagery & publications [skip ci]"
+            git commit -m "chore: refresh lab imagery [skip ci]"
             git push
           fi
 

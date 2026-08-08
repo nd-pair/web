@@ -34,13 +34,31 @@
 let DATA=null;
 const pubsEl=document.getElementById("pubs");
 const esc=s=>String(s==null?"":s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const norm=s=>String(s||"").toLowerCase().normalize("NFD").replace(/\p{Diacritic}/gu,"").replace(/[^a-z ]/g," ").replace(/\s+/g," ").trim();
 
+// PAIR roster, loaded at runtime (data/faculty.json + data/students.json) so the
+// lists stay editable without re-crawling. Members are highlighted in gold.
+let memberIds=new Set(), memberNames=new Set(), memberKeys=new Set();
+const keyOf=name=>{ const t=norm(name).split(" ").filter(Boolean); return t.length?t[0]+" "+t[t.length-1]:""; };
+// faculty match by OpenAlex id (reliable); students by name / first+last key
+// (handles middle initials, e.g. "Daniel J. Volpi" ↔ "Daniel Volpi").
+function isMember(a){
+  return (a.id && memberIds.has(a.id)) || memberNames.has(norm(a.name)) || memberKeys.has(keyOf(a.name));
+}
+
+const CAP=40;   // cap displayed byline length; full list stays in the data
+function authorsHTML(authors){
+  if(!authors||!authors.length) return "";
+  const spans=authors.map(a=>`<span class="${isMember(a)?"au":""}">${esc(a.name)}</span>`);
+  if(spans.length<=CAP) return spans.join(", ")+" · ";
+  return spans.slice(0,CAP).join(", ")+`, <span class="more">…and ${spans.length-CAP} more</span> · `;
+}
 function pubRow(p){
-  const au=p.authors&&p.authors.length?`<span class="au">${p.authors.join(", ")}</span> · `:"";
   const venue=p.venue?`${esc(p.venue)} · `:"";
-  return `<div class="pub" data-s="${esc((p.title+' '+(p.venue||'')+' '+(p.authors||[]).join(' ')).toLowerCase())}">
+  const search=(p.title+" "+(p.venue||"")+" "+(p.authors||[]).map(a=>a.name).join(" ")).toLowerCase();
+  return `<div class="pub" data-s="${esc(search)}">
       <div class="t"><a href="${p.id}" target="_blank" rel="noopener">${esc(p.title)}</a></div>
-      <div class="m">${au}${venue}${p.date||p.year||""} · <a href="${p.id}" target="_blank" rel="noopener">OpenAlex ↗</a></div>
+      <div class="m">${authorsHTML(p.authors)}${venue}${p.date||p.year||""} · <a href="${p.id}" target="_blank" rel="noopener">OpenAlex ↗</a></div>
     </div>`;
 }
 function renderAll(){
@@ -60,11 +78,18 @@ function filter(term){
   });
 }
 
-fetch("data/publications.json").then(r=>r.json()).then(d=>{
+Promise.all([
+  fetch("data/publications.json").then(r=>r.json()),
+  fetch("data/faculty.json").then(r=>r.json()).catch(()=>[]),
+  fetch("data/students.json").then(r=>r.json()).catch(()=>[])
+]).then(([d,faculty,students])=>{
   DATA=d;
+  faculty.forEach(f=>{ (f.openalex_ids||(f.openalex_id?[f.openalex_id]:[])).forEach(id=>memberIds.add(id)); memberNames.add(norm(f.name)); });
+  students.forEach(n=>{ memberNames.add(norm(n)); memberKeys.add(keyOf(n)); });
   document.getElementById("subhead").innerHTML =
-    `<b>${d.total.toLocaleString()}</b> publications since ${d.minYear}, from our faculty — pulled from `+
+    `<b>${d.total.toLocaleString()}</b> publications since ${d.minYear}, from our members — pulled from `+
     `<a href="https://openalex.org" target="_blank" rel="noopener">OpenAlex</a>, grouped by year. `+
+    `<span class="au">PAIR members</span> are shown in gold. `+
     `<span style="color:var(--muted)">Updated ${d.generated}.</span>`;
   document.getElementById("chips").innerHTML =
     d.years.map(y=>`<a href="#y${y.year}">${y.year} <span style="color:var(--muted)">${y.count}</span></a>`).join("");

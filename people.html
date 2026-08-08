@@ -23,8 +23,11 @@
     <div class="section-head reveal"><p class="eyebrow">The community</p><h2>Members</h2></div>
     <div class="grid g4" id="members" style="margin-top:22px"></div>
 
-    <div class="section-head reveal" style="margin-top:56px"><p class="eyebrow">Also part of the community</p><h2>Affiliated Members</h2></div>
+    <div class="section-head reveal" style="margin-top:56px"><h2>Affiliated Members</h2></div>
     <div class="grid g4" id="affiliated" style="margin-top:22px"></div>
+
+    <div class="section-head reveal" style="margin-top:56px"><p class="eyebrow">The next generation</p><h2>Graduate Students</h2></div>
+    <div class="grid g4" id="students" style="margin-top:22px"></div>
   </div>
 </section>
 
@@ -41,11 +44,26 @@ function card(f){
     `<div class="lk">${lab}${lab&&oa?" · ":""}${oa}</div>`;
   return d;
 }
-fetch("data/faculty.json").then(r=>r.json()).then(fac=>{
+function initials(name){
+  const p=name.replace(/[^A-Za-z '’-]/g,"").split(/\s+/).filter(Boolean);
+  return ((p[0]||"")[0]||"")+((p[p.length-1]||"")[0]||"");
+}
+function studentCard(name){
+  const d=document.createElement("div"); d.className="person card sm reveal";
+  d.innerHTML=`<div class="initials">${initials(name).toUpperCase()}</div><div class="nm">${name}</div>`;
+  return d;
+}
+Promise.all([
+  fetch("data/faculty.json").then(r=>r.json()),
+  fetch("data/students.json").then(r=>r.json()).catch(()=>[])
+]).then(([fac,students])=>{
   fac.sort((a,b)=>a.name.split(" ").pop().localeCompare(b.name.split(" ").pop()));
   const M=document.getElementById("members"), A=document.getElementById("affiliated");
   fac.forEach(f=>(f.affiliated?A:M).appendChild(card(f)));
-  if(!A.children.length) A.previousElementSibling.style.display="none";
+  const S=document.getElementById("students");
+  students.sort((a,b)=>a.split(" ").pop().localeCompare(b.split(" ").pop()));
+  students.forEach(n=>S.appendChild(studentCard(n)));
+  if(!S.children.length) S.previousElementSibling.style.display="none";
   setTimeout(()=>document.querySelectorAll(".reveal").forEach(x=>x.classList.add("in")),30);
 }).catch(()=>{ document.getElementById("members").innerHTML="<p>Could not load people.</p>"; });
 </script>

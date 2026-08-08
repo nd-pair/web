@@ -52,41 +52,60 @@
   }, {threshold:.12});
   document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
 
-  // animated "physical-AI network" in each hero — drifting nodes + links
-  function heroFX(){
-    if(matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  // a light-blue schematic humanoid idly walking back and forth in each hero
+  function heroWalker(){
+    const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
     document.querySelectorAll(".hero").forEach(hero=>{
       const cv=document.createElement("canvas"); cv.className="fx"; hero.prepend(cv);
-      const ctx=cv.getContext("2d"); let W,H,dpr,parts;
-      function init(){
-        const n=Math.max(24,Math.min(70,Math.round(hero.clientWidth/22)));
-        parts=Array.from({length:n},()=>({x:Math.random()*W,y:Math.random()*H,
-          vx:(Math.random()-.5)*.18*dpr,vy:(Math.random()-.5)*.18*dpr,r:(Math.random()*1.6+1)*dpr}));
-      }
+      const ctx=cv.getContext("2d"); let W,H,dpr,last=0;
+      let posX=0.5, dir=1, pause=0;
       function size(){
         dpr=Math.min(2,window.devicePixelRatio||1);
         W=cv.width=hero.clientWidth*dpr; H=cv.height=hero.clientHeight*dpr;
-        cv.style.width=hero.clientWidth+"px"; cv.style.height=hero.clientHeight+"px"; init();
+        cv.style.width=hero.clientWidth+"px"; cv.style.height=hero.clientHeight+"px";
       }
-      function frame(){
+      // segment lengths (local units, ~175 tall)
+      const TORSO=52, NECK=10, HEAD=12, THIGH=36, SHANK=34, UARM=26, FARM=24;
+      function seg(x,y,a,l){ return [x+Math.sin(a)*l, y+Math.cos(a)*l]; } // a from +Y(down)
+      function figure(cx,cy,s,ph,face){
+        ctx.save(); ctx.translate(cx,cy); ctx.scale(face*s,s); ctx.translate(0,-3.5*Math.abs(Math.sin(ph)));
+        ctx.lineWidth=3.4; ctx.lineCap="round"; ctx.lineJoin="round";
+        ctx.strokeStyle="rgba(150,188,230,0.55)"; ctx.fillStyle="rgba(150,188,230,0.55)";
+        const sh=[0,-TORSO];
+        // leg: hip(0,0)->knee->foot
+        const leg=p=>{ const th=0.55*Math.sin(p), kb=0.95*Math.max(0,Math.sin(p+0.4));
+          const k=seg(0,0,th,THIGH), f=seg(k[0],k[1],th-kb,SHANK);
+          ctx.beginPath();ctx.moveTo(0,0);ctx.lineTo(k[0],k[1]);ctx.lineTo(f[0],f[1]);ctx.stroke(); };
+        // arm: shoulder->elbow->hand
+        const arm=p=>{ const sa=0.5*Math.sin(p), eb=0.35+0.35*Math.max(0,Math.sin(p+0.5));
+          const e=seg(sh[0],sh[1],sa,UARM), h=seg(e[0],e[1],sa-eb,FARM);
+          ctx.beginPath();ctx.moveTo(sh[0],sh[1]);ctx.lineTo(e[0],e[1]);ctx.lineTo(h[0],h[1]);ctx.stroke(); };
+        leg(ph); leg(ph+Math.PI); arm(ph+Math.PI); arm(ph);
+        ctx.beginPath();ctx.moveTo(0,0);ctx.lineTo(sh[0],sh[1]);ctx.stroke();       // spine
+        ctx.beginPath();ctx.moveTo(sh[0],sh[1]);ctx.lineTo(0,-TORSO-NECK);ctx.stroke();
+        ctx.beginPath();ctx.arc(0,-TORSO-NECK-HEAD,HEAD,0,6.2832);ctx.stroke();     // head
+        ctx.restore();
+      }
+      // pace in the open right third of the hero (clear of the left-aligned text)
+      const LO=0.62, HI=0.90; posX=0.74;
+      function frame(ts){
+        const dt=Math.min(60, ts-(last||ts)); last=ts;
         ctx.clearRect(0,0,W,H);
-        for(const p of parts){ p.x+=p.vx; p.y+=p.vy;
-          if(p.x<0)p.x+=W; if(p.x>W)p.x-=W; if(p.y<0)p.y+=H; if(p.y>H)p.y-=H; }
-        const max=145*dpr;
-        for(let i=0;i<parts.length;i++)for(let j=i+1;j<parts.length;j++){
-          const a=parts[i],b=parts[j],dx=a.x-b.x,dy=a.y-b.y,d=Math.hypot(dx,dy);
-          if(d<max){ ctx.globalAlpha=(1-d/max)*.30; ctx.strokeStyle="#c99700"; ctx.lineWidth=dpr;
-            ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke(); }
-        }
-        ctx.globalAlpha=1;
-        for(const p of parts){ ctx.fillStyle="rgba(229,185,61,.85)";
-          ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,6.2832);ctx.fill(); }
+        if(pause>0) pause-=dt;
+        else { posX+=dir*0.00006*dt;
+          if(posX>HI){posX=HI;dir=-1;pause=1000;}
+          if(posX<LO){posX=LO;dir=1;pause=1000;} }
+        const ph=ts*0.0050*(pause>0?0.12:1);           // slow to a shuffle at turns
+        const s=0.52*H/175, cy=H*0.56;
+        figure(posX*W, cy, s, ph, dir);
         requestAnimationFrame(frame);
       }
-      window.addEventListener("resize",size); size(); frame();
+      window.addEventListener("resize",size); size();
+      if(reduce) figure(0.76*W, H*0.56, 0.52*H/175, 0, 1);
+      else requestAnimationFrame(frame);
     });
   }
-  heroFX();
+  heroWalker();
 
   // photographic hero: a single lab image under a navy overlay + slow ken-burns
   function heroPhotos(){

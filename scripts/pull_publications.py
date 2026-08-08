@@ -15,7 +15,12 @@ MIN_YEAR = int(os.environ.get("PUBS_MIN_YEAR", "2016"))
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FAC = json.load(open(os.path.join(ROOT, "data", "faculty.json")))
-IDS = {f["openalex_id"]: f["name"] for f in FAC if f.get("openalex_id")}
+# map every OpenAlex author id (incl. split identities) -> faculty name
+IDS = {}
+for f in FAC:
+    for aid in (f.get("openalex_ids") or ([f["openalex_id"]] if f.get("openalex_id") else [])):
+        if aid:
+            IDS[aid] = f["name"]
 
 
 def http_get(url):
@@ -49,20 +54,21 @@ def main():
             if wid not in works:
                 loc = w.get("primary_location") or {}
                 src = (loc.get("source") or {}) if loc else {}
+                # full author byline, in order: {name, id (short OpenAlex id)}
+                authors = []
+                for a in w.get("authorships", []):
+                    au = (a.get("author") or {})
+                    nm = (au.get("display_name") or "").strip()
+                    if nm:
+                        authors.append({"name": nm, "id": (au.get("id") or "").rsplit("/", 1)[-1]})
                 works[wid] = {
                     "id": wid,
                     "title": (w.get("title") or "(untitled)").strip(),
                     "year": w.get("publication_year"),
                     "date": w.get("publication_date"),
                     "venue": (src.get("display_name") if src else None),
-                    "authors": set(),
+                    "authors": authors,
                 }
-            # record ND faculty authors on this work
-            for a in w.get("authorships", []):
-                au = (a.get("author") or {})
-                aid2 = (au.get("id") or "").rsplit("/", 1)[-1]
-                if aid2 in IDS:
-                    works[wid]["authors"].add(IDS[aid2])
         print(f"  {name}: {n} works since {MIN_YEAR}", file=sys.stderr)
 
     # collapse duplicate records of the same paper (preprint + published share a
@@ -77,15 +83,17 @@ def main():
         if cur is None:
             by_title[k] = w
         else:
-            cur["authors"] |= w["authors"]
+            # keep the fuller byline; keep the record that has venue/date
+            best = w["authors"] if len(w["authors"]) > len(cur["authors"]) else cur["authors"]
             if score(w) > score(cur):
-                w["authors"] = cur["authors"]
+                w["authors"] = best
                 by_title[k] = w
+            else:
+                cur["authors"] = best
 
     # group by year, newest first; within a year newest date first
     years = {}
     for w in by_title.values():
-        w["authors"] = sorted(w["authors"])
         years.setdefault(w["year"], []).append(w)
     year_list = []
     for y in sorted(years, key=lambda y: (y is None, -(y or 0))):
