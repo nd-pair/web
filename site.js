@@ -64,26 +64,44 @@
         W=cv.width=hero.clientWidth*dpr; H=cv.height=hero.clientHeight*dpr;
         cv.style.width=hero.clientWidth+"px"; cv.style.height=hero.clientHeight+"px";
       }
-      // segment lengths (local units, ~175 tall)
-      const TORSO=52, NECK=10, HEAD=12, THIGH=36, SHANK=34, UARM=26, FARM=24;
-      function seg(x,y,a,l){ return [x+Math.sin(a)*l, y+Math.cos(a)*l]; } // a from +Y(down)
+      // schematic humanoid-robot proportions (local units, ~180 tall)
+      const TORSO=56, NECK=6, THIGH=44, SHANK=40, UARM=30, FARM=24;
+      const seg=(x,y,a,l)=>[x+Math.sin(a)*l, y+Math.cos(a)*l]; // a measured from +Y (down)
+      const BODY="rgba(156,192,232,0.62)", FAR="rgba(156,192,232,0.30)",
+            DARK="rgba(70,110,162,0.75)", LINE="rgba(198,222,248,0.5)";
       function figure(cx,cy,s,ph,face){
-        ctx.save(); ctx.translate(cx,cy); ctx.scale(face*s,s); ctx.translate(0,-3.5*Math.abs(Math.sin(ph)));
-        ctx.lineWidth=3.4; ctx.lineCap="round"; ctx.lineJoin="round";
-        ctx.strokeStyle="rgba(150,188,230,0.55)"; ctx.fillStyle="rgba(150,188,230,0.55)";
-        const sh=[0,-TORSO];
-        // leg: hip(0,0)->knee->foot
-        const leg=p=>{ const th=0.55*Math.sin(p), kb=0.95*Math.max(0,Math.sin(p+0.4));
-          const k=seg(0,0,th,THIGH), f=seg(k[0],k[1],th-kb,SHANK);
-          ctx.beginPath();ctx.moveTo(0,0);ctx.lineTo(k[0],k[1]);ctx.lineTo(f[0],f[1]);ctx.stroke(); };
-        // arm: shoulder->elbow->hand
-        const arm=p=>{ const sa=0.5*Math.sin(p), eb=0.35+0.35*Math.max(0,Math.sin(p+0.5));
+        ctx.save(); ctx.translate(cx,cy); ctx.scale(face*s,s); ctx.translate(0,-4*Math.abs(Math.sin(ph)));
+        ctx.lineCap="round"; ctx.lineJoin="round";
+        const sh=[1,-TORSO], hip=[0,0];
+        const cap=(a,b,w,c)=>{ ctx.strokeStyle=c; ctx.lineWidth=w; ctx.beginPath();ctx.moveTo(a[0],a[1]);ctx.lineTo(b[0],b[1]);ctx.stroke(); };
+        const joint=(p,r,c)=>{ ctx.fillStyle=c; ctx.beginPath();ctx.arc(p[0],p[1],r,0,6.2832);ctx.fill(); ctx.lineWidth=1.1;ctx.strokeStyle=DARK;ctx.stroke(); };
+        function rrect(cx2,cy2,w,h,rad,rot,c){ ctx.save(); ctx.translate(cx2,cy2); ctx.rotate(rot);
+          const x=-w/2,y=-h/2; ctx.beginPath(); ctx.moveTo(x+rad,y);
+          ctx.arcTo(x+w,y,x+w,y+h,rad); ctx.arcTo(x+w,y+h,x,y+h,rad);
+          ctx.arcTo(x,y+h,x,y,rad); ctx.arcTo(x,y,x+w,y,rad); ctx.closePath();
+          ctx.fillStyle=c; ctx.fill(); ctx.lineWidth=1.1; ctx.strokeStyle=DARK; ctx.stroke(); ctx.restore(); }
+        function leg(p,c,jr){
+          const th=0.5*Math.sin(p), kb=1.0*Math.max(0,Math.sin(p+0.35));
+          const k=seg(hip[0],hip[1],th,THIGH), aA=th-kb, an=seg(k[0],k[1],aA,SHANK);
+          cap(hip,k,15,c); cap(k,an,11,c);                       // thigh, shank
+          cap([an[0]-6,an[1]+2],[an[0]+19,an[1]+4],8,c);         // flat foot
+          joint(hip,8,c); joint(k,7,c); joint(an,5,c);           // hip, knee, ankle actuators
+        }
+        function arm(p,c,jr){
+          const sa=0.42*Math.sin(p), eb=0.35+0.3*Math.max(0,Math.sin(p+0.5));
           const e=seg(sh[0],sh[1],sa,UARM), h=seg(e[0],e[1],sa-eb,FARM);
-          ctx.beginPath();ctx.moveTo(sh[0],sh[1]);ctx.lineTo(e[0],e[1]);ctx.lineTo(h[0],h[1]);ctx.stroke(); };
-        leg(ph); leg(ph+Math.PI); arm(ph+Math.PI); arm(ph);
-        ctx.beginPath();ctx.moveTo(0,0);ctx.lineTo(sh[0],sh[1]);ctx.stroke();       // spine
-        ctx.beginPath();ctx.moveTo(sh[0],sh[1]);ctx.lineTo(0,-TORSO-NECK);ctx.stroke();
-        ctx.beginPath();ctx.arc(0,-TORSO-NECK-HEAD,HEAD,0,6.2832);ctx.stroke();     // head
+          cap(sh,e,10,c); cap(e,h,8,c);
+          joint(sh,7,c); joint(e,5,c); joint(h,4,c);             // shoulder, elbow, gripper
+        }
+        // far side first (depth), then body, then near side
+        leg(ph+Math.PI, FAR); arm(ph, FAR);
+        rrect(0,3,30,16,5,0,BODY);                               // pelvis block
+        rrect(2,-TORSO*0.58,27,TORSO*0.82,7,0.05,BODY);          // chest, slight lean
+        cap([-8,-TORSO*0.5],[10,-TORSO*0.5],2,LINE);             // chest detail line
+        rrect(2,-TORSO-NECK-9,18,20,6,0.03,BODY);                // head
+        ctx.save(); ctx.translate(2,-TORSO-NECK-11); ctx.rotate(0.03);
+        ctx.fillStyle=DARK; ctx.beginPath(); ctx.rect(-8,-2.5,16,5); ctx.fill(); ctx.restore();  // visor
+        leg(ph, BODY); arm(ph+Math.PI, BODY);
         ctx.restore();
       }
       // pace in the open right third of the hero (clear of the left-aligned text)
