@@ -1,5 +1,32 @@
 // Shared chrome: nav + footer injection, active link, scroll-reveal, mobile menu.
 (function(){
+  // ---- soft password gate (SHA-256 of "pair@nd"; data is public, not real security) ----
+  const PW_HASH = "7481995bf6b9ebdd5defda06e5d81290fe7dd29ae422ee1b8e0104c95296eb10";
+  if(sessionStorage.getItem("nd_pair_auth")!=="1"){
+    document.documentElement.style.overflow="hidden";
+    const gate=document.createElement("div"); gate.id="gate";
+    gate.innerHTML=
+      `<form id="gateForm">
+        <img class="glogo" src="assets/pair-logo.png" alt="" />
+        <h1>Physical <span>AI</span> and Robotics Initiative</h1>
+        <p>Internal preview — please enter the access password.</p>
+        <input type="password" id="gatePw" autocomplete="current-password" autofocus />
+        <button type="submit">Enter</button>
+        <div id="gateErr"></div>
+        <div class="gnote">For ND PAIR members. This is a soft gate — the underlying data is public.</div>
+      </form>`;
+    (document.body||document.documentElement).appendChild(gate);
+    const sha256=async s=>{ const b=await crypto.subtle.digest("SHA-256",new TextEncoder().encode(s));
+      return [...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,"0")).join(""); };
+    gate.querySelector("#gateForm").addEventListener("submit", async e=>{
+      e.preventDefault();
+      if(await sha256(document.getElementById("gatePw").value)===PW_HASH){
+        sessionStorage.setItem("nd_pair_auth","1"); gate.remove(); document.documentElement.style.overflow="";
+      } else document.getElementById("gateErr").textContent="Incorrect password.";
+    });
+    setTimeout(()=>{ const i=document.getElementById("gatePw"); if(i) i.focus(); },30);
+  }
+
   const PAGES = [
     ["index.html","Home"],
     ["laboratories.html","Laboratories"],
