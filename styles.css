@@ -21,7 +21,8 @@ a:hover{text-decoration:underline}
 .nav{position:sticky;top:0;z-index:30;background:rgba(12,35,64,.92);backdrop-filter:blur(10px);
   border-bottom:1px solid rgba(255,255,255,.08);transition:padding .25s}
 .nav .wrap{display:flex;align-items:center;gap:24px;height:64px}
-.brand{font-family:var(--serif);font-size:17px;font-weight:600;color:#fff;letter-spacing:.2px;white-space:nowrap}
+.brand{font-family:var(--serif);font-size:17px;font-weight:600;color:#fff;letter-spacing:.2px;white-space:nowrap;display:inline-flex;align-items:center;gap:10px}
+.brand .logo{height:32px;width:auto;display:block;flex:none}
 .brand .at{color:var(--gold-lt)}
 .nav nav{margin-left:auto;display:flex;gap:6px;flex-wrap:wrap}
 .nav nav a{color:#dfe6f1;font-size:14.5px;padding:8px 14px;border-radius:999px;transition:.2s}
@@ -38,10 +39,11 @@ a:hover{text-decoration:underline}
 .hero .wrap{position:relative;z-index:5;padding:96px 24px 104px}
 /* photographic hero (lab images), ken-burns cross-fade + navy overlay */
 .hero.photo::before,.hero.photo::after{display:none}
-.hero .kb{position:absolute;inset:0;z-index:0;background-size:cover;background-position:center;opacity:0;transition:opacity 1.6s ease;will-change:opacity,transform}
-.hero .kb.on{opacity:1;animation:kenburns 22s ease-in-out infinite alternate}
-.hero .overlay{position:absolute;inset:0;z-index:1;background:linear-gradient(160deg,rgba(10,27,49,.9),rgba(12,35,64,.72) 46%,rgba(18,47,87,.8))}
-@keyframes kenburns{from{transform:scale(1.05)}to{transform:scale(1.16)}}
+.hero .kb{position:absolute;inset:0;z-index:0;background-size:cover;background-position:center top;opacity:0;transition:opacity 1.6s ease;will-change:opacity,transform}
+.hero .kb.on{opacity:1;animation:kenburns 34s ease-in-out infinite alternate}
+/* darker on the left (behind the headline), lighter on the right to show the art */
+.hero .overlay{position:absolute;inset:0;z-index:1;background:linear-gradient(100deg,rgba(7,17,33,.93) 0%,rgba(10,26,48,.82) 40%,rgba(12,35,64,.5) 78%,rgba(12,35,64,.42) 100%)}
+@keyframes kenburns{from{transform:scale(1.02)}to{transform:scale(1.08)}}
 
 /* moving gallery marquee */
 .marquee{overflow:hidden;position:relative;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}

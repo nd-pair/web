@@ -7,13 +7,14 @@
     ["publications.html","Publications"],
     ["internal.html","Internal"],
   ];
+  const fav=document.createElement("link"); fav.rel="icon"; fav.type="image/png"; fav.href="assets/pair-logo.png"; document.head.appendChild(fav);
   const here = (location.pathname.split("/").pop() || "index.html");
   const navEl = document.getElementById("site-nav");
   if(navEl){
     navEl.className = "nav";
     navEl.innerHTML =
       `<div class="wrap">
-        <a class="brand" href="index.html">Physical <span class="at">AI</span> and Robotics Initiative</a>
+        <a class="brand" href="index.html"><img class="logo" src="assets/pair-logo.png" alt="PAIR logo">Physical <span class="at">AI</span> and Robotics Initiative</a>
         <button class="navtoggle" aria-label="Menu">☰</button>
         <nav>${PAGES.map(([h,l])=>`<a href="${h}" class="${h===here?"active":""}">${l}</a>`).join("")}</nav>
       </div>`;
@@ -29,7 +30,7 @@
     footEl.innerHTML =
       `<div class="wrap">
         <div style="max-width:34ch">
-          <div class="brand">Physical <span style="color:#e5b93d">AI</span> and Robotics Initiative</div>
+          <div class="brand"><img class="logo" src="assets/pair-logo.png" alt="PAIR logo">Physical <span style="color:#e5b93d">AI</span> and Robotics Initiative</div>
           <small>Building robots to increase human flourishing, at the University of Notre Dame.</small>
         </div>
         <div>
