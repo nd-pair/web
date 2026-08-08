@@ -88,27 +88,15 @@
   }
   heroFX();
 
-  // photographic hero: cross-fade lab images with a slow ken-burns zoom
+  // photographic hero: a single lab image under a navy overlay + slow ken-burns
   function heroPhotos(){
-    const hero=document.querySelector(".hero[data-photos]");
+    const hero=document.querySelector(".hero[data-photo]");
     if(!hero) return;
-    fetch("data/gallery.json").then(r=>r.json()).then(imgs=>{
-      if(!imgs.length) return;
-      hero.classList.add("photo");
-      const ov=document.createElement("div"); ov.className="overlay"; hero.prepend(ov);
-      const a=document.createElement("div"), b=document.createElement("div");
-      a.className="kb"; b.className="kb"; hero.prepend(b); hero.prepend(a);
-      let i=0, cur=a, nxt=b;
-      const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
-      cur.style.backgroundImage=`url(${imgs[0].src})`; cur.classList.add("on");
-      if(reduce||imgs.length<2) return;
-      setInterval(()=>{
-        i=(i+1)%imgs.length;
-        nxt.style.backgroundImage=`url(${imgs[i].src})`;
-        nxt.classList.add("on"); cur.classList.remove("on");
-        [cur,nxt]=[nxt,cur];
-      }, 6000);
-    }).catch(()=>{});
+    hero.classList.add("photo");
+    const ov=document.createElement("div"); ov.className="overlay"; hero.prepend(ov);
+    const kb=document.createElement("div"); kb.className="kb";
+    kb.style.backgroundImage=`url(${hero.dataset.photo})`;
+    hero.prepend(kb); kb.classList.add("on");
   }
   heroPhotos();
 })();
