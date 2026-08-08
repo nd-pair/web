@@ -1,13 +1,67 @@
 {
-  "generated": "2026-08-08 03:16 UTC",
+  "generated": "2026-08-08 13:53 UTC",
   "source": "OpenAlex (https://openalex.org)",
   "minYear": 2016,
-  "total": 1087,
+  "total": 1089,
   "years": [
     {
       "year": 2026,
-      "count": 26,
+      "count": 28,
       "items": [
+        {
+          "id": "https://openalex.org/W7196939210",
+          "title": "Design of a lightweight wearable exoskeleton with virtual reality feedback for post-stroke hand rehabilitation",
+          "year": 2026,
+          "date": "2026-08-06",
+          "venue": "Biomedizinische Technik/Biomedical Engineering",
+          "authors": [
+            {
+              "name": "Lin Yu",
+              "id": "A5145850381"
+            },
+            {
+              "name": "Mengjie Tang",
+              "id": "A5144812807"
+            },
+            {
+              "name": "Lingfang Xu",
+              "id": "A5109758896"
+            },
+            {
+              "name": "Ziwei Yu",
+              "id": "A5101880055"
+            },
+            {
+              "name": "Zhi Zheng",
+              "id": "A5065741205"
+            }
+          ]
+        },
+        {
+          "id": "https://openalex.org/W7197001892",
+          "title": "Navigating Sustainability in Shape-Changing Interfaces: Choices, Challenges, Futures",
+          "year": 2026,
+          "date": "2026-08-01",
+          "venue": "Design and Artificial Intelligence",
+          "authors": [
+            {
+              "name": "Qingyu Fang",
+              "id": "A5145182912"
+            },
+            {
+              "name": "Zeyu Yan",
+              "id": "A5044495445"
+            },
+            {
+              "name": "Huaishu Peng",
+              "id": "A5067580146"
+            },
+            {
+              "name": "Tingyu Cheng",
+              "id": "A5011017276"
+            }
+          ]
+        },
         {
           "id": "https://openalex.org/W7169853445",
           "title": "Bio-SFT: Asymmetric Cortical Guidance and Retinal Adaptation for Robust HDR Reconstruction",
