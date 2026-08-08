@@ -1,0 +1,146 @@
+[
+  {
+    "slug": "edgar-bolivar-nieto",
+    "name": "Edgar Bol\u00edvar-Nieto",
+    "openalex_id": "A5076214359",
+    "affiliation": "University of Notre Dame",
+    "photo": "edgar-bolivar-nieto.jpg",
+    "lab": "WeRoLab",
+    "lab_url": "https://werolab.nd.edu"
+  },
+  {
+    "slug": "hai-lin",
+    "name": "Hai Lin",
+    "openalex_id": "A5045445273",
+    "affiliation": "University of Notre Dame",
+    "photo": "hai-lin.jpg",
+    "lab": null,
+    "lab_url": null
+  },
+  {
+    "slug": "j-william-goodwine",
+    "name": "Bill Goodwine",
+    "openalex_id": "A5042951623",
+    "affiliation": "University of Notre Dame",
+    "photo": "j-william-goodwine.jpg",
+    "lab": "Nonlinear Controls Lab",
+    "lab_url": "https://controls.ame.nd.edu/mediawiki/index.php/Main_Page"
+  },
+  {
+    "slug": "james-schmiedeler",
+    "name": "Jim Schmiedeler",
+    "openalex_id": "A5073029557",
+    "affiliation": "University of Notre Dame",
+    "photo": "james-schmiedeler.jpg",
+    "lab": "LAB Lab",
+    "lab_url": "https://scholar.google.com/citations?user=EzYQXesAAAAJ&hl=en"
+  },
+  {
+    "slug": "jane-cleland-huang",
+    "name": "Jane Cleland-Huang",
+    "openalex_id": "A5037363688",
+    "affiliation": "University of Notre Dame",
+    "photo": "jane-cleland-huang.jpeg",
+    "lab": "SAREC / DroneResponse",
+    "lab_url": "http://droneresponse.net"
+  },
+  {
+    "slug": "margaret-coad",
+    "name": "Margaret McGuinness",
+    "openalex_id": "A5062756806",
+    "affiliation": null,
+    "photo": "margaret-coad.jpg",
+    "lab": null,
+    "lab_url": null
+  },
+  {
+    "slug": "mengxue-hou",
+    "name": "Mengxue Hou",
+    "openalex_id": "A5063884621",
+    "affiliation": "University of Notre Dame",
+    "photo": "mengxue-hou.jpg",
+    "lab": null,
+    "lab_url": null
+  },
+  {
+    "slug": "michael-lemmon",
+    "name": "Mike Lemmon",
+    "openalex_id": "A5022295836",
+    "affiliation": "University of Notre Dame",
+    "photo": "michael-lemmon.jpg",
+    "lab": "Lemmon Group",
+    "lab_url": "https://www3.nd.edu/~lemmon/"
+  },
+  {
+    "slug": "nikolaus-correll",
+    "name": "Nikolaus Correll",
+    "openalex_id": "A5047458039",
+    "affiliation": null,
+    "photo": "nikolaus-correll.jpg",
+    "lab": null,
+    "lab_url": null
+  },
+  {
+    "slug": "panos-antsaklis",
+    "name": "Panos Antsaklis",
+    "openalex_id": "A5077171773",
+    "affiliation": "University of Notre Dame",
+    "photo": "panos-antsaklis.jpg",
+    "lab": "Antsaklis Group",
+    "lab_url": "https://www3.nd.edu/~pantsakl/"
+  },
+  {
+    "slug": "patrick-wensing",
+    "name": "Pat Wensing",
+    "openalex_id": "A5029126529",
+    "affiliation": "University of Notre Dame",
+    "photo": "patrick-wensing.jpg",
+    "lab": "ROAM Lab",
+    "lab_url": "https://roamlab.nd.edu/"
+  },
+  {
+    "slug": "robert-landers",
+    "name": "Robert Landers",
+    "openalex_id": "A5020875577",
+    "affiliation": "University of Notre Dame",
+    "photo": "robert-landers.jpg",
+    "lab": "Landers Group",
+    "lab_url": "https://landersgroup.nd.edu"
+  },
+  {
+    "slug": "tingyu-cheng",
+    "name": "Tingyu Cheng",
+    "openalex_id": "A5011017276",
+    "affiliation": "University of Notre Dame",
+    "photo": "tingyu-cheng.jpg",
+    "lab": null,
+    "lab_url": null
+  },
+  {
+    "slug": "toros-arikan",
+    "name": "Toros Arikan",
+    "openalex_id": "A5066250773",
+    "affiliation": "Rice University",
+    "photo": "toros-arikan.jpg",
+    "lab": null,
+    "lab_url": null
+  },
+  {
+    "slug": "yasemin-ozkan-aydin",
+    "name": "Yasemin Ozkan-Aydin",
+    "openalex_id": "A5031304323",
+    "affiliation": "University of Notre Dame",
+    "photo": "yasemin-ozkan-aydin.jpeg",
+    "lab": "MiNiRo-Lab",
+    "lab_url": "https://minirolab.nd.edu"
+  },
+  {
+    "slug": "zhi-zheng",
+    "name": "Zhi Zheng",
+    "openalex_id": "A5065741205",
+    "affiliation": "Wuhan University",
+    "photo": "zhi-zheng.jpg",
+    "lab": null,
+    "lab_url": null
+  }
+]

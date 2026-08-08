@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>People — Robotics @ Notre Dame</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header id="site-nav"></header>
+
+<div class="hero" style="padding:0">
+  <div class="wrap" style="padding:74px 24px 78px">
+    <p class="eyebrow reveal">The community</p>
+    <h1 class="reveal" style="font-size:clamp(30px,4.6vw,48px)">People</h1>
+    <p class="lead reveal">The faculty who lead our laboratories and shape the direction of robotics
+      at Notre Dame.</p>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="grid g4" id="people"></div>
+  </div>
+</section>
+
+<footer id="site-footer"></footer>
+<script src="site.js"></script>
+<script>
+fetch("data/faculty.json").then(r=>r.json()).then(fac=>{
+  const el=document.getElementById("people");
+  fac.sort((a,b)=>a.name.split(" ").pop().localeCompare(b.name.split(" ").pop()));
+  fac.forEach(f=>{
+    const img = f.photo ? `assets/faculty/${f.photo}` : "";
+    const lab = f.lab ? `<a href="${f.lab_url}" target="_blank" rel="noopener">${f.lab}</a>` : "";
+    const oa = f.openalex_id ? `<a href="https://openalex.org/${f.openalex_id}" target="_blank" rel="noopener">Publications</a>` : "";
+    const d=document.createElement("div"); d.className="person card reveal";
+    d.innerHTML =
+      (img?`<img src="${img}" alt="${f.name}" loading="lazy">`:"")+
+      `<div class="nm">${f.name}</div>`+
+      `<div class="af">${f.affiliation||"University of Notre Dame"}</div>`+
+      `<div class="lk">${lab}${lab&&oa?" · ":""}${oa}</div>`;
+    el.appendChild(d);
+  });
+  setTimeout(()=>document.querySelectorAll(".reveal").forEach(x=>x.classList.add("in")),30);
+}).catch(()=>{ document.getElementById("people").innerHTML="<p>Could not load people.</p>"; });
+</script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Publications — Robotics @ Notre Dame</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header id="site-nav"></header>
+
+<div class="hero" style="padding:0">
+  <div class="wrap" style="padding:64px 24px 64px">
+    <p class="eyebrow reveal">From our community</p>
+    <h1 class="reveal" style="font-size:clamp(30px,4.6vw,48px)">Publications</h1>
+    <p class="lead reveal" id="subhead">Recent work from our faculty, pulled from OpenAlex and grouped by year.</p>
+  </div>
+</div>
+
+<div class="pubbar">
+  <div class="wrap">
+    <input id="q" placeholder="Filter by title, author, or venue…" style="flex:1;min-width:220px;padding:9px 13px;border:1px solid var(--line);border-radius:999px;font-size:14px" />
+    <div class="yearchips" id="chips"></div>
+  </div>
+</div>
+
+<section style="padding-top:20px">
+  <div class="wrap"><div id="pubs"></div></div>
+</section>
+
+<footer id="site-footer"></footer>
+<script src="site.js"></script>
+<script>
+let DATA=null;
+const pubsEl=document.getElementById("pubs");
+const esc=s=>String(s==null?"":s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+function pubRow(p){
+  const au=p.authors&&p.authors.length?`<span class="au">${p.authors.join(", ")}</span> · `:"";
+  const venue=p.venue?`${esc(p.venue)} · `:"";
+  return `<div class="pub" data-s="${esc((p.title+' '+(p.venue||'')+' '+(p.authors||[]).join(' ')).toLowerCase())}">
+      <div class="t"><a href="${p.id}" target="_blank" rel="noopener">${esc(p.title)}</a></div>
+      <div class="m">${au}${venue}${p.date||p.year||""} · <a href="${p.id}" target="_blank" rel="noopener">OpenAlex ↗</a></div>
+    </div>`;
+}
+function renderAll(){
+  pubsEl.innerHTML = DATA.years.map(y=>
+    `<div class="yeargroup" id="y${y.year}"><h2>${y.year||"Undated"} <span class="c">${y.count} publication${y.count===1?"":"s"}</span></h2>
+      ${y.items.map(pubRow).join("")}</div>`).join("");
+}
+function filter(term){
+  term=term.trim().toLowerCase();
+  document.querySelectorAll(".yeargroup").forEach(g=>{
+    let shown=0;
+    g.querySelectorAll(".pub").forEach(p=>{
+      const hit=!term||p.dataset.s.includes(term);
+      p.style.display=hit?"":"none"; if(hit) shown++;
+    });
+    g.style.display=shown?"":"none";
+  });
+}
+
+fetch("data/publications.json").then(r=>r.json()).then(d=>{
+  DATA=d;
+  document.getElementById("subhead").innerHTML =
+    `<b>${d.total.toLocaleString()}</b> publications since ${d.minYear}, from our faculty — pulled from `+
+    `<a href="https://openalex.org" target="_blank" rel="noopener">OpenAlex</a>, grouped by year. `+
+    `<span style="color:var(--muted)">Updated ${d.generated}.</span>`;
+  document.getElementById("chips").innerHTML =
+    d.years.map(y=>`<a href="#y${y.year}">${y.year} <span style="color:var(--muted)">${y.count}</span></a>`).join("");
+  renderAll();
+  const q=document.getElementById("q");
+  let t; q.addEventListener("input",()=>{ clearTimeout(t); t=setTimeout(()=>filter(q.value),120); });
+}).catch(e=>{ pubsEl.innerHTML="<p>Could not load publications.</p>"; console.error(e); });
+</script>
+</body>
+</html>

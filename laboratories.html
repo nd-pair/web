@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Laboratories — Robotics @ Notre Dame</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header id="site-nav"></header>
+
+<div class="hero" style="padding:0">
+  <div class="wrap" style="padding:74px 24px 78px">
+    <p class="eyebrow reveal">Where the work happens</p>
+    <h1 class="reveal" style="font-size:clamp(30px,4.6vw,48px)">Our laboratories</h1>
+    <p class="lead reveal">Fourteen groups across the community, each with its own focus — from legged
+      machines and wearable robots to autonomous teams. Every lab links out to its own site.</p>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div id="labgroups"></div>
+  </div>
+</section>
+
+<footer id="site-footer"></footer>
+<script src="site.js"></script>
+<script>
+const ORDER = ["Legged & Bioinspired","Wearable & Human-Centered","Autonomous & Multi-Robot"];
+fetch("data/labs.json").then(r=>r.json()).then(labs=>{
+  const root=document.getElementById("labgroups");
+  ORDER.forEach(area=>{
+    const inArea=labs.filter(l=>l.area===area);
+    if(!inArea.length) return;
+    const head=document.createElement("div");
+    head.className="section-head reveal"; head.style.margin="10px 0 20px";
+    head.innerHTML=`<p class="eyebrow">${area}</p><h2>${area} Robotics</h2>`;
+    root.appendChild(head);
+    const grid=document.createElement("div"); grid.className="grid g3"; grid.style.marginBottom="46px";
+    inArea.forEach(l=>{
+      const c=document.createElement("div"); c.className="card lab reveal";
+      c.innerHTML=`<h3>${l.name}</h3><p>${l.blurb||""}</p>`+
+        `<div class="host">${(l.url||"").replace(/^https?:\/\//,"")}</div>`+
+        `<a class="go" href="${l.url}" target="_blank" rel="noopener">Visit lab</a>`;
+      grid.appendChild(c);
+    });
+    root.appendChild(grid);
+  });
+  // reveal (observer may miss late-injected nodes)
+  setTimeout(()=>document.querySelectorAll(".reveal").forEach(x=>x.classList.add("in")),30);
+}).catch(e=>{
+  document.getElementById("labgroups").innerHTML="<p>Could not load laboratories.</p>";
+});
+</script>
+</body>
+</html>

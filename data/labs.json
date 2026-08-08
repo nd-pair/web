@@ -1,0 +1,16 @@
+[
+  {"name":"WeRoLab","url":"https://werolab.nd.edu","area":"Wearable & Human-Centered","blurb":"Wearable robots — prostheses and exoskeletons — designed around human movement."},
+  {"name":"MiNiRo-Lab","url":"https://minirolab.nd.edu","area":"Legged & Bioinspired","blurb":"Bioinspired and multi-legged machines that take their cues from animals."},
+  {"name":"LAB Lab","url":"https://scholar.google.com/citations?user=EzYQXesAAAAJ&hl=en","area":"Legged & Bioinspired","blurb":"Locomotion and biomechanics of walking and running systems."},
+  {"name":"ROAM Lab","url":"https://roamlab.nd.edu/","area":"Legged & Bioinspired","blurb":"Optimization and control for agile, dynamic robot motion."},
+  {"name":"Plecnik Group","url":"https://www.markplecnik.com","area":"Legged & Bioinspired","blurb":"Mechanism design and the mathematics of linkages and kinematics."},
+  {"name":"DISCOVER Lab","url":"https://sites.google.com/a/nd.edu/discoverlab/","area":"Wearable & Human-Centered","blurb":"Human-robot interaction and assistive technology."},
+  {"name":"I2R Lab","url":"https://sites.google.com/view/iirl/home","area":"Wearable & Human-Centered","blurb":"Interactive and intelligent robotics for people."},
+  {"name":"IRIS Lab","url":"https://irislab.nd.edu","area":"Autonomous & Multi-Robot","blurb":"Intelligent robotics, sensing, and estimation."},
+  {"name":"ROAR Lab","url":"https://sites.nd.edu/roarlab/","area":"Autonomous & Multi-Robot","blurb":"Autonomous robots, reasoning, and field deployment."},
+  {"name":"SAREC / DroneResponse","url":"http://droneresponse.net","area":"Autonomous & Multi-Robot","blurb":"Autonomous aerial teams for search, rescue, and emergency response."},
+  {"name":"Antsaklis Group","url":"https://www3.nd.edu/~pantsakl/","area":"Autonomous & Multi-Robot","blurb":"Hybrid, networked, and cyber-physical control systems."},
+  {"name":"Lemmon Group","url":"https://www3.nd.edu/~lemmon/","area":"Autonomous & Multi-Robot","blurb":"Networked control and cyber-physical systems."},
+  {"name":"Nonlinear Controls Lab","url":"https://controls.ame.nd.edu/mediawiki/index.php/Main_Page","area":"Autonomous & Multi-Robot","blurb":"Nonlinear dynamics, geometric mechanics, and control."},
+  {"name":"Landers Group","url":"https://landersgroup.nd.edu","area":"Autonomous & Multi-Robot","blurb":"Manufacturing automation, mechatronics, and control."}
+]

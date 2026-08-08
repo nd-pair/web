@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Robotics @ Notre Dame</title>
+<meta name="description" content="Robotics @ Notre Dame — a collaborative community building robots for the problems that matter." />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header id="site-nav"></header>
+
+<div class="hero">
+  <div class="wrap">
+    <p class="eyebrow reveal">University of Notre Dame</p>
+    <h1 class="reveal">Robots for the problems that matter.</h1>
+    <p class="lead reveal">We are a collaborative community of faculty, students, and laboratories
+      advancing legged and bioinspired machines, wearable and human-centered robots, and autonomous
+      multi-robot systems — and putting them to work in the world.</p>
+    <div class="cta reveal">
+      <a class="btn gold" href="laboratories.html">Explore the laboratories</a>
+      <a class="btn ghost" href="publications.html">See recent publications</a>
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">What we build</p>
+      <h2>Three directions, one community</h2>
+      <p>Our laboratories converge on machines that move, assist, and cooperate — grounded in
+        rigorous dynamics, controls, and learning.</p>
+    </div>
+    <div class="grid g3" style="margin-top:34px">
+      <div class="card reveal"><span class="tag">Motion</span>
+        <h3>Legged &amp; Bioinspired Robotics</h3>
+        <p>Walking, running, and climbing machines that borrow their tricks from animals — and the
+          biomechanics and control that make them move.</p>
+        <a class="go" href="laboratories.html">Meet the labs</a></div>
+      <div class="card reveal"><span class="tag">People</span>
+        <h3>Wearable &amp; Human-Centered Robots</h3>
+        <p>Exoskeletons, prostheses, and interactive robots designed around the person wearing or
+          working beside them.</p>
+        <a class="go" href="laboratories.html">Meet the labs</a></div>
+      <div class="card reveal"><span class="tag">Teams</span>
+        <h3>Autonomous &amp; Multi-Robot Systems</h3>
+        <p>Fleets that sense, decide, and coordinate — from aerial first response to provably safe
+          networked control.</p>
+        <a class="go" href="laboratories.html">Meet the labs</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="mist">
+  <div class="wrap">
+    <div class="stats reveal" id="stats">
+      <div class="stat"><div class="n">16</div><div class="l">Faculty</div></div>
+      <div class="stat"><div class="n">14</div><div class="l">Laboratories</div></div>
+      <div class="stat"><div class="n" id="pubN">1,200+</div><div class="l">Publications since 2016</div></div>
+      <div class="stat"><div class="n">1</div><div class="l">Collaborative community</div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Where the work happens</p>
+      <h2>A few of our laboratories</h2>
+      <p>Fourteen labs, one community. Here are a few — the full list links out to each group.</p>
+    </div>
+    <div class="grid g3" id="labpreview" style="margin-top:30px"></div>
+    <div class="reveal" style="margin-top:26px"><a class="btn gold" href="laboratories.html">All laboratories</a></div>
+  </div>
+</section>
+
+<section class="mist">
+  <div class="wrap" style="display:flex;gap:30px;flex-wrap:wrap;align-items:center;justify-content:space-between">
+    <div class="section-head reveal" style="flex:1;min-width:280px">
+      <p class="eyebrow">For members</p>
+      <h2>Inside the community</h2>
+      <p>Members can explore our internal collaboration network — an interactive map of who works
+        with whom across the group.</p>
+    </div>
+    <div class="reveal"><a class="btn gold" href="internal.html">Go to Internal →</a></div>
+  </div>
+</section>
+
+<footer id="site-footer"></footer>
+<script src="site.js"></script>
+<script>
+// hydrate lab preview + publication count
+fetch("data/labs.json").then(r=>r.json()).then(labs=>{
+  const el=document.getElementById("labpreview");
+  labs.slice(0,6).forEach(l=>{
+    const d=document.createElement("div"); d.className="card lab reveal";
+    d.innerHTML=`<h3>${l.name}</h3><p>${l.blurb||""}</p>`+
+      `<div class="host">${(l.url||"").replace(/^https?:\/\//,"")}</div>`+
+      `<a class="go" href="${l.url}" target="_blank" rel="noopener">Visit</a>`;
+    el.appendChild(d);
+  });
+  document.querySelectorAll("#labpreview .reveal").forEach(x=>x.classList.add("in"));
+}).catch(()=>{});
+fetch("data/publications.json").then(r=>r.json()).then(d=>{
+  if(d.total) document.getElementById("pubN").textContent = d.total.toLocaleString()+"+";
+}).catch(()=>{});
+</script>
+</body>
+</html>
