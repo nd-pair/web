@@ -51,7 +51,7 @@
 <section>
   <div class="wrap">
     <div class="section-head reveal">
-      <p class="eyebrow">Where the work happens</p>
+      <p class="eyebrow">Laboratories across campus</p>
       <h2>A few of our laboratories</h2>
       <p>Thirteen labs, one community. Here are a few — the full list links out to each group.</p>
     </div>
@@ -76,8 +76,6 @@
     <div class="section-head reveal" style="flex:1;min-width:280px">
       <p class="eyebrow">For members</p>
       <h2>Inside the community</h2>
-      <p>Members can explore our internal collaboration network — an interactive map of who works
-        with whom across the group.</p>
     </div>
     <div class="reveal"><a class="btn gold" href="internal.html">Go to Internal →</a></div>
   </div>
@@ -99,7 +97,7 @@ fetch("data/testbeds.json").then(r=>r.json()).then(tb=>{
   const el=document.getElementById("testbeds");
   tb.forEach((t,i)=>{
     const d=document.createElement("div"); d.className="card testbed reveal";
-    d.innerHTML=`<span class="tag">Testbed</span><h3>${t.name}</h3><p>${t.blurb||""}</p>`;
+    d.innerHTML=`<h3>${t.name}</h3><p>${t.blurb||""}</p>`;
     el.appendChild(d);
   });
   document.querySelectorAll("#testbeds .reveal").forEach(x=>x.classList.add("in"));

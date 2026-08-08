@@ -2,7 +2,7 @@
 (function(){
   // ---- soft password gate (SHA-256 of "pair@nd"; data is public, not real security) ----
   const PW_HASH = "7481995bf6b9ebdd5defda06e5d81290fe7dd29ae422ee1b8e0104c95296eb10";
-  if(sessionStorage.getItem("nd_pair_auth")!=="1"){
+  if(sessionStorage.getItem("nd_pair_site")!=="1"){
     document.documentElement.style.overflow="hidden";
     const gate=document.createElement("div"); gate.id="gate";
     gate.innerHTML=
@@ -21,7 +21,7 @@
     gate.querySelector("#gateForm").addEventListener("submit", async e=>{
       e.preventDefault();
       if(await sha256(document.getElementById("gatePw").value)===PW_HASH){
-        sessionStorage.setItem("nd_pair_auth","1"); gate.remove(); document.documentElement.style.overflow="";
+        sessionStorage.setItem("nd_pair_site","1"); gate.remove(); document.documentElement.style.overflow="";
       } else document.getElementById("gateErr").textContent="Incorrect password.";
     });
     setTimeout(()=>{ const i=document.getElementById("gatePw"); if(i) i.focus(); },30);
