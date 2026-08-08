@@ -3,5 +3,6 @@
   {"name":"Humanoid","blurb":"Whole-body control and dexterity for human-scale robots."},
   {"name":"Terrestrial–aquatic testbed","blurb":"Machines that cross the boundary between land and water."},
   {"name":"Lower limb prosthetics","blurb":"Powered prostheses and exoskeletons for walking and mobility."},
-  {"name":"Multi-robot systems","blurb":"Teams of robots that sense, decide, and coordinate together."}
+  {"name":"Robotic Nursing","blurb":"Robots that assist caregivers and support patients in clinical and home settings."},
+  {"name":"Self-driving labs","blurb":"Autonomous experimentation — robots that run and optimize their own scientific experiments."}
 ]
