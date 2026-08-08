@@ -4,16 +4,16 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Physical AI and Robotics Initiative — University of Notre Dame</title>
-<meta name="description" content="The Physical AI and Robotics Initiative at the University of Notre Dame — a collaborative community building robots for the problems that matter." />
+<meta name="description" content="The Physical AI and Robotics Initiative at the University of Notre Dame — a collaborative community building robots to increase human flourishing." />
 <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 <header id="site-nav"></header>
 
-<div class="hero">
+<div class="hero" data-photos>
   <div class="wrap">
     <p class="eyebrow reveal">Physical AI and Robotics Initiative · University of Notre Dame</p>
-    <h1 class="reveal">Robots for the problems that matter.</h1>
+    <h1 class="reveal">Robots to increase human flourishing.</h1>
     <p class="lead reveal">We are a collaborative community of faculty, students, and laboratories —
       working across shared testbeds to build physical AI and robots that move, assist, and cooperate,
       and putting them to work in the world.</p>
@@ -59,6 +59,17 @@
   </div>
 </section>
 
+<section style="padding-bottom:20px">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Scenes from our labs</p>
+      <h2>In the lab</h2>
+      <p>Robots, rigs, and results from across the initiative.</p>
+    </div>
+  </div>
+  <div class="marquee reveal" style="margin-top:26px"><div class="track" id="strip"></div></div>
+</section>
+
 <section class="mist">
   <div class="wrap" style="display:flex;gap:30px;flex-wrap:wrap;align-items:center;justify-content:space-between">
     <div class="section-head reveal" style="flex:1;min-width:280px">
@@ -74,6 +85,14 @@
 <footer id="site-footer"></footer>
 <script src="site.js"></script>
 <script>
+// moving gallery strip (duplicated for a seamless loop)
+fetch("data/gallery.json").then(r=>r.json()).then(imgs=>{
+  const strip=document.getElementById("strip");
+  if(!imgs.length){ strip.closest("section").style.display="none"; return; }
+  const cards=imgs.map(g=>`<a href="${g.url}" target="_blank" rel="noopener">`+
+    `<img src="${g.src}" alt="${g.lab}" loading="lazy"><span class="cap">${g.lab}</span></a>`).join("");
+  strip.innerHTML=cards+cards;   // twice → -50% translate loops seamlessly
+}).catch(()=>{});
 // collaborative testbeds
 fetch("data/testbeds.json").then(r=>r.json()).then(tb=>{
   const el=document.getElementById("testbeds");

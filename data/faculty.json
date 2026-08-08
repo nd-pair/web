@@ -6,7 +6,8 @@
     "affiliation": "University of Notre Dame",
     "photo": "edgar-bolivar-nieto.jpg",
     "lab": "WeRoLab",
-    "lab_url": "https://werolab.nd.edu"
+    "lab_url": "https://werolab.nd.edu",
+    "affiliated": false
   },
   {
     "slug": "hai-lin",
@@ -15,7 +16,8 @@
     "affiliation": "University of Notre Dame",
     "photo": "hai-lin.jpg",
     "lab": null,
-    "lab_url": null
+    "lab_url": null,
+    "affiliated": false
   },
   {
     "slug": "j-william-goodwine",
@@ -24,7 +26,8 @@
     "affiliation": "University of Notre Dame",
     "photo": "j-william-goodwine.jpg",
     "lab": "Nonlinear Controls Lab",
-    "lab_url": "https://controls.ame.nd.edu/mediawiki/index.php/Main_Page"
+    "lab_url": "https://controls.ame.nd.edu/mediawiki/index.php/Main_Page",
+    "affiliated": false
   },
   {
     "slug": "james-schmiedeler",
@@ -33,7 +36,8 @@
     "affiliation": "University of Notre Dame",
     "photo": "james-schmiedeler.jpg",
     "lab": "LAB Lab",
-    "lab_url": "https://scholar.google.com/citations?user=EzYQXesAAAAJ&hl=en"
+    "lab_url": "https://scholar.google.com/citations?user=EzYQXesAAAAJ&hl=en",
+    "affiliated": false
   },
   {
     "slug": "jane-cleland-huang",
@@ -42,7 +46,8 @@
     "affiliation": "University of Notre Dame",
     "photo": "jane-cleland-huang.jpeg",
     "lab": "SAREC / DroneResponse",
-    "lab_url": "http://droneresponse.net"
+    "lab_url": "http://droneresponse.net",
+    "affiliated": true
   },
   {
     "slug": "margaret-coad",
@@ -51,7 +56,8 @@
     "affiliation": null,
     "photo": "margaret-coad.jpg",
     "lab": null,
-    "lab_url": null
+    "lab_url": null,
+    "affiliated": false
   },
   {
     "slug": "mengxue-hou",
@@ -60,7 +66,8 @@
     "affiliation": "University of Notre Dame",
     "photo": "mengxue-hou.jpg",
     "lab": null,
-    "lab_url": null
+    "lab_url": null,
+    "affiliated": false
   },
   {
     "slug": "michael-lemmon",
@@ -69,7 +76,8 @@
     "affiliation": "University of Notre Dame",
     "photo": "michael-lemmon.jpg",
     "lab": "Lemmon Group",
-    "lab_url": "https://www3.nd.edu/~lemmon/"
+    "lab_url": "https://www3.nd.edu/~lemmon/",
+    "affiliated": true
   },
   {
     "slug": "nikolaus-correll",
@@ -78,7 +86,8 @@
     "affiliation": null,
     "photo": "nikolaus-correll.jpg",
     "lab": null,
-    "lab_url": null
+    "lab_url": null,
+    "affiliated": false
   },
   {
     "slug": "panos-antsaklis",
@@ -87,7 +96,8 @@
     "affiliation": "University of Notre Dame",
     "photo": "panos-antsaklis.jpg",
     "lab": "Antsaklis Group",
-    "lab_url": "https://www3.nd.edu/~pantsakl/"
+    "lab_url": "https://www3.nd.edu/~pantsakl/",
+    "affiliated": true
   },
   {
     "slug": "patrick-wensing",
@@ -96,7 +106,8 @@
     "affiliation": "University of Notre Dame",
     "photo": "patrick-wensing.jpg",
     "lab": "ROAM Lab",
-    "lab_url": "https://roamlab.nd.edu/"
+    "lab_url": "https://roamlab.nd.edu/",
+    "affiliated": false
   },
   {
     "slug": "robert-landers",
@@ -105,7 +116,8 @@
     "affiliation": "University of Notre Dame",
     "photo": "robert-landers.jpg",
     "lab": "Landers Group",
-    "lab_url": "https://landersgroup.nd.edu"
+    "lab_url": "https://landersgroup.nd.edu",
+    "affiliated": true
   },
   {
     "slug": "tingyu-cheng",
@@ -114,7 +126,8 @@
     "affiliation": "University of Notre Dame",
     "photo": "tingyu-cheng.jpg",
     "lab": null,
-    "lab_url": null
+    "lab_url": null,
+    "affiliated": false
   },
   {
     "slug": "toros-arikan",
@@ -123,7 +136,8 @@
     "affiliation": "Rice University",
     "photo": "toros-arikan.jpg",
     "lab": null,
-    "lab_url": null
+    "lab_url": null,
+    "affiliated": true
   },
   {
     "slug": "yasemin-ozkan-aydin",
@@ -132,7 +146,8 @@
     "affiliation": "University of Notre Dame",
     "photo": "yasemin-ozkan-aydin.jpeg",
     "lab": "MiNiRo-Lab",
-    "lab_url": "https://minirolab.nd.edu"
+    "lab_url": "https://minirolab.nd.edu",
+    "affiliated": false
   },
   {
     "slug": "zhi-zheng",
@@ -141,6 +156,7 @@
     "affiliation": "Wuhan University",
     "photo": "zhi-zheng.jpg",
     "lab": null,
-    "lab_url": null
+    "lab_url": null,
+    "affiliated": false
   }
 ]

@@ -30,7 +30,7 @@
       `<div class="wrap">
         <div style="max-width:34ch">
           <div class="brand">Physical <span style="color:#e5b93d">AI</span> and Robotics Initiative</div>
-          <small>Bringing robotics to the problems that matter, at the University of Notre Dame.</small>
+          <small>Building robots to increase human flourishing, at the University of Notre Dame.</small>
         </div>
         <div>
           <div style="color:#fff;font-weight:600;margin-bottom:8px">Explore</div>
@@ -87,4 +87,28 @@
     });
   }
   heroFX();
+
+  // photographic hero: cross-fade lab images with a slow ken-burns zoom
+  function heroPhotos(){
+    const hero=document.querySelector(".hero[data-photos]");
+    if(!hero) return;
+    fetch("data/gallery.json").then(r=>r.json()).then(imgs=>{
+      if(!imgs.length) return;
+      hero.classList.add("photo");
+      const ov=document.createElement("div"); ov.className="overlay"; hero.prepend(ov);
+      const a=document.createElement("div"), b=document.createElement("div");
+      a.className="kb"; b.className="kb"; hero.prepend(b); hero.prepend(a);
+      let i=0, cur=a, nxt=b;
+      const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
+      cur.style.backgroundImage=`url(${imgs[0].src})`; cur.classList.add("on");
+      if(reduce||imgs.length<2) return;
+      setInterval(()=>{
+        i=(i+1)%imgs.length;
+        nxt.style.backgroundImage=`url(${imgs[i].src})`;
+        nxt.classList.add("on"); cur.classList.remove("on");
+        [cur,nxt]=[nxt,cur];
+      }, 6000);
+    }).catch(()=>{});
+  }
+  heroPhotos();
 })();

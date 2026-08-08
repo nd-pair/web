@@ -34,8 +34,24 @@ a:hover{text-decoration:underline}
 .hero::before,.hero::after{content:"";position:absolute;border-radius:50%;filter:blur(60px);opacity:.5;z-index:0}
 .hero::before{width:520px;height:520px;background:radial-gradient(circle,#c99700aa,transparent 70%);top:-160px;right:-120px;animation:float1 16s ease-in-out infinite}
 .hero::after{width:460px;height:460px;background:radial-gradient(circle,#1e63c9aa,transparent 70%);bottom:-180px;left:-120px;animation:float2 20s ease-in-out infinite}
-.hero canvas.fx{position:absolute;inset:0;z-index:0;opacity:.75;pointer-events:none}
-.hero .wrap{position:relative;z-index:1;padding:96px 24px 104px}
+.hero canvas.fx{position:absolute;inset:0;z-index:2;opacity:.7;pointer-events:none}
+.hero .wrap{position:relative;z-index:5;padding:96px 24px 104px}
+/* photographic hero (lab images), ken-burns cross-fade + navy overlay */
+.hero.photo::before,.hero.photo::after{display:none}
+.hero .kb{position:absolute;inset:0;z-index:0;background-size:cover;background-position:center;opacity:0;transition:opacity 1.6s ease;will-change:opacity,transform}
+.hero .kb.on{opacity:1;animation:kenburns 22s ease-in-out infinite alternate}
+.hero .overlay{position:absolute;inset:0;z-index:1;background:linear-gradient(160deg,rgba(10,27,49,.9),rgba(12,35,64,.72) 46%,rgba(18,47,87,.8))}
+@keyframes kenburns{from{transform:scale(1.05)}to{transform:scale(1.16)}}
+
+/* moving gallery marquee */
+.marquee{overflow:hidden;position:relative;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.marquee .track{display:flex;gap:18px;width:max-content;animation:scrollx 46s linear infinite}
+.marquee:hover .track{animation-play-state:paused}
+.marquee a{flex:none;position:relative;display:block;width:360px;height:202px;border-radius:14px;overflow:hidden;border:1px solid var(--line)}
+.marquee img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease}
+.marquee a:hover img{transform:scale(1.07)}
+.marquee .cap{position:absolute;left:0;right:0;bottom:0;padding:22px 14px 10px;color:#fff;font-weight:600;font-size:13.5px;background:linear-gradient(transparent,rgba(6,16,30,.82))}
+@keyframes scrollx{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 .hero h1{color:#fff;font-size:clamp(34px,5.4vw,60px);letter-spacing:.3px;max-width:16ch}
 .hero p.lead{font-size:clamp(16px,2vw,20px);color:#cdd8e8;max-width:60ch;margin-top:14px}
 .hero .cta{margin-top:30px;display:flex;gap:14px;flex-wrap:wrap}
