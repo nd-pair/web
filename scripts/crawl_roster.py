@@ -141,20 +141,23 @@ def parse_people(html):
                             "photo_url": img.get("src") or "", "affiliated": affiliated})
             break
 
+    # Current students live between "Current Students" and "Alumni" as list items
+    # formatted "Name, DEPT (Advisor), joined SEASON YEAR". Alumni are handled in
+    # data/alumni.json (hand-maintained); they rarely change.
     students = []
-    if cur_line and alum_line:
-        frag = "".join(str(x) for x in soup.find_all(True))  # fallback not used
-    # slice raw html between the two markers for robustness
     i = html.find("Current Students"); j = html.find("Alumni", i)
     if i != -1 and j != -1:
         fs = BeautifulSoup(html[i:j], "html.parser")
-        skip = {"Current Students", "Ph.D. Students", "Ph.D. students", "M.S. students"}
-        for el in fs.find_all(["a", "li", "p", "h3", "h4", "strong", "span", "div"]):
-            t = re.sub(r"\s+", " ", el.get_text()).strip()
-            if 2 <= len(t) <= 40 and t not in skip and \
-               re.match(r"^[A-Z][A-Za-z.'’-]+(?:\s+[A-Z][A-Za-z.'’-]+){1,3}$", t):
-                if t not in students:
-                    students.append(t)
+        for li in fs.find_all("li"):
+            full = re.sub(r"\s+", " ", li.get_text()).strip()
+            m = re.match(r"^(.*?),\s*([A-Za-z]{2,4})\s*\(([^)]+)\)\s*,\s*joined\s+(.+)$", full)
+            if not m:
+                continue
+            a = li.find("a", href=True)
+            students.append({"name": m.group(1).strip(),
+                             "url": a["href"] if a else None,
+                             "dept": m.group(2), "advisor": m.group(3),
+                             "joined": m.group(4).strip()})
     return faculty, students
 
 

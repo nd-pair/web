@@ -1,25 +1,198 @@
 [
-  "Nicholas Adrian",
-  "Mohsen Alizadeh Noghani",
-  "Elif Pinar Aydin",
-  "Will Bartel",
-  "Nnamdi Chikere",
-  "Yuan Cao",
-  "Jiajun Cui",
-  "Myia Dickens",
-  "Sean Even",
-  "Allison Fick",
-  "Suhrud Joglekar",
-  "Adedayo Jigida",
-  "Minho Lee",
-  "Hao Luo",
-  "Ciera McFarland",
-  "Azhang Nazaripouya",
-  "Sam O'Connor",
-  "Shashank Ramesh",
-  "Asraf Siddiquee",
-  "Zihao Song",
-  "Daniel Volpi",
-  "Xiaoran Zha",
-  "Yu Zhou"
+  {
+    "name": "Nicholas Adrian",
+    "url": "https://www.linkedin.com/in/nicholas-adrian-581bb7293/",
+    "dept": "AME",
+    "advisor": "Wensing",
+    "joined": "fall 2022"
+  },
+  {
+    "name": "Mohsen Alizadeh Noghani",
+    "url": "https://www.linkedin.com/in/mohsen-alizadeh-noghani-777ab9240/",
+    "dept": "AME",
+    "advisor": "Bol\u00edvar-Nieto",
+    "joined": "summer 2022"
+  },
+  {
+    "name": "Elif Pinar Aydin",
+    "url": "https://www.linkedin.com/in/elif-p%C4%B1nar-a-a6b250140/",
+    "dept": "EE",
+    "advisor": "Ozkan-Aydin",
+    "joined": "fall 2024"
+  },
+  {
+    "name": "Will Bartel",
+    "url": "https://www.linkedin.com/in/william-bartel/",
+    "dept": "AME",
+    "advisor": "Wensing",
+    "joined": "fall 2024"
+  },
+  {
+    "name": "Nnamdi Chikere",
+    "url": "https://www.linkedin.com/in/nnamdi-chikere/",
+    "dept": "EE",
+    "advisor": "Ozkan-Aydin",
+    "joined": "summer 2022"
+  },
+  {
+    "name": "Yuan Cao",
+    "url": "https://yuancao1.github.io/Yuan_cao1",
+    "dept": "EE",
+    "advisor": "Zheng",
+    "joined": "fall 2024"
+  },
+  {
+    "name": "Jiajun Cui",
+    "url": "https://www.linkedin.com/in/jiajun-cui-9774241bb/",
+    "dept": "AME",
+    "advisor": "Goodwine",
+    "joined": "fall 2023"
+  },
+  {
+    "name": "Myia Dickens",
+    "url": "https://www.linkedin.com/in/myiadickens/",
+    "dept": "AME",
+    "advisor": "Schmiedeler",
+    "joined": "fall 2021"
+  },
+  {
+    "name": "Sean Even",
+    "url": "https://www.linkedin.com/in/sean-even-111204157/",
+    "dept": "EE",
+    "advisor": "Ozkan-Aydin",
+    "joined": "fall 2022"
+  },
+  {
+    "name": "Allison Fick",
+    "url": "https://www.linkedin.com/in/allison-fick-0b1401197/",
+    "dept": "AME",
+    "advisor": "McGuinness",
+    "joined": "fall 2023"
+  },
+  {
+    "name": "Axel Gonz\u00e1lez Cornejo",
+    "url": "https://www.linkedin.com/in/axelgonzalez1/",
+    "dept": "AME",
+    "advisor": "Bol\u00edvar-Nieto",
+    "joined": "fall 2024"
+  },
+  {
+    "name": "Suhrud Joglekar",
+    "url": "https://www.linkedin.com/in/suhrudjoglekar/",
+    "dept": "AME",
+    "advisor": "Bol\u00edvar-Nieto",
+    "joined": "fall 2025"
+  },
+  {
+    "name": "Adedayo Jigida",
+    "url": "https://www.linkedin.com/in/adedayo-jigida-7a0329112/",
+    "dept": "AME",
+    "advisor": "Schmiedeler",
+    "joined": "fall 2022"
+  },
+  {
+    "name": "Minho Lee",
+    "url": "https://www.linkedin.com/in/minho-lee-8356a7207/",
+    "dept": "AME",
+    "advisor": "Bol\u00edvar-Nieto",
+    "joined": "fall 2024"
+  },
+  {
+    "name": "Jiaqing (Allen) Liu",
+    "url": "https://www.linkedin.com/in/jiaqing-allen-liu/",
+    "dept": "CSE",
+    "advisor": "Cheng",
+    "joined": "fall 2025"
+  },
+  {
+    "name": "Hao Luo",
+    "url": null,
+    "dept": "AME",
+    "advisor": "Plecnik",
+    "joined": "summer 2023"
+  },
+  {
+    "name": "Ciera McFarland",
+    "url": "https://www.linkedin.com/in/cieramcfarland/",
+    "dept": "AME",
+    "advisor": "McGuinness",
+    "joined": "fall 2021"
+  },
+  {
+    "name": "Zhongqi Miao",
+    "url": null,
+    "dept": "AME",
+    "advisor": "McGuinness",
+    "joined": "fall 2025"
+  },
+  {
+    "name": "Azhang Nazaripouya",
+    "url": "https://www.linkedin.com/in/azhang-nazaripouya-43082b349/",
+    "dept": "EE",
+    "advisor": "Ozkan-Aydin",
+    "joined": "fall 2025"
+  },
+  {
+    "name": "Sam O'Connor",
+    "url": "https://www.linkedin.com/in/samoconnor2000/",
+    "dept": "AME",
+    "advisor": "Plecnik",
+    "joined": "fall 2022"
+  },
+  {
+    "name": "Shashank Ramesh",
+    "url": "https://www.linkedin.com/in/shashank-ramesh-515707145/",
+    "dept": "AME",
+    "advisor": "Plecnik",
+    "joined": "fall 2022"
+  },
+  {
+    "name": "Katalin Sch\u00e4ffer",
+    "url": "https://www.linkedin.com/in/katalin-sch%C3%A4ffer-059a1523b/",
+    "dept": "AME",
+    "advisor": "McGuinness",
+    "joined": "fall 2021"
+  },
+  {
+    "name": "Asraf Siddiquee",
+    "url": "https://www.linkedin.com/in/abu-nayem-md-asraf-siddiquee-27143b165/",
+    "dept": "EE",
+    "advisor": "Ozkan-Aydin",
+    "joined": "fall 2022"
+  },
+  {
+    "name": "Zihao Song",
+    "url": "https://www.linkedin.com/in/zihao-song-047792300/",
+    "dept": "EE",
+    "advisor": "Lin",
+    "joined": "fall 2020"
+  },
+  {
+    "name": "Daniel Volpi",
+    "url": "https://www.linkedin.com/in/daniel-volpi-8723051b3/",
+    "dept": "AME",
+    "advisor": "Wensing",
+    "joined": "fall 2024"
+  },
+  {
+    "name": "Chongjun Yang",
+    "url": null,
+    "dept": "EE",
+    "advisor": "Zheng",
+    "joined": "fall 2024"
+  },
+  {
+    "name": "Xiaoran Zha",
+    "url": "https://www.linkedin.com/in/xiaoranzha/",
+    "dept": "EE",
+    "advisor": "Hou",
+    "joined": "fall 2023"
+  },
+  {
+    "name": "Yu Zhou",
+    "url": "https://www.linkedin.com/in/yu-zhou-5a54b121a/",
+    "dept": "EE",
+    "advisor": "Hou",
+    "joined": "fall 2023"
+  }
 ]

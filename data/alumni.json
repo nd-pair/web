@@ -1,0 +1,546 @@
+{
+  "phd": [
+    {
+      "name": "David Kelly",
+      "url": "https://www.linkedin.com/in/dkelly2018/",
+      "year": 2025,
+      "degree": "Ph.D.",
+      "dept": "AME",
+      "advisor": "Wensing",
+      "position": "Technical Solutions Engineer, Epic"
+    },
+    {
+      "name": "John Nganga",
+      "url": "https://www.linkedin.com/in/ngangajohn/",
+      "year": 2025,
+      "degree": "Ph.D.",
+      "dept": "AME",
+      "advisor": "Wensing",
+      "position": null
+    },
+    {
+      "name": "Shenggao Li",
+      "url": "https://www.linkedin.com/in/shenggao-li-bb5786308/",
+      "year": 2025,
+      "degree": "Ph.D.",
+      "dept": "AME",
+      "advisor": "Wensing",
+      "position": null
+    },
+    {
+      "name": "Ryan Posh",
+      "url": "https://www.linkedin.com/in/ryan-posh/",
+      "year": 2024,
+      "degree": "Ph.D.",
+      "dept": "AME",
+      "advisor": "Wensing & Schmiedeler",
+      "position": "Postdoctoral Research Fellow, University of Michigan"
+    },
+    {
+      "name": "He Li",
+      "url": "https://www.linkedin.com/in/he-li-8915a6206/",
+      "year": 2024,
+      "degree": "Ph.D.",
+      "dept": "AME",
+      "advisor": "Wensing",
+      "position": "Roboticist/Research Scientist, The AI Institute"
+    },
+    {
+      "name": "Tongjia Zheng",
+      "url": "https://www.linkedin.com/in/tongjia-zheng/",
+      "year": 2024,
+      "degree": "Ph.D.",
+      "dept": "EE",
+      "advisor": "Lin",
+      "position": "Postdoctoral Fellow, University of Toronto"
+    },
+    {
+      "name": "Wei Zheng",
+      "url": "https://www.linkedin.com/in/wzheng2/",
+      "year": 2023,
+      "degree": "Ph.D.",
+      "dept": "EE",
+      "advisor": "Lin",
+      "position": "Tools Engineer, Autonomous Driving, Isuzu Technical Center of America"
+    },
+    {
+      "name": "Vincent Kurtz",
+      "url": "https://www.linkedin.com/in/vince-kurtz-098069123/",
+      "year": 2023,
+      "degree": "Ph.D.",
+      "dept": "EE",
+      "advisor": "Lin",
+      "position": "Visiting Assistant Professor, DePaul University"
+    },
+    {
+      "name": "Gabriel Bravo Palacios",
+      "url": "https://www.linkedin.com/in/gabriel-bravo-palacios/",
+      "year": 2023,
+      "degree": "Ph.D.",
+      "dept": "AME",
+      "advisor": "Wensing",
+      "position": "Associate Researcher, Computer Science, Dartmouth College"
+    },
+    {
+      "name": "Roopak Karulkar",
+      "url": "https://www.linkedin.com/in/roopakkarulkar/",
+      "year": 2022,
+      "degree": "Ph.D.",
+      "dept": "AME",
+      "advisor": "Wensing",
+      "position": "Software Engineer II - Robotics, Agility Robotics"
+    },
+    {
+      "name": "Taylor Higgins",
+      "url": "https://eng.famu.fsu.edu/me/people/higgins",
+      "year": 2022,
+      "degree": "Ph.D.",
+      "dept": "AME",
+      "advisor": "Wensing & Schmiedeler",
+      "position": "Assistant Professor, Mechanical Engineering, Florida A&M University-Florida State University"
+    },
+    {
+      "name": "Tan Chen",
+      "url": "https://www.mtu.edu/ece/department/faculty/chen-t/",
+      "year": 2021,
+      "degree": "Ph.D.",
+      "dept": "AME",
+      "advisor": "Goodwine",
+      "position": "Assistant Professor, Electrical & Computer Engineering, Michigan Technological University"
+    },
+    {
+      "name": "Xiangyu Ni",
+      "url": "https://www.linkedin.com/in/xiangyu-ni/",
+      "year": 2021,
+      "degree": "Ph.D.",
+      "dept": "AME",
+      "advisor": "Goodwine",
+      "position": "Shanghai Micro Electronics Equipment"
+    },
+    {
+      "name": "Alireza Partovi",
+      "url": "https://www.linkedin.com/in/alirezapartovi/",
+      "year": 2021,
+      "degree": "Ph.D.",
+      "dept": "EE",
+      "advisor": "Lin",
+      "position": "Senior Thermal Control Software Engineer, Ford Motor Company"
+    },
+    {
+      "name": "Rafael Rodrigues da Silva",
+      "url": "https://www.linkedin.com/in/profrafaelrs/",
+      "year": 2021,
+      "degree": "Ph.D.",
+      "dept": "EE",
+      "advisor": "Lin",
+      "position": "Senior Machine Learning Engineer - Motion Planning, Motional"
+    },
+    {
+      "name": "Martin Fevre",
+      "url": "https://www.linkedin.com/in/martinfevre/",
+      "year": 2020,
+      "degree": "Ph.D.",
+      "dept": "AME",
+      "advisor": "Schmiedeler",
+      "position": "Senior Manager, Software Engineering, Humanoid Skills, Agility Robotics"
+    },
+    {
+      "name": "Zhiyu Liu",
+      "url": "https://www.linkedin.com/in/zhiyuliu92/",
+      "year": 2020,
+      "degree": "Ph.D.",
+      "dept": "EE",
+      "advisor": "Lin",
+      "position": "Software Engineering Manager, Machine Learning, Meta"
+    },
+    {
+      "name": "Jin Dai",
+      "url": "https://www.linkedin.com/in/jin-dai-phd-11b36576/",
+      "year": 2019,
+      "degree": "Ph.D.",
+      "dept": "EE",
+      "advisor": "Lin",
+      "position": "Staff System R & D Engineer, Momenta"
+    },
+    {
+      "name": "Kevin O'Brien",
+      "url": "https://www.linkedin.com/in/kevin-obrien1118/",
+      "year": 2019,
+      "degree": "Ph.D.",
+      "dept": "Bioengineering",
+      "advisor": "Schmiedeler",
+      "position": "Managing Engineer, Exponent"
+    },
+    {
+      "name": "Bo Wu",
+      "url": "https://www.linkedin.com/in/bo-wu-0474bb72/",
+      "year": 2018,
+      "degree": "Ph.D.",
+      "dept": "EE",
+      "advisor": "Lin",
+      "position": "Machine Learning Software Engineer, Apple Inc."
+    },
+    {
+      "name": "Kevin Leyden",
+      "url": "https://www.linkedin.com/in/kleyden/",
+      "year": 2018,
+      "degree": "Ph.D.",
+      "dept": "AME",
+      "advisor": "Goodwine",
+      "position": "Lockheed Martin"
+    },
+    {
+      "name": "Xiaobin Zhang",
+      "url": "https://www.linkedin.com/in/xiaobinz/",
+      "year": 2017,
+      "degree": "Ph.D.",
+      "dept": "EE",
+      "advisor": "Lin",
+      "position": "Senior Staff Software Engineer, Zoox"
+    },
+    {
+      "name": "Larry Funke",
+      "url": "https://www.onu.edu/directory/lawrence-funke",
+      "year": 2017,
+      "degree": "Ph.D.",
+      "dept": "AME",
+      "advisor": "Schmiedeler",
+      "position": "Associate Professor, Mechanical Engineering, Ohio Northern University"
+    },
+    {
+      "name": "Travis Brown",
+      "url": "https://www-robotics.jpl.nasa.gov/who-we-are/people/travis_brown/",
+      "year": 2015,
+      "degree": "Ph.D.",
+      "dept": "AME",
+      "advisor": "Schmiedeler",
+      "position": "Staff Robotics Hardware Engineer, Agility Robotics"
+    },
+    {
+      "name": "Jos\u00e9 Lugo",
+      "url": "https://www.uprm.edu/inme/people/faculty/joselugo/",
+      "year": 2014,
+      "degree": "Ph.D.",
+      "dept": "AME",
+      "advisor": "Batill & Schmiedeler",
+      "position": "Professor, Mechanical Engineering, University of Puerto Rico Mayag\u00fcez"
+    },
+    {
+      "name": "Michael Kennedy",
+      "url": "https://www.linkedin.com/in/michaelwkennedy/",
+      "year": 2014,
+      "degree": "Ph.D.",
+      "dept": "AME",
+      "advisor": "Schmiedeler",
+      "position": "Deputy Director of Monitoring and Analytics Governance, Integration, and Consolidation, Healthcare Operations Center, U.S. Department of Veterans Affairs"
+    },
+    {
+      "name": "Anne Martin",
+      "url": "https://www.me.psu.edu/department/directory-detail-g.aspx?q=aem34",
+      "year": 2014,
+      "degree": "Ph.D.",
+      "dept": "AME",
+      "advisor": "Schmiedeler",
+      "position": "Associate Professor, Mechanical and Nuclear Engineering, Penn State University"
+    },
+    {
+      "name": "Kai Zhao",
+      "url": "https://www.linkedin.com/in/kai-z-09268337/",
+      "year": 2014,
+      "degree": "Ph.D.",
+      "dept": "AME",
+      "advisor": "Schmiedeler",
+      "position": "Senior Director of Engineering, Magna International"
+    },
+    {
+      "name": "David Post",
+      "url": "https://www.linkedin.com/in/postdavid/",
+      "year": 2013,
+      "degree": "Ph.D.",
+      "dept": "AME",
+      "advisor": "Schmiedeler",
+      "position": "Senior Engineer, L3 Interstate Electronics Corporation"
+    },
+    {
+      "name": "Jason Nightingale",
+      "url": "https://www.nhl.com/sabres/team/staff",
+      "year": 2012,
+      "degree": "Ph.D.",
+      "dept": "AME",
+      "advisor": "Goodwine & Hind",
+      "position": "Assistant Director of Amateur Scouting, Buffalo Sabres"
+    },
+    {
+      "name": "Punit Bandi",
+      "url": "https://www.linkedin.com/in/punit-bandi-52a6651a/",
+      "year": 2012,
+      "degree": "Ph.D.",
+      "dept": "AME",
+      "advisor": "Tovar & Schmiedeler",
+      "position": "Senior Mechanical Technical Leader, BorgWarner"
+    },
+    {
+      "name": "Satyajit Ambike",
+      "url": "https://www.purdue.edu/hhs/hk/Biomechanics-MotorBehavior/about/dr-satyajit-ambike/",
+      "year": 2012,
+      "degree": "Ph.D.",
+      "dept": "ME from Ohio State",
+      "advisor": "Schmiedeler",
+      "position": "Associate Professor, Health and Kinesiology, Purdue University"
+    },
+    {
+      "name": "Dayu Lv",
+      "url": "https://www.linkedin.com/in/dayu-lv-0005a41b/",
+      "year": 2011,
+      "degree": "Ph.D.",
+      "dept": "ME",
+      "advisor": "Goodwine",
+      "position": "Research Scientist, Center for Diabetes Technology, University of Virginia"
+    },
+    {
+      "name": "Baoyang Deng",
+      "url": "https://www.linkedin.com/in/baoyang-deng-32b61317/",
+      "year": 2011,
+      "degree": "Ph.D.",
+      "dept": "ME",
+      "advisor": "Goodwine",
+      "position": "Engineer Specialist, Caterpillar"
+    },
+    {
+      "name": "Alice Nightingale",
+      "url": "https://engineering.buffalo.edu/home/research/faculty/women.host.html/content/shared/engineering/engineering-education/profiles/nightingale-alice.html",
+      "year": 2010,
+      "degree": "Ph.D.",
+      "dept": "AME",
+      "advisor": "Jumper & Goodwine",
+      "position": "Associate Professor of Teaching, Engineering Education, University at Buffalo"
+    },
+    {
+      "name": "Vivek Yadav",
+      "url": "https://www.linkedin.com/in/vivek-yadav-574aab4/",
+      "year": 2010,
+      "degree": "Ph.D.",
+      "dept": "ME from Ohio State",
+      "advisor": "Schmiedeler",
+      "position": "Principal Applied Scientist, Amazon"
+    },
+    {
+      "name": "Leonard Rusli",
+      "url": "https://sgu.ac.id/member/leonard-rusli/",
+      "year": 2008,
+      "degree": "Ph.D.",
+      "dept": "ME from Ohio State",
+      "advisor": "Luscher & Schmiedeler",
+      "position": "Vice Rector for Academic Affairs, Swiss German University"
+    },
+    {
+      "name": "Hong Zou",
+      "url": "https://www.linkedin.com/in/hong-zou-19a95487/",
+      "year": 2007,
+      "degree": "Ph.D.",
+      "dept": "ME from Ohio State",
+      "advisor": "Schmiedeler",
+      "position": "Head of Application Engineering, Runway Safe"
+    },
+    {
+      "name": "Neil Petroff",
+      "url": "https://www.highpoint.edu/faculty-staff/engineering/neil-petroff/",
+      "year": 2006,
+      "degree": "Ph.D.",
+      "dept": "AME",
+      "advisor": "Goodwine",
+      "position": "Associate Professor, Mechanical Engineering, High Point University"
+    },
+    {
+      "name": "M. Brett McMickell",
+      "url": "https://www.linkedin.com/in/mcmickell/",
+      "year": 2003,
+      "degree": "Ph.D.",
+      "dept": "AME",
+      "advisor": "Goodwine",
+      "position": "Chief Technology Officer, Kubota North America"
+    },
+    {
+      "name": "Yejun Wei",
+      "url": null,
+      "year": 2002,
+      "degree": "Ph.D.",
+      "dept": "AME",
+      "advisor": "Goodwine",
+      "position": null
+    }
+  ],
+  "ms": [
+    {
+      "name": "Alexis Laudenslager",
+      "url": "https://www.linkedin.com/in/alexis-laudenslager-b9a099196/",
+      "year": 2025,
+      "degree": "M.S.",
+      "dept": "AME",
+      "advisor": "McGuinness",
+      "position": "Systems Engineer II, BAE Systems"
+    },
+    {
+      "name": "Sanchit Sinha",
+      "url": "https://www.linkedin.com/in/sanchit-sinha-11ba911bb/",
+      "year": 2024,
+      "degree": "M.S.",
+      "dept": "AME",
+      "advisor": "Schmiedeler",
+      "position": "Ph.D. student, Mechanical Engineering, IIT-Bombay"
+    },
+    {
+      "name": "Marty Kilbane",
+      "url": "https://www.linkedin.com/in/martinpkilbane/",
+      "year": 2023,
+      "degree": "M.S.",
+      "dept": "AME",
+      "advisor": "Schmiedeler & Bol\u00edvar-Nieto",
+      "position": "Ph.D. student, University of Michigan"
+    },
+    {
+      "name": "Omar Rasheed",
+      "url": "https://www.linkedin.com/in/omar-a-rasheed/",
+      "year": 2022,
+      "degree": "M.S.",
+      "dept": "AME",
+      "advisor": "Schmiedeler & Zahr",
+      "position": "Product Development Engineer, Runway Safe"
+    },
+    {
+      "name": "Jorge Lopez",
+      "url": "https://www.linkedin.com/in/jorgelopez22/",
+      "year": 2021,
+      "degree": "M.S.",
+      "dept": "AME",
+      "advisor": "Schmiedeler",
+      "position": "Senior Structural Engineer, Pratt & Whitney"
+    },
+    {
+      "name": "Rojitha Goonesekere",
+      "url": "https://www.linkedin.com/in/rojithag/",
+      "year": 2020,
+      "degree": "M.S.",
+      "dept": "AME",
+      "advisor": "Wensing",
+      "position": "Software Engineer, Evry Health"
+    },
+    {
+      "name": "Yinhao Zhu",
+      "url": "https://www.linkedin.com/in/yinhao-zhu-64760149/",
+      "year": 2020,
+      "degree": "M.S.",
+      "dept": "EE",
+      "advisor": "Lin",
+      "position": "Staff Engineer, Qualcomm"
+    },
+    {
+      "name": "Gabriel Iturralde Duenas",
+      "url": "https://www.linkedin.com/in/gabriel-iturralde-d/",
+      "year": 2020,
+      "degree": "M.S.",
+      "dept": "AME",
+      "advisor": "Schmiedeler",
+      "position": "Head of Technology, Gritsee"
+    },
+    {
+      "name": "Al Olszewski",
+      "url": "https://www.linkedin.com/in/albert-m-olszewski-97a50761/",
+      "year": 2019,
+      "degree": "M.S.",
+      "dept": "AME",
+      "advisor": "Schmiedeler",
+      "position": "Senior Program Manager, Akkio"
+    },
+    {
+      "name": "Grigoriy Dubrovskiy",
+      "url": "https://www.linkedin.com/in/gdubrovskiy/",
+      "year": 2018,
+      "degree": "M.S.",
+      "dept": "EE",
+      "advisor": "Lin",
+      "position": "Senior Software Engineer, Serve Robotics"
+    },
+    {
+      "name": "Simon Hinnekens",
+      "url": "https://www.linkedin.com/in/simon-hinnekens-2554791a2/",
+      "year": 2018,
+      "degree": "M.S.",
+      "dept": "AME",
+      "advisor": "Schmiedeler",
+      "position": "Postdoctoral Scholar, UCLouvain"
+    },
+    {
+      "name": "Chris Maurice",
+      "url": "https://www.linkedin.com/in/christophermaurice/",
+      "year": 2017,
+      "degree": "M.S.",
+      "dept": "AME",
+      "advisor": "Schmiedeler",
+      "position": "Building Enclosure Regional Manager, Smith Seckman Reid"
+    },
+    {
+      "name": "Trevor Logan",
+      "url": "https://www.linkedin.com/in/trevor-logan-06b0061b8/",
+      "year": 2017,
+      "degree": "M.S.",
+      "dept": "EE",
+      "advisor": "Lin",
+      "position": "Senior Specialist, MBSE Deployment, L3Harris Technologies"
+    },
+    {
+      "name": "Samuel Silva",
+      "url": "https://www.linkedin.com/in/samuelhsilva/",
+      "year": 2016,
+      "degree": "M.S.",
+      "dept": "EE",
+      "advisor": "Lin",
+      "position": "Lead Computer Vision Engineer, Blackmagic Design"
+    },
+    {
+      "name": "Ashley Nettleman",
+      "url": "https://www.linkedin.com/in/ashleynettleman/",
+      "year": 2015,
+      "degree": "M.S.",
+      "dept": "AME",
+      "advisor": "Goodwine",
+      "position": null
+    },
+    {
+      "name": "Nicholas Galati",
+      "url": null,
+      "year": 2013,
+      "degree": "M.S.",
+      "dept": "AME",
+      "advisor": "Goodwine",
+      "position": null
+    },
+    {
+      "name": "Andrew Balhoff",
+      "url": null,
+      "year": 2012,
+      "degree": "M.S.",
+      "dept": "AME",
+      "advisor": "Schmiedeler",
+      "position": "Project Engineer, Saker Group"
+    },
+    {
+      "name": "Michael O'Connor",
+      "url": "https://www.linkedin.com/in/moconnor-cw/",
+      "year": 2012,
+      "degree": "M.S.",
+      "dept": "AME",
+      "advisor": "Goodwine",
+      "position": "Product Manager/Engineer, Curtiss-Wright Nuclear"
+    },
+    {
+      "name": "Marc Ma",
+      "url": "https://www.linkedin.com/in/marc-ma-33676166/",
+      "year": 2000,
+      "degree": "M.S.",
+      "dept": "AME",
+      "advisor": "Goodwine",
+      "position": "Solutions Architect, ICE"
+    }
+  ]
+}

@@ -85,7 +85,7 @@ Promise.all([
 ]).then(([d,faculty,students])=>{
   DATA=d;
   faculty.forEach(f=>{ (f.openalex_ids||(f.openalex_id?[f.openalex_id]:[])).forEach(id=>memberIds.add(id)); memberNames.add(norm(f.name)); });
-  students.forEach(n=>{ memberNames.add(norm(n)); memberKeys.add(keyOf(n)); });
+  students.forEach(s=>{ const n=s&&s.name?s.name:s; memberNames.add(norm(n)); memberKeys.add(keyOf(n)); });
   document.getElementById("subhead").innerHTML =
     `<b>${d.total.toLocaleString()}</b> publications since ${d.minYear}, from our members — pulled from `+
     `<a href="https://openalex.org" target="_blank" rel="noopener">OpenAlex</a>, grouped by year. `+

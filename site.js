@@ -56,6 +56,7 @@
   function heroWalker(){
     const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
     document.querySelectorAll(".hero").forEach(hero=>{
+      if(hero.hasAttribute("data-photo")) return;   // skip the front-page photo hero
       const cv=document.createElement("canvas"); cv.className="fx"; hero.prepend(cv);
       const ctx=cv.getContext("2d"); let W,H,dpr,last=0;
       let posX=0.5, dir=1, pause=0;
@@ -88,8 +89,9 @@
           joint(hip,8,c); joint(k,7,c); joint(an,5,c);           // hip, knee, ankle actuators
         }
         function arm(p,c,jr){
-          const sa=0.42*Math.sin(p), eb=0.35+0.3*Math.max(0,Math.sin(p+0.5));
-          const e=seg(sh[0],sh[1],sa,UARM), h=seg(e[0],e[1],sa-eb,FARM);
+          const sa=0.42*Math.sin(p), eb=0.4+0.3*Math.max(0,Math.sin(p+0.5));
+          // forearm folds FORWARD (in the walking direction); reverses with facing
+          const e=seg(sh[0],sh[1],sa,UARM), h=seg(e[0],e[1],sa+eb,FARM);
           cap(sh,e,10,c); cap(e,h,8,c);
           joint(sh,7,c); joint(e,5,c); joint(h,4,c);             // shoulder, elbow, gripper
         }
