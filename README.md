@@ -1,15 +1,17 @@
-# Robotics @ Notre Dame — website
+# Physical AI and Robotics Initiative — website
 
-A forward-looking, lightly animated site for the Robotics @ Notre Dame community,
-in the University's navy-and-gold identity. Static HTML/CSS/JS — no build step.
+A forward-looking, lightly animated site for the Physical AI and Robotics
+Initiative at the University of Notre Dame, in the University's navy-and-gold
+identity. Static HTML/CSS/JS — no build step.
 
 **Live site:** https://nd-pair.github.io/web/
 
 ## Pages
 
 - **Home** (`index.html`) — hero, focus areas, quick stats, featured labs.
-- **Laboratories** (`laboratories.html`) — all 14 labs, grouped by focus area,
-  each linking out to its own site. Data: `data/labs.json`.
+- **Laboratories** (`laboratories.html`) — all 13 labs plus the Collaborative
+  Testbeds, each linking out to its own site. Data: `data/labs.json`,
+  `data/testbeds.json`.
 - **People** (`people.html`) — faculty headshots, affiliation, lab + publications
   links. Data: `data/faculty.json` and `assets/faculty/`.
 - **Publications** (`publications.html`) — pulled from

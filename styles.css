@@ -21,7 +21,7 @@ a:hover{text-decoration:underline}
 .nav{position:sticky;top:0;z-index:30;background:rgba(12,35,64,.92);backdrop-filter:blur(10px);
   border-bottom:1px solid rgba(255,255,255,.08);transition:padding .25s}
 .nav .wrap{display:flex;align-items:center;gap:24px;height:64px}
-.brand{font-family:var(--serif);font-size:19px;font-weight:600;color:#fff;letter-spacing:.2px;white-space:nowrap}
+.brand{font-family:var(--serif);font-size:17px;font-weight:600;color:#fff;letter-spacing:.2px;white-space:nowrap}
 .brand .at{color:var(--gold-lt)}
 .nav nav{margin-left:auto;display:flex;gap:6px;flex-wrap:wrap}
 .nav nav a{color:#dfe6f1;font-size:14.5px;padding:8px 14px;border-radius:999px;transition:.2s}

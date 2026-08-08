@@ -13,7 +13,7 @@
     navEl.className = "nav";
     navEl.innerHTML =
       `<div class="wrap">
-        <a class="brand" href="index.html">Robotics <span class="at">@</span> Notre Dame</a>
+        <a class="brand" href="index.html">Physical <span class="at">AI</span> and Robotics Initiative</a>
         <button class="navtoggle" aria-label="Menu">☰</button>
         <nav>${PAGES.map(([h,l])=>`<a href="${h}" class="${h===here?"active":""}">${l}</a>`).join("")}</nav>
       </div>`;
@@ -29,8 +29,8 @@
     footEl.innerHTML =
       `<div class="wrap">
         <div style="max-width:34ch">
-          <div class="brand">Robotics <span style="color:#e5b93d">@</span> Notre Dame</div>
-          <small>Bringing robotics to the problems that matter, from the University of Notre Dame.</small>
+          <div class="brand">Physical <span style="color:#e5b93d">AI</span> and Robotics Initiative</div>
+          <small>Bringing robotics to the problems that matter, at the University of Notre Dame.</small>
         </div>
         <div>
           <div style="color:#fff;font-weight:600;margin-bottom:8px">Explore</div>

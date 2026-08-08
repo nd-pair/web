@@ -1,0 +1,7 @@
+[
+  {"name":"Industrial Robotics","blurb":"Automation, manufacturing, and human–robot collaboration on the factory floor."},
+  {"name":"Humanoid","blurb":"Whole-body control and dexterity for human-scale robots."},
+  {"name":"Terrestrial–aquatic testbed","blurb":"Machines that cross the boundary between land and water."},
+  {"name":"Lower limb prosthetics","blurb":"Powered prostheses and exoskeletons for walking and mobility."},
+  {"name":"Multi-robot systems","blurb":"Teams of robots that sense, decide, and coordinate together."}
+]

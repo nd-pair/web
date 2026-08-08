@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Laboratories — Robotics @ Notre Dame</title>
+<title>Laboratories — Physical AI and Robotics Initiative</title>
 <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -13,45 +13,53 @@
   <div class="wrap" style="padding:74px 24px 78px">
     <p class="eyebrow reveal">Where the work happens</p>
     <h1 class="reveal" style="font-size:clamp(30px,4.6vw,48px)">Our laboratories</h1>
-    <p class="lead reveal">Fourteen groups across the community, each with its own focus — from legged
-      machines and wearable robots to autonomous teams. Every lab links out to its own site.</p>
+    <p class="lead reveal">Thirteen groups across the community, working together across shared
+      collaborative testbeds. Every lab links out to its own site.</p>
   </div>
 </div>
 
 <section>
   <div class="wrap">
-    <div id="labgroups"></div>
+    <div class="section-head reveal">
+      <p class="eyebrow">Where we build together</p>
+      <h2>Collaborative Testbeds</h2>
+    </div>
+    <div class="grid g3" id="testbeds" style="margin-top:24px;margin-bottom:20px"></div>
+  </div>
+</section>
+
+<section class="mist">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">The groups</p>
+      <h2>All laboratories</h2>
+    </div>
+    <div class="grid g3" id="labgrid" style="margin-top:24px"></div>
   </div>
 </section>
 
 <footer id="site-footer"></footer>
 <script src="site.js"></script>
 <script>
-const ORDER = ["Legged & Bioinspired","Wearable & Human-Centered","Autonomous & Multi-Robot"];
-fetch("data/labs.json").then(r=>r.json()).then(labs=>{
-  const root=document.getElementById("labgroups");
-  ORDER.forEach(area=>{
-    const inArea=labs.filter(l=>l.area===area);
-    if(!inArea.length) return;
-    const head=document.createElement("div");
-    head.className="section-head reveal"; head.style.margin="10px 0 20px";
-    head.innerHTML=`<p class="eyebrow">${area}</p><h2>${area} Robotics</h2>`;
-    root.appendChild(head);
-    const grid=document.createElement("div"); grid.className="grid g3"; grid.style.marginBottom="46px";
-    inArea.forEach(l=>{
-      const c=document.createElement("div"); c.className="card lab reveal";
-      c.innerHTML=`<h3>${l.name}</h3><p>${l.blurb||""}</p>`+
-        `<div class="host">${(l.url||"").replace(/^https?:\/\//,"")}</div>`+
-        `<a class="go" href="${l.url}" target="_blank" rel="noopener">Visit lab</a>`;
-      grid.appendChild(c);
-    });
-    root.appendChild(grid);
+fetch("data/testbeds.json").then(r=>r.json()).then(tb=>{
+  const el=document.getElementById("testbeds");
+  tb.forEach(t=>{
+    const c=document.createElement("div"); c.className="card testbed reveal";
+    c.innerHTML=`<span class="tag">Testbed</span><h3>${t.name}</h3><p>${t.blurb||""}</p>`;
+    el.appendChild(c);
   });
-  // reveal (observer may miss late-injected nodes)
-  setTimeout(()=>document.querySelectorAll(".reveal").forEach(x=>x.classList.add("in")),30);
-}).catch(e=>{
-  document.getElementById("labgroups").innerHTML="<p>Could not load laboratories.</p>";
-});
+}).catch(()=>{});
+fetch("data/labs.json").then(r=>r.json()).then(labs=>{
+  const grid=document.getElementById("labgrid");
+  labs.forEach(l=>{
+    const c=document.createElement("div"); c.className="card lab reveal";
+    c.innerHTML=`<h3>${l.name}</h3><p>${l.blurb||""}</p>`+
+      `<div class="host">${(l.url||"").replace(/^https?:\/\//,"")}</div>`+
+      `<a class="go" href="${l.url}" target="_blank" rel="noopener">Visit lab</a>`;
+    grid.appendChild(c);
+  });
+}).catch(e=>{ document.getElementById("labgrid").innerHTML="<p>Could not load laboratories.</p>"; })
+  .finally(()=>setTimeout(()=>document.querySelectorAll(".reveal").forEach(x=>x.classList.add("in")),30));
 </script>
 </body>
 </html>
