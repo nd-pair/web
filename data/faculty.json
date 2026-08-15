@@ -65,6 +65,18 @@
     "lab_url": null
   },
   {
+    "slug": "fanxin-kong",
+    "name": "Fanxin Kong",
+    "openalex_id": "A5108999536",
+    "openalex_ids": [
+      "A5108999536"
+    ],
+    "photo": "fanxin-kong.jpg",
+    "affiliated": false,
+    "lab": null,
+    "lab_url": null
+  },
+  {
     "slug": "hai-lin",
     "name": "Hai Lin",
     "openalex_id": "A5045445273",

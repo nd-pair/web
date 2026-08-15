@@ -28,6 +28,13 @@
     "joined": "fall 2024"
   },
   {
+    "name": "Sicheng Chen",
+    "url": null,
+    "dept": "CSE",
+    "advisor": "Kong",
+    "joined": "fall 2026"
+  },
+  {
     "name": "Nnamdi Chikere",
     "url": "https://www.linkedin.com/in/nnamdi-chikere/",
     "dept": "EE",
@@ -63,6 +70,13 @@
     "joined": "fall 2022"
   },
   {
+    "name": "Jialiang Fan",
+    "url": "https://jialiangfan.com",
+    "dept": "CSE",
+    "advisor": "Kong",
+    "joined": "fall 2024"
+  },
+  {
     "name": "Allison Fick",
     "url": "https://www.linkedin.com/in/allison-fick-0b1401197/",
     "dept": "AME",
@@ -89,6 +103,13 @@
     "dept": "AME",
     "advisor": "Schmiedeler",
     "joined": "fall 2022"
+  },
+  {
+    "name": "Shixiong Jiang",
+    "url": "https://www.linkedin.com/in/shixiong-jiang-840415281/",
+    "dept": "CSE",
+    "advisor": "Kong",
+    "joined": "fall 2023"
   },
   {
     "name": "Minho Lee",
@@ -175,6 +196,20 @@
     "joined": "fall 2024"
   },
   {
+    "name": "Zijun Wang",
+    "url": null,
+    "dept": "CSE",
+    "advisor": "Kong",
+    "joined": "fall 2026"
+  },
+  {
+    "name": "Weizhe Xu",
+    "url": "https://www.linkedin.com/in/weizhe-xu-8745b2295/",
+    "dept": "CSE",
+    "advisor": "Kong",
+    "joined": "fall 2023"
+  },
+  {
     "name": "Chongjun Yang",
     "url": null,
     "dept": "EE",
@@ -194,5 +229,12 @@
     "dept": "EE",
     "advisor": "Hou",
     "joined": "fall 2023"
+  },
+  {
+    "name": "Taozheng Zhu",
+    "url": null,
+    "dept": "CSE",
+    "advisor": "Kong",
+    "joined": "fall 2025"
   }
 ]

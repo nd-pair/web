@@ -1,12 +1,12 @@
 {
-  "generated": "2026-08-08 17:32 UTC",
+  "generated": "2026-08-15 07:08 UTC",
   "source": "OpenAlex (https://openalex.org)",
   "minYear": 2016,
-  "total": 1089,
+  "total": 1106,
   "years": [
     {
       "year": 2026,
-      "count": 28,
+      "count": 34,
       "items": [
         {
           "id": "https://openalex.org/W7196939210",
@@ -314,6 +314,109 @@
             {
               "name": "Alessandro Roncone",
               "id": "A5020277024"
+            }
+          ]
+        },
+        {
+          "id": "https://openalex.org/W7153822423",
+          "title": "Interactive 3D-Printed Soap: Exploring Biodegradable and Ephemeral Material Interactions",
+          "year": 2026,
+          "date": "2026-04-13",
+          "venue": null,
+          "authors": [
+            {
+              "name": "Jing Xie",
+              "id": "A5070662022"
+            },
+            {
+              "name": "Yingting Gao",
+              "id": "A5101380907"
+            },
+            {
+              "name": "Jin Yu",
+              "id": "A5102169470"
+            },
+            {
+              "name": "Tingyu Cheng",
+              "id": "A5011017276"
+            },
+            {
+              "name": "HyunJoo Oh",
+              "id": "A5123842626"
+            }
+          ]
+        },
+        {
+          "id": "https://openalex.org/W7154116567",
+          "title": "Circuit2Yarn: From Planar Circuits to Electronic Yarns for Textile-Based Interactions",
+          "year": 2026,
+          "date": "2026-04-13",
+          "venue": null,
+          "authors": [
+            {
+              "name": "Zhechen Zhao",
+              "id": "A5133486370"
+            },
+            {
+              "name": "Jingyi Liu",
+              "id": "A5074055921"
+            },
+            {
+              "name": "Tianhong Catherine Yu",
+              "id": "A5077097352"
+            },
+            {
+              "name": "Jiaqing Liu",
+              "id": "A5133505978"
+            },
+            {
+              "name": "Zeyu Yan",
+              "id": "A5044495445"
+            },
+            {
+              "name": "Huaishu Peng",
+              "id": "A5067580146"
+            },
+            {
+              "name": "Yiyue Luo",
+              "id": "A5007246518"
+            },
+            {
+              "name": "Zhihan Zhang",
+              "id": "A5101798380"
+            },
+            {
+              "name": "Tingyu Cheng",
+              "id": "A5011017276"
+            }
+          ]
+        },
+        {
+          "id": "https://openalex.org/W7154160380",
+          "title": "3D Printing Soap: Exploring New Biodegrdable Materials and Creative Possibilities",
+          "year": 2026,
+          "date": "2026-04-13",
+          "venue": null,
+          "authors": [
+            {
+              "name": "Jing Xie",
+              "id": "A5070662022"
+            },
+            {
+              "name": "Yingting Gao",
+              "id": "A5101380907"
+            },
+            {
+              "name": "Jin Yu",
+              "id": "A5102169470"
+            },
+            {
+              "name": "Tingyu Cheng",
+              "id": "A5011017276"
+            },
+            {
+              "name": "HyunJoo Oh",
+              "id": "A5123842626"
             }
           ]
         },
@@ -750,8 +853,8 @@
           "venue": "arXiv (Cornell University)",
           "authors": [
             {
-              "name": "Tan, Xuan",
-              "id": ""
+              "name": "Xuan Tan",
+              "id": "A5139833306"
             },
             {
               "name": "William Xie",
@@ -875,6 +978,23 @@
           ]
         },
         {
+          "id": "https://openalex.org/W7131070927",
+          "title": "Correction to \u201cSmooth Parameterization of Rigid-Body Inertia\u201d",
+          "year": 2026,
+          "date": "2026-02-23",
+          "venue": "IEEE Robotics and Automation Letters",
+          "authors": [
+            {
+              "name": "Caleb Rucker",
+              "id": "A5126599205"
+            },
+            {
+              "name": "Patrick M. Wensing",
+              "id": "A5029126529"
+            }
+          ]
+        },
+        {
           "id": "https://openalex.org/W7124161275",
           "title": "NAS-FD: Neural Architecture Search-Based Fraud Detection for Power Audit Data",
           "year": 2026,
@@ -904,6 +1024,44 @@
             {
               "name": "Ze Zhou",
               "id": "A5123017837"
+            }
+          ]
+        },
+        {
+          "id": "https://openalex.org/W7123353085",
+          "title": "Coriolis Factorizations and Their <i>Connections</i> to Riemannian Geometry",
+          "year": 2026,
+          "date": "2026-01-12",
+          "venue": "IEEE Transactions on Automatic Control",
+          "authors": [
+            {
+              "name": "Patrick M. Wensing",
+              "id": "A5029126529"
+            },
+            {
+              "name": "Jean-Jacques E. Slotine",
+              "id": "A5122887400"
+            }
+          ]
+        },
+        {
+          "id": "https://openalex.org/W7126052509",
+          "title": "Task-Space Control for Powered Knee-Ankle Prostheses: Subject Trial Repository",
+          "year": 2026,
+          "date": "2026-01-01",
+          "venue": "Open MIND",
+          "authors": [
+            {
+              "name": "David Kelly",
+              "id": "A5124224287"
+            },
+            {
+              "name": "Edgar Bolivar Nieto",
+              "id": "A5124263118"
+            },
+            {
+              "name": "Patrick M. Wensing",
+              "id": "A5029126529"
             }
           ]
         },
@@ -1072,7 +1230,7 @@
     },
     {
       "year": 2025,
-      "count": 80,
+      "count": 83,
       "items": [
         {
           "id": "https://openalex.org/W4417266406",
@@ -1229,7 +1387,7 @@
           "title": "Cognition Envelopes for Bounded Decision Making in Autonomous UAS Operations",
           "year": 2025,
           "date": "2025-10-30",
-          "venue": "ArXiv.org",
+          "venue": "arXiv (Cornell University)",
           "authors": [
             {
               "name": "Pedro Antonio Alarc\u00f3n Granadeno",
@@ -2090,7 +2248,7 @@
           "title": "Sustainability assessment using multimodal AI agents",
           "year": 2025,
           "date": "2025-07-22",
-          "venue": "ArXiv.org",
+          "venue": "arXiv (Cornell University)",
           "authors": [
             {
               "name": "Zhihan Zhang",
@@ -2422,6 +2580,31 @@
           ]
         },
         {
+          "id": "https://openalex.org/W4414198595",
+          "title": "Query-Based Black-Box Stealthy Sensor Attacks on Cyber-Physical Systems",
+          "year": 2025,
+          "date": "2025-06-22",
+          "venue": null,
+          "authors": [
+            {
+              "name": "Shixiong Jiang",
+              "id": "A5108999535"
+            },
+            {
+              "name": "Weizhe Xu",
+              "id": "A5109000033"
+            },
+            {
+              "name": "Mengyu Liu",
+              "id": "A5100761835"
+            },
+            {
+              "name": "Fanxin Kong",
+              "id": "A5108999536"
+            }
+          ]
+        },
+        {
           "id": "https://openalex.org/W4415068760",
           "title": "Multi-Loco: Unifying Multi-Embodiment Legged Locomotion via Reinforcement Learning Augmented Diffusion",
           "year": 2025,
@@ -2741,6 +2924,35 @@
             {
               "name": "Jane Cleland\u2010Huang",
               "id": "A5037363688"
+            }
+          ]
+        },
+        {
+          "id": "https://openalex.org/W4411086961",
+          "title": "Recovery-Guaranteed Sensor Attack Detection for Cyber-Physical Systems",
+          "year": 2025,
+          "date": "2025-05-06",
+          "venue": null,
+          "authors": [
+            {
+              "name": "Weizhe Xu",
+              "id": "A5109000033"
+            },
+            {
+              "name": "Xin Chen",
+              "id": "A5100363116"
+            },
+            {
+              "name": "Matthew Anderson",
+              "id": "A5011402768"
+            },
+            {
+              "name": "Steve Drager",
+              "id": "A5049549352"
+            },
+            {
+              "name": "Fanxin Kong",
+              "id": "A5108999536"
             }
           ]
         },
@@ -3489,12 +3701,37 @@
               "id": "A5065741205"
             }
           ]
+        },
+        {
+          "id": "https://openalex.org/W4412722116",
+          "title": "A Propagation Perspective on Recursive Forward Dynamics for Systems With Kinematic Loops",
+          "year": 2025,
+          "date": "2025-01-01",
+          "venue": "IEEE Transactions on Robotics",
+          "authors": [
+            {
+              "name": "Matthew Chignoli",
+              "id": "A5035509343"
+            },
+            {
+              "name": "Nicholas Adrian",
+              "id": "A5021359142"
+            },
+            {
+              "name": "Sangbae Kim",
+              "id": "A5101912751"
+            },
+            {
+              "name": "Patrick M. Wensing",
+              "id": "A5029126529"
+            }
+          ]
         }
       ]
     },
     {
       "year": 2024,
-      "count": 89,
+      "count": 95,
       "items": [
         {
           "id": "https://openalex.org/W4405934979",
@@ -4877,6 +5114,35 @@
           ]
         },
         {
+          "id": "https://openalex.org/W4400017388",
+          "title": "CPSim: Simulation Toolbox for Security Problems in Cyber-Physical Systems",
+          "year": 2024,
+          "date": "2024-06-25",
+          "venue": "ACM Transactions on Design Automation of Electronic Systems",
+          "authors": [
+            {
+              "name": "Mengyu Liu",
+              "id": "A5100761835"
+            },
+            {
+              "name": "Lin Zhang",
+              "id": "A5100351950"
+            },
+            {
+              "name": "Weizhe Xu",
+              "id": "A5109000033"
+            },
+            {
+              "name": "Shixiong Jiang",
+              "id": "A5108999535"
+            },
+            {
+              "name": "Fanxin Kong",
+              "id": "A5108999536"
+            }
+          ]
+        },
+        {
           "id": "https://openalex.org/W4401723659",
           "title": "An Environmentally Complex Requirement for Safe Separation Distance Between UAVs",
           "year": 2024,
@@ -5218,6 +5484,27 @@
           ]
         },
         {
+          "id": "https://openalex.org/W4400189284",
+          "title": "Vulnerability Analysis for Safe Reinforcement Learning in Cyber-Physical Systems",
+          "year": 2024,
+          "date": "2024-05-13",
+          "venue": null,
+          "authors": [
+            {
+              "name": "Shixiong Jiang",
+              "id": "A5108999535"
+            },
+            {
+              "name": "Mengyu Liu",
+              "id": "A5100761835"
+            },
+            {
+              "name": "Fanxin Kong",
+              "id": "A5108999536"
+            }
+          ]
+        },
+        {
           "id": "https://openalex.org/W4401415875",
           "title": "Task-space Control of a Powered Ankle Prosthesis",
           "year": 2024,
@@ -5235,6 +5522,93 @@
             {
               "name": "Patrick M. Wensing",
               "id": "A5029126529"
+            }
+          ]
+        },
+        {
+          "id": "https://openalex.org/W4400189308",
+          "title": "Poster Abstract: Assuring LLM-Enabled Cyber-Physical Systems",
+          "year": 2024,
+          "date": "2024-05-13",
+          "venue": null,
+          "authors": [
+            {
+              "name": "Weizhe Xu",
+              "id": "A5109000033"
+            },
+            {
+              "name": "Mengyu Liu",
+              "id": "A5100761835"
+            },
+            {
+              "name": "Steven Drager",
+              "id": "A5008070371"
+            },
+            {
+              "name": "Matthew Anderson",
+              "id": "A5011402768"
+            },
+            {
+              "name": "Fanxin Kong",
+              "id": "A5108999536"
+            }
+          ]
+        },
+        {
+          "id": "https://openalex.org/W4400062452",
+          "title": "Fast Attack Recovery for Stochastic Cyber-Physical Systems",
+          "year": 2024,
+          "date": "2024-05-13",
+          "venue": null,
+          "authors": [
+            {
+              "name": "Zhang Li",
+              "id": "A5100418969"
+            },
+            {
+              "name": "Luis Burbano",
+              "id": "A5009264393"
+            },
+            {
+              "name": "Xin Chen",
+              "id": "A5100563359"
+            },
+            {
+              "name": "\u00c1lvaro A. C\u00e1rdenas",
+              "id": "A5016892225"
+            },
+            {
+              "name": "Steven Drager",
+              "id": "A5008070371"
+            },
+            {
+              "name": "Matthew J. Anderson",
+              "id": "A5066596486"
+            },
+            {
+              "name": "Fanxin Kong",
+              "id": "A5108999536"
+            }
+          ]
+        },
+        {
+          "id": "https://openalex.org/W4400062090",
+          "title": "Demo: Vulnerability Analysis for STL-Guided Safe Reinforcement Learning in Cyber-Physical Systems",
+          "year": 2024,
+          "date": "2024-05-13",
+          "venue": null,
+          "authors": [
+            {
+              "name": "Shixiong Jiang",
+              "id": "A5108999535"
+            },
+            {
+              "name": "Mengyu Liu",
+              "id": "A5100761835"
+            },
+            {
+              "name": "Fanxin Kong",
+              "id": "A5108999536"
             }
           ]
         },
@@ -5435,6 +5809,31 @@
             {
               "name": "Mengxue Hou",
               "id": "A5063884621"
+            }
+          ]
+        },
+        {
+          "id": "https://openalex.org/W4392984041",
+          "title": "Path Planning for UAVs under GPS Permanent Faults",
+          "year": 2024,
+          "date": "2024-03-20",
+          "venue": "ACM Transactions on Cyber-Physical Systems",
+          "authors": [
+            {
+              "name": "M. Hani Sulieman",
+              "id": "A5042456946"
+            },
+            {
+              "name": "Mengyu Liu",
+              "id": "A5100761835"
+            },
+            {
+              "name": "M. Cenk Gursoy",
+              "id": "A5076753154"
+            },
+            {
+              "name": "Fanxin Kong",
+              "id": "A5108999536"
             }
           ]
         },
@@ -6105,31 +6504,6 @@
           ]
         },
         {
-          "id": "https://openalex.org/W4389072126",
-          "title": "A Propagation Perspective on Recursive Forward Dynamics for Systems with Kinematic Loops",
-          "year": 2023,
-          "date": "2023-11-22",
-          "venue": "arXiv (Cornell University)",
-          "authors": [
-            {
-              "name": "Matthew Chignoli",
-              "id": "A5035509343"
-            },
-            {
-              "name": "Nicholas Adrian",
-              "id": "A5021359142"
-            },
-            {
-              "name": "Sangbae Kim",
-              "id": "A5101912751"
-            },
-            {
-              "name": "Patrick M. Wensing",
-              "id": "A5029126529"
-            }
-          ]
-        },
-        {
           "id": "https://openalex.org/W4394995565",
           "title": "Characterizing Evacuee Behavior During a Robot-Guided Evacuation",
           "year": 2023,
@@ -6184,6 +6558,27 @@
             {
               "name": "Meiping Wu",
               "id": "A5100553345"
+            }
+          ]
+        },
+        {
+          "id": "https://openalex.org/W4393208093",
+          "title": "Design of Active Fault Diagnosis and Repair System for Active Distribution Networks Based on Decision Tree Algorithm",
+          "year": 2023,
+          "date": "2023-11-03",
+          "venue": null,
+          "authors": [
+            {
+              "name": "Fanxin Kong",
+              "id": "A5108999536"
+            },
+            {
+              "name": "Tianqi Guo",
+              "id": "A5074212562"
+            },
+            {
+              "name": "Xinyu Zhang",
+              "id": "A5062512479"
             }
           ]
         },
@@ -9154,7 +9549,7 @@
     },
     {
       "year": 2022,
-      "count": 100,
+      "count": 101,
       "items": [
         {
           "id": "https://openalex.org/W4312304847",
@@ -9631,6 +10026,27 @@
             {
               "name": "Hai Lin",
               "id": "A5045445273"
+            }
+          ]
+        },
+        {
+          "id": "https://openalex.org/W4364305171",
+          "title": "Smart Power Service System Based on Edge Data Center and Cloud Computing Technology",
+          "year": 2022,
+          "date": "2022-11-04",
+          "venue": null,
+          "authors": [
+            {
+              "name": "Fanxin Kong",
+              "id": "A5108999536"
+            },
+            {
+              "name": "Jianxiong Gan",
+              "id": "A5009406945"
+            },
+            {
+              "name": "Anqi Wang",
+              "id": "A5051342730"
             }
           ]
         },
@@ -15458,7 +15874,7 @@
     },
     {
       "year": 2020,
-      "count": 106,
+      "count": 107,
       "items": [
         {
           "id": "https://openalex.org/W3119897449",
@@ -15757,6 +16173,27 @@
             {
               "name": "Elliot W. Hawkes",
               "id": "A5088329417"
+            }
+          ]
+        },
+        {
+          "id": "https://openalex.org/W3097391087",
+          "title": "Effect of pH on the Tribological Behavior of Eu-Doped WO3 Nanoparticle in Water-Based Fluid",
+          "year": 2020,
+          "date": "2020-11-07",
+          "venue": "Tribology Letters",
+          "authors": [
+            {
+              "name": "Sang Xiong",
+              "id": "A5035534190"
+            },
+            {
+              "name": "Liang Dong",
+              "id": "A5100342721"
+            },
+            {
+              "name": "Fanxin Kong",
+              "id": "A5108999536"
             }
           ]
         },
