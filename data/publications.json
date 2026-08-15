@@ -1,13 +1,50 @@
 {
-  "generated": "2026-08-15 07:08 UTC",
+  "generated": "2026-08-15 15:44 UTC",
   "source": "OpenAlex (https://openalex.org)",
   "minYear": 2016,
-  "total": 1106,
+  "total": 1107,
   "years": [
     {
       "year": 2026,
-      "count": 34,
+      "count": 35,
       "items": [
+        {
+          "id": "https://openalex.org/W7203469132",
+          "title": "Embroidered textile sensors for real-time multiaxial force mapping in prosthetics",
+          "year": 2026,
+          "date": "2026-08-14",
+          "venue": "Science Advances",
+          "authors": [
+            {
+              "name": "Tianhao Yu",
+              "id": "A5090875881"
+            },
+            {
+              "name": "Axel Gonz\u00e1lez Cornejo",
+              "id": "A5128867853"
+            },
+            {
+              "name": "Hyeonseo Joo",
+              "id": "A5070883033"
+            },
+            {
+              "name": "Ziheng Wang",
+              "id": "A5147140876"
+            },
+            {
+              "name": "Yumin Dai",
+              "id": "A5101757403"
+            },
+            {
+              "name": "Edgar Bol\u00edvar-Nieto",
+              "id": "A5076214359"
+            },
+            {
+              "name": "Chi Hwan Lee",
+              "id": "A5088885773"
+            }
+          ]
+        },
         {
           "id": "https://openalex.org/W7196939210",
           "title": "Design of a lightweight wearable exoskeleton with virtual reality feedback for post-stroke hand rehabilitation",
