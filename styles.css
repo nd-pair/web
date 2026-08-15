@@ -47,7 +47,6 @@ a:hover{text-decoration:underline}
 #gate #gateErr{margin-top:10px;font-size:12.5px;color:#ff9a9a;min-height:16px}
 #gate .gnote{margin-top:14px;font-size:11px;color:#9fb0c6}
 
-.hero canvas.fx{position:absolute;inset:0;z-index:2;opacity:.7;pointer-events:none}
 .hero .wrap{position:relative;z-index:5;padding:96px 24px 104px}
 .hero-logo{position:absolute;z-index:3;top:50%;right:6%;transform:translateY(-50%);height:56%;max-height:310px;width:auto;opacity:.95;pointer-events:none;filter:drop-shadow(0 3px 7px rgba(0,0,0,.28))}
 @media(max-width:900px){.hero-logo{opacity:.16;right:50%;transform:translate(50%,-50%)}}
