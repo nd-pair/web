@@ -37,6 +37,7 @@
   const fav=document.createElement("link"); fav.rel="icon"; fav.type="image/png"; fav.href="assets/pair-logo.png"; document.head.appendChild(fav);
   const here = (location.pathname.split("/").pop() || "index.html");
   const navEl = document.getElementById("site-nav");
+  { const sk=document.createElement("a"); sk.className="skip-link"; sk.href="#main"; sk.textContent="Skip to main content"; if(document.body) document.body.insertBefore(sk, document.body.firstChild); }
   if(navEl){
     navEl.className = "nav";
     navEl.innerHTML =
@@ -71,7 +72,10 @@
           <div><a href="https://openalex.org/" target="_blank" rel="noopener">Data: OpenAlex</a></div>
         </div>
       </div>
-      <div class="wrap" style="margin-top:22px"><small>© University of Notre Dame · Robotics @ Notre Dame</small></div>`;
+      <div class="wrap" style="margin-top:22px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
+        <a class="ndmark" href="https://www.nd.edu" target="_blank" rel="noopener" aria-label="University of Notre Dame"><img src="assets/nd/nd-lockup-white.png" alt="University of Notre Dame"></a>
+        <small>Notre Dame, IN 46556 USA · <a href="https://www.nd.edu/about/accessibility/" target="_blank" rel="noopener">Accessibility</a> · © 2026 University of Notre Dame</small>
+      </div>`;
   }
 
   // reveal on scroll

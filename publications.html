@@ -9,7 +9,7 @@
 <body>
 <header id="site-nav"></header>
 
-<div class="hero" style="padding:0">
+<div id="main" tabindex="-1" class="hero" style="padding:0">
   <div class="wrap" style="padding:64px 24px 64px">
     <p class="eyebrow reveal">From our community</p>
     <h1 class="reveal" style="font-size:clamp(30px,4.6vw,48px)">Publications</h1>
@@ -19,7 +19,7 @@
 
 <div class="pubbar">
   <div class="wrap">
-    <input id="q" placeholder="Filter by title, author, or venue…" style="flex:1;min-width:220px;padding:9px 13px;border:1px solid var(--line);border-radius:999px;font-size:14px" />
+    <input id="q" aria-label="Filter list" placeholder="Filter by title, author, or venue…" style="flex:1;min-width:220px;padding:9px 13px;border:1px solid var(--line);border-radius:999px;font-size:14px" />
     <div class="yearchips" id="chips"></div>
   </div>
 </div>
