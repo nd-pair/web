@@ -1,13 +1,42 @@
 {
-  "generated": "2026-08-15 15:44 UTC",
+  "generated": "2026-08-25 16:30 UTC",
   "source": "OpenAlex (https://openalex.org)",
   "minYear": 2016,
   "total": 1107,
   "years": [
     {
       "year": 2026,
-      "count": 35,
+      "count": 36,
       "items": [
+        {
+          "id": "https://openalex.org/W7203572540",
+          "title": "Feedforward-Feedback Control Methodology for Low-Volume Precision Plate Bending - Code and Experimental Data",
+          "year": 2026,
+          "date": "2026-08-17",
+          "venue": "Open MIND",
+          "authors": [
+            {
+              "name": "Partho Kundu",
+              "id": "A5111275442"
+            },
+            {
+              "name": "Nafis Iqbal",
+              "id": "A5122087857"
+            },
+            {
+              "name": "Zongze Li",
+              "id": "A5147270715"
+            },
+            {
+              "name": "Balark Tiwari",
+              "id": "A5147280963"
+            },
+            {
+              "name": "Robert G. Landers",
+              "id": "A5020875577"
+            }
+          ]
+        },
         {
           "id": "https://openalex.org/W7203469132",
           "title": "Embroidered textile sensors for real-time multiaxial force mapping in prosthetics",
@@ -1066,7 +1095,7 @@
         },
         {
           "id": "https://openalex.org/W7123353085",
-          "title": "Coriolis Factorizations and Their <i>Connections</i> to Riemannian Geometry",
+          "title": "Coriolis Factorizations and Their Connections to Riemannian Geometry",
           "year": 2026,
           "date": "2026-01-12",
           "venue": "IEEE Transactions on Automatic Control",
@@ -1086,7 +1115,7 @@
           "title": "Task-Space Control for Powered Knee-Ankle Prostheses: Subject Trial Repository",
           "year": 2026,
           "date": "2026-01-01",
-          "venue": "Open MIND",
+          "venue": "University of Notre Dame",
           "authors": [
             {
               "name": "David Kelly",
@@ -1133,7 +1162,7 @@
         },
         {
           "id": "https://openalex.org/W7166534255",
-          "title": "Off-Policy Reinforcement Learning <i>H</i> <sub>\u221e</sub> Control for Two-Time-Scale Supply Chain Systems Subject to Design Change",
+          "title": "Off-Policy Reinforcement Learning H \u221e Control for Two-Time-Scale Supply Chain Systems Subject to Design Change",
           "year": 2026,
           "date": "2026-01-01",
           "venue": "IEEE Transactions on Systems Man and Cybernetics Systems",
@@ -1930,7 +1959,7 @@
         },
         {
           "id": "https://openalex.org/W4415004251",
-          "title": "QUESTRL: A Q&amp;A Framework for Designing Trustworthy Reinforcement Learning Systems",
+          "title": "QUESTRL: A Q&A Framework for Designing Trustworthy Reinforcement Learning Systems",
           "year": 2025,
           "date": "2025-09-01",
           "venue": null,
@@ -2067,7 +2096,7 @@
         },
         {
           "id": "https://openalex.org/W4413316401",
-          "title": "Added value of ophthalmic artery <scp>Doppler</scp> in prediction of pre\u2010eclampsia: systematic review and meta\u2010analysis",
+          "title": "Added value of ophthalmic artery Doppler in prediction of pre\u2010eclampsia: systematic review and meta\u2010analysis",
           "year": 2025,
           "date": "2025-08-19",
           "venue": "Ultrasound in Obstetrics and Gynecology",
@@ -3304,7 +3333,7 @@
           "venue": "arXiv (Cornell University)",
           "authors": [
             {
-              "name": "Gayoung Park",
+              "name": "Bona Gayoung Park",
               "id": ""
             },
             {
@@ -4812,7 +4841,7 @@
         },
         {
           "id": "https://openalex.org/W4401436465",
-          "title": "Laser Induced Breakdown Spectroscopy for Chemistry and Composition Monitoring of Laser Powder Bed FusionProcessing",
+          "title": "Laser Induced Breakdown Spectroscopy for Chemistry and Composition Monitoring of Laser Powder Bed Fusion Processing",
           "year": 2024,
           "date": "2024-08-01",
           "venue": null,
@@ -6224,7 +6253,7 @@
         },
         {
           "id": "https://openalex.org/W4394879318",
-          "title": "Research on Visual Function Anomaly Classification Based on SMOTE\u2009+\u2009Boosting Multiple Sampling Algorithm",
+          "title": "Research on Visual Function Anomaly Classification Based on SMOTE + Boosting Multiple Sampling Algorithm",
           "year": 2024,
           "date": "2024-01-01",
           "venue": "Lecture notes in electrical engineering",
@@ -6417,25 +6446,8 @@
     },
     {
       "year": 2023,
-      "count": 111,
+      "count": 110,
       "items": [
-        {
-          "id": "https://openalex.org/W4390214473",
-          "title": "Coriolis Factorizations and their Connections to Riemannian Geometry",
-          "year": 2023,
-          "date": "2023-12-22",
-          "venue": "arXiv (Cornell University)",
-          "authors": [
-            {
-              "name": "Patrick M. Wensing",
-              "id": "A5029126529"
-            },
-            {
-              "name": "Jean-Jacques Slotine",
-              "id": "A5044026747"
-            }
-          ]
-        },
         {
           "id": "https://openalex.org/W4390481003",
           "title": "Analytical Second-Order Derivatives of Rigid-Body Contact Dynamics: Application to Multi-Shooting DDP",
@@ -7216,7 +7228,7 @@
         },
         {
           "id": "https://openalex.org/W4385614497",
-          "title": "Making computing visible &amp; tangible: A paper-based computing toolkit for codesigning inclusive computing education activities",
+          "title": "Making computing visible & tangible: A paper-based computing toolkit for codesigning inclusive computing education activities",
           "year": 2023,
           "date": "2023-08-06",
           "venue": "International Journal of Child-Computer Interaction",
@@ -9012,7 +9024,7 @@
         },
         {
           "id": "https://openalex.org/W4320854014",
-          "title": "On Second-Order Derivatives of Rigid-Body Dynamics: Theory &amp; Implementation",
+          "title": "On Second-Order Derivatives of Rigid-Body Dynamics: Theory & Implementation",
           "year": 2023,
           "date": "2023-02-12",
           "venue": "arXiv (Cornell University)",
@@ -11323,7 +11335,7 @@
         },
         {
           "id": "https://openalex.org/W4283219460",
-          "title": "Front Cover: <i>Clostridium butyricum</i> Inhibits Fat Deposition via Increasing the Frequency of Adipose Tissue\u2010Resident Regulatory T Cells",
+          "title": "Front Cover: Clostridium butyricum Inhibits Fat Deposition via Increasing the Frequency of Adipose Tissue\u2010Resident Regulatory T Cells",
           "year": 2022,
           "date": "2022-06-01",
           "venue": "Molecular Nutrition & Food Research",
@@ -12191,7 +12203,7 @@
         },
         {
           "id": "https://openalex.org/W4285273580",
-          "title": "Theory of\u00a0Mind Assessment with\u00a0Human-Human and\u00a0Human-Robot Interactions",
+          "title": "Theory of Mind Assessment with Human-Human and Human-Robot Interactions",
           "year": 2022,
           "date": "2022-01-01",
           "venue": "Lecture notes in computer science",
@@ -12325,7 +12337,7 @@
         },
         {
           "id": "https://openalex.org/W4312296478",
-          "title": "Making Computing Visible &amp; Tangible: A Paper Computing Construction Kit for Co-Creating Inclusive Instructional Materials",
+          "title": "Making Computing Visible & Tangible: A Paper Computing Construction Kit for Co-Creating Inclusive Instructional Materials",
           "year": 2022,
           "date": "2022-01-01",
           "venue": "SSRN Electronic Journal",
@@ -19493,7 +19505,7 @@
         },
         {
           "id": "https://openalex.org/W2990914639",
-          "title": "Privacy Verification and Enforcement via\u00a0Belief Manipulation",
+          "title": "Privacy Verification and Enforcement via Belief Manipulation",
           "year": 2019,
           "date": "2019-11-21",
           "venue": null,
@@ -22337,7 +22349,7 @@
       "items": [
         {
           "id": "https://openalex.org/W2906700374",
-          "title": "H<sub>\u221e</sub> Consensus for Multiagent-Based Supply Chain Systems Under Switching Topology and Uncertain Demands",
+          "title": "H \u221e Consensus for Multiagent-Based Supply Chain Systems Under Switching Topology and Uncertain Demands",
           "year": 2018,
           "date": "2018-12-27",
           "venue": "IEEE Transactions on Systems Man and Cybernetics Systems",
@@ -27708,7 +27720,7 @@
         },
         {
           "id": "https://openalex.org/W2608070462",
-          "title": "&lt;inline-formula&gt; &lt;tex-math notation=\"LaTeX\"&gt;$H_{\\infty }$ &lt;/tex-math&gt; &lt;/inline-formula&gt; Control of Two-Time-Scale Markovian Switching Production-Inventory Systems",
+          "title": "$H_{\\infty }$ Control of Two-Time-Scale Markovian Switching Production-Inventory Systems",
           "year": 2017,
           "date": "2017-04-26",
           "venue": "IEEE Transactions on Control Systems Technology",
@@ -29081,7 +29093,7 @@
         },
         {
           "id": "https://openalex.org/W2555167683",
-          "title": "On <i>l</i><sub>1</sub> stability of switched positive singular systems with time\u2010varying delay",
+          "title": "On l1 stability of switched positive singular systems with time\u2010varying delay",
           "year": 2016,
           "date": "2016-11-08",
           "venue": "International Journal of Robust and Nonlinear Control",
