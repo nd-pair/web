@@ -1,13 +1,159 @@
 {
-  "generated": "2026-08-25 16:30 UTC",
+  "generated": "2026-09-01 11:57 UTC",
   "source": "OpenAlex (https://openalex.org)",
   "minYear": 2016,
-  "total": 1107,
+  "total": 1113,
   "years": [
     {
       "year": 2026,
-      "count": 36,
+      "count": 43,
       "items": [
+        {
+          "id": "https://openalex.org/W7204727217",
+          "title": "The Agile Stage Model: A Minimally Viable Framework for Developing and Governing Digital Therapeutics, Including Agentic Artificial Intelligence Systems (Preprint)",
+          "year": 2026,
+          "date": "2026-08-28",
+          "venue": null,
+          "authors": [
+            {
+              "name": "Mark J Seidman",
+              "id": "A5148719228"
+            },
+            {
+              "name": "Malaz Boustani",
+              "id": "A5019055956"
+            },
+            {
+              "name": "Edmond Ramly",
+              "id": "A5015210707"
+            },
+            {
+              "name": "Richard J. Holden",
+              "id": "A5081469237"
+            },
+            {
+              "name": "Melissa M. Pangelinan",
+              "id": "A5044546280"
+            },
+            {
+              "name": "Andrew A. Gonzalez",
+              "id": "A5064156865"
+            },
+            {
+              "name": "Hyesun Chung",
+              "id": "A5006993479"
+            },
+            {
+              "name": "Alicia Hyun Jin Lee",
+              "id": "A5148687431"
+            },
+            {
+              "name": "Nick Stewart",
+              "id": "A5148636589"
+            },
+            {
+              "name": "Fereshtehossadat Shojaei",
+              "id": "A5140754064"
+            },
+            {
+              "name": "Fatemehalsadat Shojaei",
+              "id": "A5040437369"
+            },
+            {
+              "name": "Diana Summanwar",
+              "id": "A5107437763"
+            },
+            {
+              "name": "Zhi Zheng",
+              "id": "A5065741205"
+            },
+            {
+              "name": "Zina Ben Miled",
+              "id": "A5083472980"
+            },
+            {
+              "name": "Yiyu Shi",
+              "id": "A5000141831"
+            }
+          ]
+        },
+        {
+          "id": "https://openalex.org/W7204200856",
+          "title": "GOLEM: Modular Humanoid Autonomy Towards Electric Vehicle Battery Disassembly",
+          "year": 2026,
+          "date": "2026-08-21",
+          "venue": "arXiv (Cornell University)",
+          "authors": [
+            {
+              "name": "Max Conway",
+              "id": "A5130218606"
+            },
+            {
+              "name": "William Xie",
+              "id": "A5019978536"
+            },
+            {
+              "name": "Allen Devaraj",
+              "id": "A5148045765"
+            },
+            {
+              "name": "Yutong Zhang",
+              "id": "A5148115668"
+            },
+            {
+              "name": "Niraj Pudasaini",
+              "id": "A5114413769"
+            },
+            {
+              "name": "Mateo Feit",
+              "id": "A5148078018"
+            },
+            {
+              "name": "Adam Abid",
+              "id": "A5148164943"
+            },
+            {
+              "name": "Zachary Allen",
+              "id": "A5130242714"
+            },
+            {
+              "name": "Chen Liu",
+              "id": "A5148129014"
+            },
+            {
+              "name": "Xuan Tan",
+              "id": "A5148167824"
+            },
+            {
+              "name": "Jensen Lavering",
+              "id": "A5148100146"
+            },
+            {
+              "name": "Jason Chen",
+              "id": "A5100717125"
+            },
+            {
+              "name": "Lyle Antieau",
+              "id": "A5148092386"
+            },
+            {
+              "name": "Anthony Von Pischke",
+              "id": "A5148051145"
+            },
+            {
+              "name": "Alessandro Roncone",
+              "id": "A5020277024"
+            },
+            {
+              "name": "Zachary Sunberg",
+              "id": "A5134483239"
+            },
+            {
+              "name": "Nikolaus Correll",
+              "id": "A5148086165"
+            }
+          ]
+        },
         {
           "id": "https://openalex.org/W7203572540",
           "title": "Feedforward-Feedback Control Methodology for Low-Volume Precision Plate Bending - Code and Experimental Data",
@@ -104,6 +250,19 @@
           ]
         },
         {
+          "id": "https://openalex.org/W7204199016",
+          "title": "Shallow-water underwater acoustic estimation of the number and locations of reflective surfaces via deep learning",
+          "year": 2026,
+          "date": "2026-08-01",
+          "venue": "The Journal of the Acoustical Society of America",
+          "authors": [
+            {
+              "name": "Toros Arikan",
+              "id": "A5066250773"
+            }
+          ]
+        },
+        {
           "id": "https://openalex.org/W7197001892",
           "title": "Navigating Sustainability in Shape-Changing Interfaces: Choices, Challenges, Futures",
           "year": 2026,
@@ -184,6 +343,79 @@
             {
               "name": "Patrick M. Wensing",
               "id": "A5029126529"
+            }
+          ]
+        },
+        {
+          "id": "https://openalex.org/W7165932578",
+          "title": "Toward Next-Generation AI Data Centers: Power Delivery Architecture Shifts, Emerging Technologies, and Challenges",
+          "year": 2026,
+          "date": "2026-06-23",
+          "venue": "arXiv (Cornell University)",
+          "authors": [
+            {
+              "name": "Sangwhee Lee",
+              "id": "A5071046098"
+            },
+            {
+              "name": "Rafal P. Wojda",
+              "id": "A5139319452"
+            },
+            {
+              "name": "Cheol-Hee Jo",
+              "id": "A5033612283"
+            },
+            {
+              "name": "S. Inoue",
+              "id": "A5052947508"
+            },
+            {
+              "name": "Pedro Ribeiro",
+              "id": "A5100665022"
+            },
+            {
+              "name": "Gui-Jia Su",
+              "id": "A5109238204"
+            },
+            {
+              "name": "Mostak Mohammad",
+              "id": "A5051611639"
+            },
+            {
+              "name": "Himel Barua",
+              "id": "A5091048970"
+            },
+            {
+              "name": "Nishanth Gadiyar",
+              "id": "A5136202971"
+            },
+            {
+              "name": "Praveen Kumar",
+              "id": "A5139383659"
+            },
+            {
+              "name": "Spencer Cochran",
+              "id": "A5139322424"
+            },
+            {
+              "name": "Subho Mukherjee",
+              "id": "A5136259553"
+            },
+            {
+              "name": "Whit Vinson",
+              "id": "A5139380432"
+            },
+            {
+              "name": "Vandana Rallabandi",
+              "id": "A5139321318"
+            },
+            {
+              "name": "Shajjad Chowdhury",
+              "id": "A5139383700"
+            },
+            {
+              "name": "Burak Ozpineci",
+              "id": "A5000404906"
             }
           ]
         },
@@ -270,6 +502,27 @@
             {
               "name": "Robert G. Landers",
               "id": "A5020875577"
+            }
+          ]
+        },
+        {
+          "id": "https://openalex.org/W7164921925",
+          "title": "Impact of eddy current minimizing stator teeth in additively manufactured electric machines",
+          "year": 2026,
+          "date": "2026-06-01",
+          "venue": "IET conference proceedings.",
+          "authors": [
+            {
+              "name": "Nishanth Gadiyar",
+              "id": "A5136202971"
+            },
+            {
+              "name": "Alexander D. Goodall",
+              "id": "A5030674238"
+            },
+            {
+              "name": "Eric L. Severson",
+              "id": "A5138727441"
             }
           ]
         },
@@ -1061,6 +1314,31 @@
           ]
         },
         {
+          "id": "https://openalex.org/W7161340809",
+          "title": "Multi-Objective Optimization Framework for the Design of Wireless Power Transfer Systems",
+          "year": 2026,
+          "date": "2026-02-09",
+          "venue": null,
+          "authors": [
+            {
+              "name": "Lidya M. Weldehawaryat",
+              "id": "A5136206204"
+            },
+            {
+              "name": "Subho Mukherjee",
+              "id": "A5136259553"
+            },
+            {
+              "name": "Wajiha Shireen",
+              "id": "A5088254237"
+            },
+            {
+              "name": "Nishanth Gadiyar",
+              "id": "A5136202971"
+            }
+          ]
+        },
+        {
           "id": "https://openalex.org/W7124161275",
           "title": "NAS-FD: Neural Architecture Search-Based Fraud Detection for Power Audit Data",
           "year": 2026,
@@ -1268,6 +1546,27 @@
             {
               "name": "Jonathan Rivnay",
               "id": "A5066036682"
+            }
+          ]
+        },
+        {
+          "id": "https://openalex.org/W7204806356",
+          "title": "An Online Inertial Parameter Identification Framework with Complete Physical Consistency: Lower-Body Exoskeleton Use Case",
+          "year": 2026,
+          "date": "2026-01-01",
+          "venue": "IEEE Transactions on Automation Science and Engineering",
+          "authors": [
+            {
+              "name": "Ahmed Fahmy Soliman",
+              "id": "A5081451857"
+            },
+            {
+              "name": "Patrick M. Wensing",
+              "id": "A5029126529"
+            },
+            {
+              "name": "Barkan U\u011furlu",
+              "id": "A5080517829"
             }
           ]
         },
@@ -2388,7 +2687,7 @@
           "title": "Traffic-Aware Pedestrian Intention Prediction",
           "year": 2025,
           "date": "2025-07-16",
-          "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+          "venue": "arXiv (Cornell University)",
           "authors": [
             {
               "name": "Fahimeh Orvati Nia",
@@ -19260,7 +19559,7 @@
     },
     {
       "year": 2019,
-      "count": 107,
+      "count": 106,
       "items": [
         {
           "id": "https://openalex.org/W2997649102",
@@ -22234,31 +22533,6 @@
             {
               "name": "Robert G. Landers",
               "id": "A5020875577"
-            }
-          ]
-        },
-        {
-          "id": "https://openalex.org/W1888497568",
-          "title": "Distributed Autonomous Robotic Systems",
-          "year": 2019,
-          "date": "2019-01-01",
-          "venue": "Springer proceedings in advanced robotics",
-          "authors": [
-            {
-              "name": "Symposium on Distributed Autonomous Robotic Systems 2018 Boulder, Colo.",
-              "id": ""
-            },
-            {
-              "name": "Nikolaus Correll",
-              "id": "A5047458039"
-            },
-            {
-              "name": "Mac Schwager",
-              "id": "A5081950488"
-            },
-            {
-              "name": "Michael Otte",
-              "id": "A5010568864"
             }
           ]
         },

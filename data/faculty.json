@@ -33,7 +33,8 @@
       "A5120513272",
       "A5128775924",
       "A5130238936",
-      "A5130284295"
+      "A5130284295",
+      "A5148086165"
     ],
     "photo": "nikolaus-correll.jpg",
     "affiliated": false,
@@ -183,6 +184,18 @@
     "affiliated": true,
     "lab": "SAREC / DroneResponse",
     "lab_url": "http://droneresponse.net"
+  },
+  {
+    "slug": "nishanth-gadiyar",
+    "name": "Nishanth Gadiyar",
+    "openalex_id": "A5136202971",
+    "openalex_ids": [
+      "A5136202971"
+    ],
+    "photo": "nishanth-gadiyar.jpg",
+    "affiliated": true,
+    "lab": null,
+    "lab_url": null
   },
   {
     "slug": "robert-landers",
