@@ -198,6 +198,18 @@
     "lab_url": null
   },
   {
+    "slug": "meng-jiang",
+    "name": "Meng Jiang",
+    "openalex_id": "A5074821819",
+    "openalex_ids": [
+      "A5074821819"
+    ],
+    "photo": "meng-jiang.jpg",
+    "affiliated": true,
+    "lab": null,
+    "lab_url": null
+  },
+  {
     "slug": "robert-landers",
     "name": "Robert Landers",
     "openalex_id": "A5020875577",
