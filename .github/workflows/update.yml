@@ -22,6 +22,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # a shallow clone cannot rebase onto the updated branch
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -49,14 +51,27 @@ jobs:
             echo "No changes."
           else
             git commit -m "chore: refresh roster, imagery & publications [skip ci]"
-            git push
+            # The crawls take minutes, so main can move while they run.
+            for attempt in 1 2 3; do
+              git fetch origin "$GITHUB_REF_NAME"
+              git rebase "origin/$GITHUB_REF_NAME" || { git rebase --abort || true; \
+                echo "::error::Refresh conflicts with $GITHUB_REF_NAME. Re-run this workflow."; exit 1; }
+              python scripts/build_site.py
+              git add -A
+              git diff --cached --quiet || git commit --amend --no-edit
+              git push origin "HEAD:$GITHUB_REF_NAME" && break
+              [ "$attempt" = 3 ] && { echo "::error::Could not push the refresh."; exit 1; }
+              sleep 5
+            done
           fi
+
+      - name: Build the pages from partials/ and pages/
+        run: python scripts/build_site.py
 
       - name: Assemble static site
         run: |
           rm -rf _site && mkdir -p _site
-          cp *.html styles.css site.js _site/
-          cp -r data _site/
+          cp *.html styles.css app.js robots.txt sitemap.xml _site/
           cp -r assets _site/
           touch _site/.nojekyll
 

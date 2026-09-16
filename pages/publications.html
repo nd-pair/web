@@ -1,0 +1,33 @@
+{
+  "title": "Publications",
+  "description": "Publications from the faculty and students of the Physical AI and Robotics Initiative at the University of Notre Dame, synchronised weekly from OpenAlex."
+}
+---
+  <main id="content" class="site-content">
+    <div class="page-header">
+      <div class="page-title-wrapper">
+        <nav aria-label="Breadcrumbs" class="breadcrumbs"><ol><li><a href="index.html">Home</a></li><li aria-current="page">Publications</li></ol></nav>
+        <h1 class="page-title page-title--sm">Publications</h1>
+        <p class="page-lede">{{PUBLICATIONS_SUMMARY}}</p>
+      </div>
+    </div>
+
+    <div class="page-primary">
+      <div class="section">
+        <form class="search-form pub-search" role="search" aria-label="Filter publications" onsubmit="return false">
+          <label class="visually-hidden" for="pub-q">Filter publications by title, author or venue</label>
+          <input id="pub-q" class="search-input" type="search" autocomplete="off"
+                 placeholder="Filter by title, author or venue">
+          <button type="submit" class="search-button btn--action" aria-label="Filter publications"><svg class="icon" width="16" height="16" aria-hidden="true"><use xlink:href="#icon-search"></use></svg></button>
+        </form>
+        <p id="pub-status" class="pub-status" role="status"></p>
+        <p class="pub-note">Members of the initiative are shown in bold.</p>
+        <nav id="nav-anchor" class="nav-anchor" aria-label="Jump to year">
+          <ul>
+      {{PUBLICATIONS_ANCHORS}}
+          </ul>
+        </nav>
+      </div>
+{{PUBLICATIONS_LIST}}
+    </div>
+  </main>

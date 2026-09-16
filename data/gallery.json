@@ -1,26 +1,26 @@
 [
   {
-    "src": "assets/img/discover-lab.jpg",
+    "src": "assets/img/discover-lab.webp",
     "lab": "DISCOVER Lab",
     "url": "https://sites.google.com/a/nd.edu/discoverlab/"
   },
   {
-    "src": "assets/img/miniro-lab.jpg",
+    "src": "assets/img/miniro-lab.webp",
     "lab": "MiNiRo-Lab",
     "url": "https://minirolab.nd.edu"
   },
   {
-    "src": "assets/img/roam-lab.jpg",
+    "src": "assets/img/roam-lab.webp",
     "lab": "ROAM Lab",
     "url": "https://roamlab.nd.edu/"
   },
   {
-    "src": "assets/img/iris-lab.jpg",
+    "src": "assets/img/iris-lab.webp",
     "lab": "IRIS Lab",
     "url": "https://irislab.nd.edu"
   },
   {
-    "src": "assets/img/werolab.png",
+    "src": "assets/img/werolab.webp",
     "lab": "WeRoLab",
     "url": "https://werolab.nd.edu"
   }

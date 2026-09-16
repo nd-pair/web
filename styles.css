@@ -1,181 +1,120 @@
-/* Robotics @ Notre Dame — shared styles.  Brand: navy #0C2340, gold #C99700. */
-:root{
-  --navy:#0c2340; --navy-2:#122f57; --navy-3:#0a1b31;
-  --gold:#c99700; --gold-2:#ae7a00; --gold-lt:#e5b93d;
-  --ink:#182031; --body:#3b4658; --muted:#6b7688;
-  --paper:#ffffff; --mist:#f4f6f9; --line:#e5e9f0;
-  --maxw:1140px; --r:14px;
-  --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,"Times New Roman",serif;
-  --sans:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;font-family:var(--sans);color:var(--body);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased}
-h1,h2,h3,h4{font-family:var(--serif);color:var(--ink);line-height:1.15;margin:0 0 .4em;font-weight:600}
-a{color:var(--gold-2);text-decoration:none}
-a:hover{text-decoration:underline}
-.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
-.eyebrow{font-family:var(--sans);text-transform:uppercase;letter-spacing:.16em;font-size:12px;font-weight:700;color:var(--gold-2)}
+/* Physical AI and Robotics Initiative — site-specific styles.
+ *
+ * The University of Notre Dame Web Theme (NDT4) supplies the design system:
+ * colours, type, grid, header, footer, buttons, cards, stats. This file only adds
+ * the few patterns the theme has no component for (the student and alumni rosters,
+ * the publication list, the members-only gate) and always builds them from theme
+ * custom properties so light/dark mode and the brand palette stay intact.
+ * Documentation: https://webtheme.nd.edu
+ */
 
-/* ---------- nav ---------- */
-.nav{position:sticky;top:0;z-index:30;background:rgba(12,35,64,.92);backdrop-filter:blur(10px);
-  border-bottom:1px solid rgba(255,255,255,.08);transition:padding .25s}
-.nav .wrap{display:flex;align-items:center;gap:24px;height:64px}
-.brand{font-family:var(--serif);font-size:17px;font-weight:600;color:#fff;letter-spacing:.2px;white-space:nowrap;display:inline-flex;align-items:center;gap:10px}
-.brand .logo{height:32px;width:auto;display:block;flex:none}
-.brand .at{color:var(--gold-lt)}
-.nav nav{margin-left:auto;display:flex;gap:6px;flex-wrap:wrap}
-.nav nav a{color:#dfe6f1;font-size:14.5px;padding:8px 14px;border-radius:999px;transition:.2s}
-.nav nav a:hover{background:rgba(255,255,255,.10);text-decoration:none;color:#fff}
-.nav nav a.active{color:var(--navy);background:var(--gold-lt);font-weight:600}
-.navtoggle{display:none}
+/* --- rosters ------------------------------------------------------------- */
 
-/* ---------- hero ---------- */
-.hero{position:relative;overflow:hidden;background:linear-gradient(160deg,#0a1b31,#0c2340 45%,#122f57);color:#eaf0f8}
-.hero::before,.hero::after{content:"";position:absolute;border-radius:50%;filter:blur(60px);opacity:.5;z-index:0}
-.hero::before{width:520px;height:520px;background:radial-gradient(circle,#c99700aa,transparent 70%);top:-160px;right:-120px;animation:float1 16s ease-in-out infinite}
-.hero::after{width:460px;height:460px;background:radial-gradient(circle,#1e63c9aa,transparent 70%);bottom:-180px;left:-120px;animation:float2 20s ease-in-out infinite}
-/* soft password gate */
-#gate{position:fixed;inset:0;z-index:9999;background:linear-gradient(160deg,#0a1b31,#0c2340 55%,#12315b);display:flex;align-items:center;justify-content:center;padding:24px}
-#gate form{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.15);padding:32px 34px;border-radius:16px;max-width:380px;width:100%;text-align:center}
-#gate .glogo{height:76px;width:auto;margin:0 auto 10px;display:block}
-#gate h1{font-family:var(--serif);color:#fff;font-size:21px;margin:0 0 6px}
-#gate h1 span{color:var(--gold-lt)}
-#gate p{margin:0 0 16px;font-size:13px;color:#c7d0dd}
-#gate input{width:100%;padding:11px 13px;border-radius:9px;border:1px solid rgba(255,255,255,.25);background:rgba(0,0,0,.25);color:#fff;font-size:15px}
-#gate button{margin-top:12px;width:100%;padding:11px;border:none;border-radius:9px;background:var(--gold);color:#241a00;font-weight:700;font-size:14px;cursor:pointer}
-#gate #gateErr{margin-top:10px;font-size:12.5px;color:#ff9a9a;min-height:16px}
-#gate .gnote{margin-top:14px;font-size:11px;color:#9fb0c6}
-
-.hero .wrap{position:relative;z-index:5;padding:96px 24px 104px}
-.hero-logo{position:absolute;z-index:3;top:50%;right:6%;transform:translateY(-50%);height:56%;max-height:310px;width:auto;opacity:.95;pointer-events:none;filter:drop-shadow(0 3px 7px rgba(0,0,0,.28))}
-@media(max-width:900px){.hero-logo{opacity:.16;right:50%;transform:translate(50%,-50%)}}
-/* photographic hero (lab images), ken-burns cross-fade + navy overlay */
-.hero.photo::before,.hero.photo::after{display:none}
-.hero .kb{position:absolute;inset:0;z-index:0;background-size:cover;background-position:center top;opacity:0;transition:opacity 1.6s ease;will-change:opacity,transform}
-.hero .kb.on{opacity:1;animation:kenburns 34s ease-in-out infinite alternate}
-/* darker on the left (behind the headline), lighter on the right to show the art */
-.hero .overlay{position:absolute;inset:0;z-index:1;background:linear-gradient(100deg,rgba(7,17,33,.93) 0%,rgba(10,26,48,.82) 40%,rgba(12,35,64,.5) 78%,rgba(12,35,64,.42) 100%)}
-@keyframes kenburns{from{transform:scale(1.02)}to{transform:scale(1.08)}}
-
-/* moving gallery marquee */
-.marquee{overflow:hidden;position:relative;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
-.marquee .track{display:flex;gap:18px;width:max-content;animation:scrollx 46s linear infinite}
-.marquee:hover .track{animation-play-state:paused}
-.marquee a{flex:none;position:relative;display:block;width:360px;height:202px;border-radius:14px;overflow:hidden;border:1px solid var(--line)}
-.marquee img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease}
-.marquee a:hover img{transform:scale(1.07)}
-.marquee .cap{position:absolute;left:0;right:0;bottom:0;padding:22px 14px 10px;color:#fff;font-weight:600;font-size:13.5px;background:linear-gradient(transparent,rgba(6,16,30,.82))}
-@keyframes scrollx{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-.hero h1{color:#fff;font-size:clamp(34px,5.4vw,60px);letter-spacing:.3px;max-width:16ch}
-.hero p.lead{font-size:clamp(16px,2vw,20px);color:#cdd8e8;max-width:60ch;margin-top:14px}
-.hero .cta{margin-top:30px;display:flex;gap:14px;flex-wrap:wrap}
-.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
-.reveal.in{opacity:1;transform:none}
-.btn{display:inline-block;padding:12px 22px;border-radius:999px;font-weight:600;font-size:15px;transition:.2s;border:1.5px solid transparent}
-.btn.gold{background:var(--gold);color:#241a00}
-.btn.gold:hover{background:var(--gold-lt);text-decoration:none;transform:translateY(-2px)}
-.btn.ghost{border-color:rgba(255,255,255,.4);color:#fff}
-.btn.ghost:hover{background:rgba(255,255,255,.10);text-decoration:none;transform:translateY(-2px)}
-
-/* ---------- sections ---------- */
-section{padding:72px 0}
-.section-head{max-width:64ch}
-.section-head h2{font-size:clamp(26px,3.4vw,38px)}
-.section-head p{color:var(--muted);font-size:16px}
-.mist{background:var(--mist);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.grid{display:grid;gap:20px}
-.g3{grid-template-columns:repeat(3,1fr)}
-.g4{grid-template-columns:repeat(4,1fr)}
-@media(max-width:900px){.g3,.g4{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:560px){.g3,.g4{grid-template-columns:1fr}}
-
-.card{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:22px;transition:transform .22s,box-shadow .22s,border-color .22s}
-.card:hover{transform:translateY(-4px);box-shadow:0 14px 34px rgba(12,35,64,.12);border-color:#d7deea}
-.card h3{font-size:20px}
-.card .tag{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--gold-2);background:#fbf3df;border-radius:999px;padding:3px 10px;margin-bottom:10px}
-.card p{margin:.2em 0 0;font-size:14.5px;color:var(--body)}
-.card .go{display:inline-block;margin-top:14px;font-weight:600;font-size:14px}
-.card .go::after{content:" →";transition:.2s}
-.card:hover .go::after{margin-left:4px}
-
-/* stat row */
-.stats{display:flex;gap:14px;flex-wrap:wrap}
-.stat{flex:1;min-width:150px;background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:20px 22px}
-.stat .n{font-family:var(--serif);font-size:40px;color:var(--navy);line-height:1}
-.stat .l{color:var(--muted);font-size:14px;margin-top:6px}
-
-/* people */
-.person{text-align:center}
-.person img{width:112px;height:112px;border-radius:50%;object-fit:cover;border:3px solid var(--gold-lt);background:var(--mist)}
-.person .initials{width:88px;height:88px;border-radius:50%;margin:0 auto;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:26px;color:#fff;background:linear-gradient(150deg,var(--navy-2),var(--navy));border:2px solid var(--gold-lt)}
-.person.sm .nm{font-size:15.5px;margin-top:10px}
-
-/* expandable student/alumni groups */
-.group{border-top:1px solid var(--line)}
-.group>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:11px;padding:16px 2px;
-  font-family:var(--serif);font-size:21px;font-weight:600;color:var(--ink)}
-.group>summary::-webkit-details-marker{display:none}
-.group>summary::before{content:"▸";color:var(--gold-2);font-size:14px;transition:transform .2s}
-.group[open]>summary::before{transform:rotate(90deg)}
-.group .cnt{font-family:var(--sans);font-size:12.5px;font-weight:700;color:#5b4600;background:#fbeecb;border-radius:999px;padding:2px 10px}
-.rosterlist{display:grid;grid-template-columns:repeat(3,1fr);gap:0 26px;padding:2px 0 20px}
-@media(max-width:900px){.rosterlist{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:560px){.rosterlist{grid-template-columns:1fr}}
-.rperson{padding:9px 0;border-bottom:1px solid var(--line)}
-.rperson .rn{font-weight:600;font-size:14.5px;color:var(--ink)}
-.rperson .rn a{color:var(--ink)} .rperson .rn a:hover{color:var(--gold-2)}
-.rperson .rn .yr{color:var(--muted);font-weight:600;font-size:12.5px;margin-left:5px}
-.rperson .rm{font-size:12.5px;color:var(--muted);margin-top:2px;line-height:1.4}
-.person .nm{font-family:var(--serif);font-weight:600;color:var(--ink);margin-top:12px;font-size:17px}
-.person .af{font-size:12.5px;color:var(--muted)}
-.person .lk{margin-top:8px;display:flex;gap:10px;justify-content:center;font-size:13px}
-
-/* labs list */
-.lab{display:flex;flex-direction:column;height:100%}
-.lab .host{font-size:12.5px;color:var(--muted);margin-top:auto;padding-top:12px;word-break:break-all}
-
-/* publications */
-.pubbar{position:sticky;top:64px;z-index:20;background:var(--paper);border-bottom:1px solid var(--line);padding:14px 0}
-.pubbar .wrap{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
-.yearchips{display:flex;gap:6px;flex-wrap:wrap}
-.yearchips a{font-size:13px;padding:5px 11px;border-radius:999px;background:var(--mist);color:var(--ink);border:1px solid var(--line)}
-.yearchips a:hover{background:#fbf3df;text-decoration:none}
-.yeargroup{padding:26px 0;border-bottom:1px solid var(--line)}
-.yeargroup h2{font-size:30px;display:flex;align-items:baseline;gap:12px}
-.yeargroup h2 .c{font-family:var(--sans);font-size:13px;color:var(--muted);font-weight:600}
-.pub{padding:12px 0;border-bottom:1px dashed var(--line)}
-.pub:last-child{border-bottom:none}
-.pub .t{font-weight:600;color:var(--ink)}
-.pub .m{font-size:13px;color:var(--muted);margin-top:2px}
-.pub .au{color:var(--gold-2);font-weight:600}
-.pub .more{color:var(--muted);font-style:italic}
-
-/* internal */
-.panel{background:linear-gradient(160deg,#0c2340,#122f57);color:#eaf0f8;border-radius:18px;padding:40px;position:relative;overflow:hidden}
-.panel h2{color:#fff}
-.panel p{color:#cdd8e8}
-.lock{font-size:12px;color:#e5b93d;font-weight:700;letter-spacing:.05em;text-transform:uppercase}
-
-/* footer */
-footer.site{background:var(--navy-3);color:#b9c4d6;padding:44px 0 40px;margin-top:20px}
-footer.site .wrap{display:flex;gap:26px;flex-wrap:wrap;justify-content:space-between;align-items:flex-start}
-footer.site a{color:#dbe4f2}
-footer.site .brand{color:#fff;font-size:17px}
-footer.site small{color:#8595ad;font-size:12.5px}
-
-@keyframes float1{0%,100%{transform:translate(0,0)}50%{transform:translate(-30px,26px)}}
-@keyframes float2{0%,100%{transform:translate(0,0)}50%{transform:translate(28px,-22px)}}
-@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
-@media(max-width:720px){
-  .nav nav{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;background:var(--navy);padding:10px 24px 18px;gap:2px}
-  .nav nav.open{display:flex}
-  .navtoggle{display:block;margin-left:auto;background:none;border:0;color:#fff;font-size:24px;cursor:pointer}
+.roster {
+  columns: 22rem auto;
+  column-gap: 2.5rem;
 }
 
-/* accessibility: skip link + visible keyboard focus (WCAG 2.4.1 / 2.4.7) */
-.skip-link{position:absolute;left:-9999px;top:0;z-index:100;background:var(--gold);color:#241a00;padding:10px 16px;border-radius:0 0 10px 0;font-weight:700;text-decoration:none}
-.skip-link:focus{left:0}
-:focus-visible{outline:3px solid var(--gold-lt);outline-offset:2px;border-radius:4px}
-footer .ndmark img{height:34px;width:auto;display:block;opacity:.9;transition:opacity .2s}
-footer .ndmark:hover img{opacity:1}
+.roster > li {
+  break-inside: avoid;
+  margin-block-end: 0.75rem;
+}
+
+.roster-meta {
+  color: var(--gray);
+  display: block;
+  font-size: 0.875rem;
+}
+
+.roster-year {
+  color: var(--gray);
+  font-size: 0.875rem;
+}
+
+/* --- publications -------------------------------------------------------- */
+
+.pub-search {
+  max-width: 34rem;
+}
+
+.pub-status:empty {
+  display: none;
+}
+
+.pub-note {
+  color: var(--gray);
+  font-size: 0.875rem;
+}
+
+.pub-count {
+  color: var(--gray);
+  font-family: var(--font-default);
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.pub-list > li + li {
+  margin-block-start: 1.25rem;
+}
+
+.pub-title {
+  font-weight: 600;
+  margin-block-end: 0.25rem;
+}
+
+.pub-more {
+  font-style: italic;
+}
+
+.pub-year[hidden] {
+  display: none;
+}
+
+/* --- members-only gate --------------------------------------------------- */
+
+/* The site is a members' preview, so app.js puts this in front of it until the
+   access phrase is entered. It is a soft gate over public data, not a security
+   boundary, and it is deliberately the only thing on the page while it is up. */
+.gate {
+  align-items: center;
+  background: var(--brand-blue);
+  color: #fff;
+  display: flex;
+  inset: 0;
+  justify-content: center;
+  padding: 1.5rem;
+  position: fixed;
+  z-index: 1000;
+}
+
+.gate-inner {
+  max-width: 26rem;
+  width: 100%;
+}
+
+.gate h1,
+.gate p,
+.gate label {
+  color: #fff;   /* the theme colours body text for a light ground; this panel is navy */
+}
+
+.gate h1 {
+  font-size: 1.75rem;
+}
+
+.gate label {
+  display: block;
+  margin-block-end: 0.5rem;
+}
+
+.gate input {
+  width: 100%;
+}
+
+.gate-error:empty {
+  display: none;
+}
+
+.gate-error {
+  margin-block-start: 0.75rem;
+}

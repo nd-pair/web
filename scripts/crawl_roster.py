@@ -91,20 +91,39 @@ def all_ids_for(name, primary):
 
 
 def download_photo(url, slug):
+    """Fetch a headshot and store it as a square WebP.
+
+    The pages show these in the Web Theme's people card, which crops to a circle, so
+    a square 400px WebP is both the right shape and a fraction of the bytes of the
+    originals — which matters for the Lighthouse scores the University requires.
+    """
     if not url:
         return None
     if url.startswith("//"):
         url = "https:" + url
     elif url.startswith("/"):
         url = ORIGIN + url
-    ext = os.path.splitext(url.split("?")[0])[1].lower()
-    if ext not in (".jpg", ".jpeg", ".png", ".webp"):
-        ext = ".jpg"
-    rel = f"assets/faculty/{slug}{ext}"
+    rel = f"assets/faculty/{slug}.webp"
     try:
-        with open(os.path.join(ROOT, rel), "wb") as f:
-            f.write(http(url, binary=True))
-        return f"{slug}{ext}"
+        data = http(url, binary=True)
+        from PIL import Image
+        import io
+        im = Image.open(io.BytesIO(data))
+        if im.mode in ("P", "LA"):
+            im = im.convert("RGBA")
+        w, h = im.size
+        side = min(w, h)
+        left = (w - side) // 2
+        top = 0 if h > w else (h - side) // 2      # headshots sit high in the frame
+        im = im.crop((left, top, left + side, top + side))
+        if im.width > 400:
+            im = im.resize((400, 400), Image.LANCZOS)
+        if im.mode == "RGBA":
+            bg = Image.new("RGB", im.size, (255, 255, 255))
+            bg.paste(im, mask=im.split()[-1])
+            im = bg
+        im.convert("RGB").save(os.path.join(ROOT, rel), "WEBP", quality=80, method=6)
+        return f"{slug}.webp"
     except Exception as e:
         print(f"   !! photo failed {slug}: {e}", file=sys.stderr)
         return None

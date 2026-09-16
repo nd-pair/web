@@ -6,7 +6,7 @@
     "openalex_ids": [
       "A5076214359"
     ],
-    "photo": "edgar-bolivar-nieto.jpg",
+    "photo": "edgar-bolivar-nieto.webp",
     "affiliated": false,
     "lab": "WeRoLab",
     "lab_url": "https://werolab.nd.edu"
@@ -18,7 +18,7 @@
     "openalex_ids": [
       "A5011017276"
     ],
-    "photo": "tingyu-cheng.jpg",
+    "photo": "tingyu-cheng.webp",
     "affiliated": false,
     "lab": null,
     "lab_url": null
@@ -36,7 +36,7 @@
       "A5130284295",
       "A5148086165"
     ],
-    "photo": "nikolaus-correll.jpg",
+    "photo": "nikolaus-correll.webp",
     "affiliated": false,
     "lab": null,
     "lab_url": null
@@ -48,7 +48,7 @@
     "openalex_ids": [
       "A5042951623"
     ],
-    "photo": "j-william-goodwine.jpg",
+    "photo": "j-william-goodwine.webp",
     "affiliated": false,
     "lab": "Nonlinear Controls Lab",
     "lab_url": "https://controls.ame.nd.edu/mediawiki/index.php/Main_Page"
@@ -60,7 +60,7 @@
     "openalex_ids": [
       "A5063884621"
     ],
-    "photo": "mengxue-hou.jpg",
+    "photo": "mengxue-hou.webp",
     "affiliated": false,
     "lab": null,
     "lab_url": null
@@ -72,7 +72,7 @@
     "openalex_ids": [
       "A5108999536"
     ],
-    "photo": "fanxin-kong.jpg",
+    "photo": "fanxin-kong.webp",
     "affiliated": false,
     "lab": null,
     "lab_url": null
@@ -84,7 +84,7 @@
     "openalex_ids": [
       "A5045445273"
     ],
-    "photo": "hai-lin.jpg",
+    "photo": "hai-lin.webp",
     "affiliated": false,
     "lab": null,
     "lab_url": null
@@ -96,7 +96,7 @@
     "openalex_ids": [
       "A5062756806"
     ],
-    "photo": "margaret-coad.jpg",
+    "photo": "margaret-coad.webp",
     "affiliated": false,
     "lab": null,
     "lab_url": null
@@ -108,7 +108,7 @@
     "openalex_ids": [
       "A5031304323"
     ],
-    "photo": "yasemin-ozkan-aydin.jpeg",
+    "photo": "yasemin-ozkan-aydin.webp",
     "affiliated": false,
     "lab": "MiNiRo-Lab",
     "lab_url": "https://minirolab.nd.edu"
@@ -120,7 +120,7 @@
     "openalex_ids": [
       "A5073029557"
     ],
-    "photo": "james-schmiedeler.jpg",
+    "photo": "james-schmiedeler.webp",
     "affiliated": false,
     "lab": "LAB Lab",
     "lab_url": "https://scholar.google.com/citations?user=EzYQXesAAAAJ&hl=en"
@@ -132,7 +132,7 @@
     "openalex_ids": [
       "A5029126529"
     ],
-    "photo": "patrick-wensing.jpg",
+    "photo": "patrick-wensing.webp",
     "affiliated": false,
     "lab": "ROAM Lab",
     "lab_url": "https://roamlab.nd.edu/"
@@ -144,7 +144,7 @@
     "openalex_ids": [
       "A5065741205"
     ],
-    "photo": "zhi-zheng.jpg",
+    "photo": "zhi-zheng.webp",
     "affiliated": false,
     "lab": null,
     "lab_url": null
@@ -156,7 +156,7 @@
     "openalex_ids": [
       "A5077171773"
     ],
-    "photo": "panos-antsaklis.jpg",
+    "photo": "panos-antsaklis.webp",
     "affiliated": true,
     "lab": "Antsaklis Group",
     "lab_url": "https://www3.nd.edu/~pantsakl/"
@@ -168,7 +168,7 @@
     "openalex_ids": [
       "A5066250773"
     ],
-    "photo": "toros-arikan.jpg",
+    "photo": "toros-arikan.webp",
     "affiliated": true,
     "lab": null,
     "lab_url": null
@@ -180,7 +180,7 @@
     "openalex_ids": [
       "A5037363688"
     ],
-    "photo": "jane-cleland-huang.jpeg",
+    "photo": "jane-cleland-huang.webp",
     "affiliated": true,
     "lab": "SAREC / DroneResponse",
     "lab_url": "http://droneresponse.net"
@@ -192,7 +192,7 @@
     "openalex_ids": [
       "A5136202971"
     ],
-    "photo": "nishanth-gadiyar.jpg",
+    "photo": "nishanth-gadiyar.webp",
     "affiliated": true,
     "lab": null,
     "lab_url": null
@@ -204,7 +204,7 @@
     "openalex_ids": [
       "A5074821819"
     ],
-    "photo": "meng-jiang.jpg",
+    "photo": "meng-jiang.webp",
     "affiliated": true,
     "lab": null,
     "lab_url": null
@@ -216,7 +216,7 @@
     "openalex_ids": [
       "A5020875577"
     ],
-    "photo": "robert-landers.jpg",
+    "photo": "robert-landers.webp",
     "affiliated": true,
     "lab": "Landers Group",
     "lab_url": "https://landersgroup.nd.edu"
@@ -228,7 +228,7 @@
     "openalex_ids": [
       "A5022295836"
     ],
-    "photo": "michael-lemmon.jpg",
+    "photo": "michael-lemmon.webp",
     "affiliated": true,
     "lab": "Lemmon Group",
     "lab_url": "https://www3.nd.edu/~lemmon/"

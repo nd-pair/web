@@ -1,0 +1,55 @@
+{
+  "title": "People",
+  "description": "The faculty, students and alumni of the Physical AI and Robotics Initiative at the University of Notre Dame."
+}
+---
+  <main id="content" class="site-content">
+    <div class="page-header">
+      <div class="page-title-wrapper">
+        <nav aria-label="Breadcrumbs" class="breadcrumbs"><ol><li><a href="index.html">Home</a></li><li aria-current="page">People</li></ol></nav>
+        <h1 class="page-title page-title--sm">People</h1>
+        <p class="page-lede">The faculty who lead our laboratories, and the students carrying the
+          work forward.</p>
+      </div>
+    </div>
+
+    <div class="page-primary">
+      <section class="section">
+        <h2 class="section-title section-title--sm">Members</h2>
+        <ul class="grid grid-sm-2 grid-ml-4 list--unstyled">
+{{FACULTY_MEMBERS}}
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title section-title--sm">Affiliated members</h2>
+        <ul class="grid grid-sm-2 grid-ml-4 list--unstyled">
+{{FACULTY_AFFILIATED}}
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title section-title--sm">Students</h2>
+        <div class="accordion-list">
+          <details class="accordion" open>
+            <summary>Current students ({{COUNT_STUDENTS}})</summary>
+            <div class="accordion-content">
+{{STUDENTS}}
+            </div>
+          </details>
+          <details class="accordion">
+            <summary>Alumni &mdash; Ph.D. ({{COUNT_PHD}})</summary>
+            <div class="accordion-content">
+{{ALUMNI_PHD}}
+            </div>
+          </details>
+          <details class="accordion">
+            <summary>Alumni &mdash; M.S. ({{COUNT_MS}})</summary>
+            <div class="accordion-content">
+{{ALUMNI_MS}}
+            </div>
+          </details>
+        </div>
+      </section>
+    </div>
+  </main>
