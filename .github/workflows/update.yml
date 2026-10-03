@@ -12,6 +12,7 @@ permissions:
   contents: write
   pages: write
   id-token: write
+  issues: write
 
 concurrency:
   group: pages
@@ -27,6 +28,13 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Install the checker's dependencies
+        run: |
+          npm install --no-save --no-audit --no-fund playwright axe-core
+          npx playwright install --with-deps chromium
 
       - name: Install dependencies
         run: pip install -r scripts/requirements.txt
@@ -76,6 +84,24 @@ jobs:
           touch _site/.nojekyll
 
       - uses: actions/configure-pages@v5
+
+      # ADVISORY FOR NOW. This site has not had a Notre Dame Creative review, and
+      # the checker currently reports 10 problems on it (two <h1> per page from
+      # the members' gate, the hero title at 1.00:1 over the South Bend photo,
+      # bare numbers in the year headings, and muted text that uses a fixed
+      # palette value instead of light-dark() so it fails in dark mode).
+      #
+      # Once those are fixed, delete the "--warn-only" below and restore the
+      # conditional, so a push blocks and only the scheduled run advises:
+      #     ${{ github.event_name == 'schedule' && '--warn-only' || '' }}
+      #
+      # The runner reaches conductor.nd.edu, so this measures the real theme with
+      # the real brand fonts.
+      - name: Accessibility and design check
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: node scripts/a11y_check.js --root _site --warn-only
+
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
