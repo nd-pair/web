@@ -1,8 +1,8 @@
 {
-  "generated": "2026-10-01 13:48 UTC",
+  "generated": "2026-10-03 00:56 UTC",
   "source": "OpenAlex (https://openalex.org)",
   "minYear": 2016,
-  "total": 1336,
+  "total": 1321,
   "years": [
     {
       "year": 2026,
@@ -876,16 +876,20 @@
               "id": "A5127850917"
             },
             {
-              "name": "Oleg V. Sokolsky",
-              "id": "A5082105260"
-            },
-            {
-              "name": "Insup Lee",
-              "id": "A5137629746"
+              "name": "Zijun Wang",
+              "id": "A5153699891"
             },
             {
               "name": "Fanxin Kong",
               "id": "A5108999536"
+            },
+            {
+              "name": "Oleg Sokolsky",
+              "id": "A5153129263"
+            },
+            {
+              "name": "Insup Lee",
+              "id": "A5154190288"
             }
           ]
         },
@@ -4266,7 +4270,7 @@
               "id": "A5090912879"
             },
             {
-              "name": "Michael J. Ryan",
+              "name": "Michael James Ryan",
               "id": "A5058109700"
             },
             {
@@ -8896,7 +8900,7 @@
               "id": "A5066655843"
             },
             {
-              "name": "Pedro Alc\u00e2ntara Antunes Lopes",
+              "name": "Pedro Lopes",
               "id": "A5052549454"
             },
             {
@@ -12588,7 +12592,7 @@
               "id": "A5041813663"
             },
             {
-              "name": "Athanasios J. Syllaios",
+              "name": "Athanasios Syllaios",
               "id": "A5058824130"
             },
             {
@@ -14919,7 +14923,7 @@
     },
     {
       "year": 2021,
-      "count": 137,
+      "count": 134,
       "items": [
         {
           "id": "https://openalex.org/W4200504259",
@@ -15746,23 +15750,6 @@
           ]
         },
         {
-          "id": "https://openalex.org/W4286950143",
-          "title": "RescueAR: Augmented Reality Supported Collaboration for UAV Driven\\n Emergency Response Systems",
-          "year": 2021,
-          "date": "2021-09-30",
-          "venue": "arXiv (Cornell University)",
-          "authors": [
-            {
-              "name": "Ankit Agrawal",
-              "id": "A5004659592"
-            },
-            {
-              "name": "Jane Cleland\u2010Huang",
-              "id": "A5037363688"
-            }
-          ]
-        },
-        {
           "id": "https://openalex.org/W3204233766",
           "title": "Emergent Collective Locomotion in an Active Polymer Model of Entangled Worm Blobs",
           "year": 2021,
@@ -15933,47 +15920,6 @@
           ]
         },
         {
-          "id": "https://openalex.org/W4286963468",
-          "title": "Robot-Assisted Surgical Training Over Several Days in a Virtual Surgical\\n Environment with Divergent and Convergent Force Fields",
-          "year": 2021,
-          "date": "2021-09-23",
-          "venue": "arXiv (Cornell University)",
-          "authors": [
-            {
-              "name": "Yousi A. Oquendo",
-              "id": "A5011079591"
-            },
-            {
-              "name": "Zonghe Chua",
-              "id": "A5082074188"
-            },
-            {
-              "name": "Margaret M. Coad",
-              "id": "A5062756806"
-            },
-            {
-              "name": "Ilana Nisky",
-              "id": "A5080865180"
-            },
-            {
-              "name": "Anthony Jarc",
-              "id": "A5083764444"
-            },
-            {
-              "name": "Sherry M. Wren",
-              "id": "A5027160232"
-            },
-            {
-              "name": "Thomas S. Lendvay",
-              "id": "A5069213962"
-            },
-            {
-              "name": "Allison M. Okamura",
-              "id": "A5067958710"
-            }
-          ]
-        },
-        {
           "id": "https://openalex.org/W4286973116",
           "title": "The Stackelberg Equilibrium for One-sided Zero-sum Partially Observable Stochastic Games",
           "year": 2021,
@@ -16127,23 +16073,6 @@
             {
               "name": "Daniel I. Goldman",
               "id": "A5078622216"
-            }
-          ]
-        },
-        {
-          "id": "https://openalex.org/W4306697901",
-          "title": "Explaining Autonomous Decisions in Swarms of Human-on-the-Loop Small\\n Unmanned Aerial Systems",
-          "year": 2021,
-          "date": "2021-09-05",
-          "venue": "arXiv (Cornell University)",
-          "authors": [
-            {
-              "name": "Agrawal, Ankit",
-              "id": ""
-            },
-            {
-              "name": "Jane Cleland\u2010Huang",
-              "id": "A5037363688"
             }
           ]
         },
@@ -19022,7 +18951,7 @@
     },
     {
       "year": 2020,
-      "count": 147,
+      "count": 146,
       "items": [
         {
           "id": "https://openalex.org/W3119897449",
@@ -20365,59 +20294,6 @@
             {
               "name": "Meng Jiang",
               "id": "A5074821819"
-            }
-          ]
-        },
-        {
-          "id": "https://openalex.org/W4287667465",
-          "title": "Miniaturized Circuitry for Capacitive Self-sensing and Closed-loop\\n Control of Soft Electrostatic Transducers",
-          "year": 2020,
-          "date": "2020-09-14",
-          "venue": "arXiv (Cornell University)",
-          "authors": [
-            {
-              "name": "Khoi Ly",
-              "id": "A5040368638"
-            },
-            {
-              "name": "Nicholas Kellaris",
-              "id": "A5023362547"
-            },
-            {
-              "name": "Dade McMorris",
-              "id": "A5043242725"
-            },
-            {
-              "name": "Brian K. Johnson",
-              "id": "A5027505300"
-            },
-            {
-              "name": "Eric Acome",
-              "id": "A5021573797"
-            },
-            {
-              "name": "Vani Sundaram",
-              "id": "A5043334100"
-            },
-            {
-              "name": "Mantas Naris",
-              "id": "A5065590647"
-            },
-            {
-              "name": "J. Sean Humbert",
-              "id": "A5073287604"
-            },
-            {
-              "name": "Mark E. Rentschler",
-              "id": "A5041822706"
-            },
-            {
-              "name": "Christoph Keplinger",
-              "id": "A5005851458"
-            },
-            {
-              "name": "Nikolaus Correll",
-              "id": "A5047458039"
             }
           ]
         },
@@ -23527,7 +23403,7 @@
     },
     {
       "year": 2019,
-      "count": 166,
+      "count": 161,
       "items": [
         {
           "id": "https://openalex.org/W2997649102",
@@ -24126,39 +24002,6 @@
           ]
         },
         {
-          "id": "https://openalex.org/W4286778687",
-          "title": "Human Interface for Teleoperated Object Manipulation with a Soft Growing\\n Robot",
-          "year": 2019,
-          "date": "2019-10-28",
-          "venue": "arXiv (Cornell University)",
-          "authors": [
-            {
-              "name": "Fabio Stroppa",
-              "id": "A5054512048"
-            },
-            {
-              "name": "Ming Luo",
-              "id": "A5101565170"
-            },
-            {
-              "name": "Kyle T. Yoshida",
-              "id": "A5029066624"
-            },
-            {
-              "name": "Margaret M. Coad",
-              "id": "A5062756806"
-            },
-            {
-              "name": "Laura H. Blumenschein",
-              "id": "A5034706353"
-            },
-            {
-              "name": "Allison M. Okamura",
-              "id": "A5067958710"
-            }
-          ]
-        },
-        {
           "id": "https://openalex.org/W2981407045",
           "title": "Robustness and efficiency insights from a mechanical coupling metric for ankle-actuated biped robots",
           "year": 2019,
@@ -24525,23 +24368,6 @@
             {
               "name": "Panos J. Antsaklis",
               "id": "A5077171773"
-            }
-          ]
-        },
-        {
-          "id": "https://openalex.org/W4288276765",
-          "title": "Controllability and Accessibility Results for N-Link Horizontal Planar\\n Manipulators with One Unactuated Joint",
-          "year": 2019,
-          "date": "2019-07-30",
-          "venue": "arXiv (Cornell University)",
-          "authors": [
-            {
-              "name": "Tan Chen",
-              "id": "A5100763142"
-            },
-            {
-              "name": "Bill Goodwine",
-              "id": "A5042951623"
             }
           ]
         },
@@ -25916,44 +25742,10 @@
           ]
         },
         {
-          "id": "https://openalex.org/W4288558741",
-          "title": "Recent Advances in Analysis and Design of Cyber-physical Systems using\\n Passivity Indices",
-          "year": 2019,
-          "date": "2019-02-27",
-          "venue": "arXiv (Cornell University)",
-          "authors": [
-            {
-              "name": "Hasan Zakeri",
-              "id": "A5015383229"
-            },
-            {
-              "name": "Panos J. Antsaklis",
-              "id": "A5077171773"
-            }
-          ]
-        },
-        {
           "id": "https://openalex.org/W2967947609",
           "title": "A Data-driven Adaptive Controller Reconfiguration for Fault Mitigation: A Passivity Approach",
           "year": 2019,
           "date": "2019-02-26",
-          "venue": "arXiv (Cornell University)",
-          "authors": [
-            {
-              "name": "Hasan Zakeri",
-              "id": "A5015383229"
-            },
-            {
-              "name": "Panos J. Antsaklis",
-              "id": "A5077171773"
-            }
-          ]
-        },
-        {
-          "id": "https://openalex.org/W4288562506",
-          "title": "A Data-driven Adaptive Controller Reconfiguration for Fault Mitigation:\\n A Passivity Approach",
-          "year": 2019,
-          "date": "2019-02-25",
           "venue": "arXiv (Cornell University)",
           "authors": [
             {
@@ -26113,23 +25905,6 @@
             {
               "name": "Bill Goodwine",
               "id": "A5042951623"
-            }
-          ]
-        },
-        {
-          "id": "https://openalex.org/W4288642107",
-          "title": "Passivity and Passivity Indices of Nonlinear Systems Under Operational\\n Limitations using Approximations",
-          "year": 2019,
-          "date": "2019-01-03",
-          "venue": "arXiv (Cornell University)",
-          "authors": [
-            {
-              "name": "Hasan Zakeri",
-              "id": "A5015383229"
-            },
-            {
-              "name": "Panos J. Antsaklis",
-              "id": "A5077171773"
             }
           ]
         },
@@ -27671,7 +27446,7 @@
     },
     {
       "year": 2018,
-      "count": 133,
+      "count": 131,
       "items": [
         {
           "id": "https://openalex.org/W2906700374",
@@ -28051,7 +27826,7 @@
               "id": "A5002156402"
             },
             {
-              "name": "Barbara Berish Brown",
+              "name": "Barbara B. Brown",
               "id": "A5067782848"
             },
             {
@@ -28171,7 +27946,7 @@
               "id": "A5109893104"
             },
             {
-              "name": "Andreas Velsing Groth",
+              "name": "Andreas Groth",
               "id": "A5007336429"
             },
             {
@@ -28989,31 +28764,6 @@
             {
               "name": "Panos J. Antsaklis",
               "id": "A5077171773"
-            }
-          ]
-        },
-        {
-          "id": "https://openalex.org/W4289676782",
-          "title": "Leveraging Historical Associations between Requirements and Source Code\\n to Identify Impacted Classes",
-          "year": 2018,
-          "date": "2018-08-20",
-          "venue": "arXiv (Cornell University)",
-          "authors": [
-            {
-              "name": "Davide Falessi",
-              "id": "A5075793467"
-            },
-            {
-              "name": "Justin Roll",
-              "id": "A5028386363"
-            },
-            {
-              "name": "Jin Guo",
-              "id": "A5100300852"
-            },
-            {
-              "name": "Jane Cleland\u2010Huang",
-              "id": "A5037363688"
             }
           ]
         },
@@ -30412,35 +30162,6 @@
           ]
         },
         {
-          "id": "https://openalex.org/W4300596326",
-          "title": "Traceability in the Wild: Automatically Augmenting Incomplete Trace\\n Links",
-          "year": 2018,
-          "date": "2018-04-06",
-          "venue": "arXiv (Cornell University)",
-          "authors": [
-            {
-              "name": "Michael Rath",
-              "id": "A5101432814"
-            },
-            {
-              "name": "Jacob Rendall",
-              "id": "A5032569584"
-            },
-            {
-              "name": "Jin Guo",
-              "id": "A5010572058"
-            },
-            {
-              "name": "Jane Cleland\u2010Huang",
-              "id": "A5037363688"
-            },
-            {
-              "name": "Patrick Maeder",
-              "id": "A5011124194"
-            }
-          ]
-        },
-        {
           "id": "https://openalex.org/W2795266985",
           "title": "Traceability in the Wild: Automatically Augmenting Incomplete Trace Links",
           "year": 2018,
@@ -31786,7 +31507,7 @@
     },
     {
       "year": 2017,
-      "count": 127,
+      "count": 125,
       "items": [
         {
           "id": "https://openalex.org/W2778998603",
@@ -31943,31 +31664,6 @@
             {
               "name": "Jamie Kyujin Paik",
               "id": "A5025220023"
-            }
-          ]
-        },
-        {
-          "id": "https://openalex.org/W4297795575",
-          "title": "Dissipativity of system abstractions obtained using approximate\\n input-output simulation",
-          "year": 2017,
-          "date": "2017-11-20",
-          "venue": "arXiv (Cornell University)",
-          "authors": [
-            {
-              "name": "Etika Agarwal",
-              "id": "A5062662748"
-            },
-            {
-              "name": "Shravan Sajja",
-              "id": "A5028916280"
-            },
-            {
-              "name": "Panos J. Antsaklis",
-              "id": "A5077171773"
-            },
-            {
-              "name": "Vijay Gupta",
-              "id": "A5104035840"
             }
           ]
         },
@@ -32647,35 +32343,6 @@
             {
               "name": "Kristofer S. J. Pister",
               "id": "A5085143303"
-            }
-          ]
-        },
-        {
-          "id": "https://openalex.org/W4296927685",
-          "title": "Encoding Multi-Resolution Brain Networks Using Unsupervised Deep\\n Learning",
-          "year": 2017,
-          "date": "2017-08-12",
-          "venue": "arXiv (Cornell University)",
-          "authors": [
-            {
-              "name": "Arash Rahnama",
-              "id": "A5053280713"
-            },
-            {
-              "name": "Abdullah Alchihabi",
-              "id": "A5071269392"
-            },
-            {
-              "name": "Vijay Gupta",
-              "id": "A5043597789"
-            },
-            {
-              "name": "Panos J. Antsaklis",
-              "id": "A5077171773"
-            },
-            {
-              "name": "Fato\u015f T. Yarman Vural",
-              "id": "A5110664463"
             }
           ]
         },
@@ -35115,7 +34782,7 @@
     },
     {
       "year": 2016,
-      "count": 127,
+      "count": 125,
       "items": [
         {
           "id": "https://openalex.org/W2576906416",
@@ -36185,27 +35852,6 @@
           ]
         },
         {
-          "id": "https://openalex.org/W4293876558",
-          "title": "QSR-Dissipativity and Passivity Analysis of Event-Triggered Networked\\n Control Cyber-Physical Systems",
-          "year": 2016,
-          "date": "2016-07-02",
-          "venue": "arXiv (Cornell University)",
-          "authors": [
-            {
-              "name": "Arash Rahnama",
-              "id": "A5053280713"
-            },
-            {
-              "name": "Meng Xia",
-              "id": "A5080268090"
-            },
-            {
-              "name": "Panos J. Antsaklis",
-              "id": "A5077171773"
-            }
-          ]
-        },
-        {
           "id": "https://openalex.org/W2467566187",
           "title": "QSR-Dissipativity and Passivity Analysis of Event-Triggered Networked Control Cyber-Physical Systems",
           "year": 2016,
@@ -36601,23 +36247,6 @@
             {
               "name": "Dana Hughes",
               "id": "A5036897495"
-            },
-            {
-              "name": "Nikolaus Correll",
-              "id": "A5047458039"
-            }
-          ]
-        },
-        {
-          "id": "https://openalex.org/W4297710703",
-          "title": "Distributed Machine Learning in Materials that Couple Sensing,\\n Actuation, Computation and Communication",
-          "year": 2016,
-          "date": "2016-06-10",
-          "venue": "arXiv (Cornell University)",
-          "authors": [
-            {
-              "name": "Dana Hughes",
-              "id": "A5103176418"
             },
             {
               "name": "Nikolaus Correll",
