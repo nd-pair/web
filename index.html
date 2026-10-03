@@ -156,14 +156,46 @@
         </div>
       </div>
     </div>
+    <!-- The theme's sticky navigation. ndt.js watches .header-nav and reveals this
+         bar once the header above has scrolled out of view; it stays `hidden`, and
+         therefore out of the accessibility tree, until then. -->
+    <div class="header-nav-fixed" id="nav-fixed" hidden>
+      <div class="nav-fixed-inner">
+        <nav id="fixed" class="fixed nav-primary" aria-label="Primary navigation">
+          <div id="primary_fixed">
+            <ul class="nav-level-1 depth_1">
+            <li id="primary_fixed_0" class="active"><a href="index.html" aria-current="page" class="current">Home</a></li>
+            <li id="primary_fixed_1"><a href="laboratories.html">Laboratories</a></li>
+            <li id="primary_fixed_2"><a href="people.html">People</a></li>
+            <li id="primary_fixed_3"><a href="publications.html">Publications</a></li>
+            <li id="primary_fixed_4"><a href="internal.html">Internal</a></li>
+            </ul>
+          </div>
+        </nav>
+        <div class="header-nav-toggle">
+          <button class="btn btn--action global-menu-toggle" aria-label="Open global menu and search" aria-controls="global-menu" aria-haspopup="dialog">
+            <svg class="icon-search-menu" aria-hidden="true"><use xlink:href="#icon-search-menu"></use></svg>
+            <svg class="icon-search" aria-hidden="true"><use xlink:href="#icon-search"></use></svg>
+          </button>
+        </div>
+      </div>
+    </div>
   </header>
 
 <main id="content" class="site-content">
+    <!-- fadeDirection "to-top", not "to-bottom-right". The title and lede sit at the
+         bottom-left of the image, which is where a to-top gradient is densest; with
+         the original to-bottom-right the lede measured 2.02:1 against the 4.5:1
+         minimum. Measured clean at every width with to-top. This stays the Screen
+         variant, so the hero is still full-bleed behind the header — but that makes
+         the result dependent on this particular image: re-measure if it is replaced. -->
     <div class="page-header page-header--screen bg--dark">
-      <figure class="page-image bg--gradient bg--brand-blue bg--to-bottom-right">
-        <img src="assets/img/hero-southbend.webp"
+      <figure class="page-image bg--gradient bg--brand-blue bg--to-top">
+        <img src="assets/img/hero-southbend-800.webp"
              srcset="assets/img/hero-southbend-800.webp 800w, assets/img/hero-southbend.webp 1408w"
-             sizes="100vw" width="1408" height="768" alt="" fetchpriority="high" decoding="async">
+             sizes="100vw" width="1408" height="768"
+             alt="An illustration of a humanoid robot sorting discarded electronics into e-waste recycling bins on a South Bend street, with the Golden Dome behind it and people working at solar panels, machinery and shopfronts around the square."
+             fetchpriority="high" decoding="async">
       </figure>
       <div class="page-title-wrapper">
         <h1 class="page-title page-title--sm">Robots to increase human flourishing</h1>
@@ -186,7 +218,7 @@
     </div>
 
     <div class="page-secondary full-width">
-      <section class="section bg--sky-blue-light">
+      <section class="section bg--sky-blue-light p-4">
         <ul class="no-bullets list--stats grid grid-sm-2 grid-ml-4">
 <li class="stat-item stat-item--center">
   <span class="stat-value">19</span>

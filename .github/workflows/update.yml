@@ -85,22 +85,18 @@ jobs:
 
       - uses: actions/configure-pages@v5
 
-      # ADVISORY FOR NOW. This site has not had a Notre Dame Creative review, and
-      # the checker currently reports 10 problems on it (two <h1> per page from
-      # the members' gate, the hero title at 1.00:1 over the South Bend photo,
-      # bare numbers in the year headings, and muted text that uses a fixed
-      # palette value instead of light-dark() so it fails in dark mode).
-      #
-      # Once those are fixed, delete the "--warn-only" below and restore the
-      # conditional, so a push blocks and only the scheduled run advises:
-      #     ${{ github.event_name == 'schedule' && '--warn-only' || '' }}
-      #
-      # The runner reaches conductor.nd.edu, so this measures the real theme with
-      # the real brand fonts.
+      # Blocking on a push (someone is there to fix it); advisory on a schedule,
+      # because a site that stops updating is worse than one that updates and
+      # files a ticket. --session-storage answers the members' gate, so the sweep
+      # measures the pages rather than the modal sitting over them. The runner
+      # reaches conductor.nd.edu, so this is the real theme and the real fonts.
       - name: Accessibility and design check
         env:
           GITHUB_TOKEN: ${{ github.token }}
-        run: node scripts/a11y_check.js --root _site --warn-only
+        run: >
+          node scripts/a11y_check.js --root _site
+          --session-storage nd_pair_site=1
+          ${{ github.event_name == 'schedule' && '--warn-only' || '' }}
 
       - uses: actions/upload-pages-artifact@v3
         with:

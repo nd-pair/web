@@ -10,6 +10,13 @@
 
 /* --- rosters ------------------------------------------------------------- */
 
+/* Muted text has to be stated for both colour schemes. The theme's palette
+   variables are fixed values, not scheme-aware ones; the theme itself writes
+   light-dark() for anything that must follow prefers-color-scheme — see
+   .caption/figcaption and .card-label in ndt.css. #555 on the dark page
+   background (#091b34) measures 2.31:1. */
+
+
 .roster {
   columns: 22rem auto;
   column-gap: 2.5rem;
@@ -21,13 +28,13 @@
 }
 
 .roster-meta {
-  color: var(--gray);
+  color: light-dark(var(--gray), var(--sky-blue-dark));
   display: block;
   font-size: 0.875rem;
 }
 
 .roster-year {
-  color: var(--gray);
+  color: light-dark(var(--gray), var(--sky-blue-dark));
   font-size: 0.875rem;
 }
 
@@ -42,12 +49,12 @@
 }
 
 .pub-note {
-  color: var(--gray);
+  color: light-dark(var(--gray), var(--sky-blue-dark));
   font-size: 0.875rem;
 }
 
 .pub-count {
-  color: var(--gray);
+  color: light-dark(var(--gray), var(--sky-blue-dark));
   font-family: var(--font-default);
   font-size: 1rem;
   font-weight: 400;
@@ -72,43 +79,18 @@
 
 /* --- members-only gate --------------------------------------------------- */
 
-/* The site is a members' preview, so app.js puts this in front of it until the
-   access phrase is entered. It is a soft gate over public data, not a security
-   boundary, and it is deliberately the only thing on the page while it is up. */
-.gate {
-  align-items: center;
-  background: var(--brand-blue);
-  color: #fff;
-  display: flex;
-  inset: 0;
-  justify-content: center;
-  padding: 1.5rem;
-  position: fixed;
-  z-index: 1000;
-}
+/* The gate is the theme's Dialog component (see app.js), so it needs almost no
+   styling of its own: showModal() supplies the backdrop, the inert background and
+   the focus trap, and the kit paints the panel. Only the two things the kit has no
+   opinion about are set here. */
 
-.gate-inner {
-  max-width: 26rem;
+.gate .search-input {
   width: 100%;
-}
-
-.gate h1,
-.gate p,
-.gate label {
-  color: #fff;   /* the theme colours body text for a light ground; this panel is navy */
-}
-
-.gate h1 {
-  font-size: 1.75rem;
 }
 
 .gate label {
   display: block;
   margin-block-end: 0.5rem;
-}
-
-.gate input {
-  width: 100%;
 }
 
 .gate-error:empty {

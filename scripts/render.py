@@ -21,6 +21,10 @@ except Exception:  # Pillow is optional; without it we simply omit width/height
 _SIZES = {}
 
 
+def plural(n, word):
+    return "%d %s%s" % (n, word, "" if n == 1 else "s")
+
+
 def esc(s):
     return html.escape("" if s is None else str(s), quote=True)
 
@@ -290,10 +294,15 @@ def publications_list():
         out.append(
             '<section class="section pub-year" data-year="%s">\n'
             '  <h2 class="section-title section-title--sm" id="y%s">%s '
-            '<span class="pub-count">%s</span></h2>\n'
+            '<span class="pub-count" data-total="%d">%s</span></h2>\n'
             '  <ul class="list--unstyled pub-list">\n%s\n  </ul>\n'
+            # A bare number after the year read as part of the heading. The unit
+            # makes it a count; data-total lets app.js keep it honest while the
+            # list is filtered.
             '</section>' % (esc(group.get("year")), esc(group.get("year")),
-                            esc(group.get("year")), group.get("count", 0), "\n".join(items)))
+                            esc(group.get("year")), group.get("count", 0),
+                            plural(group.get("count", 0), "publication"),
+                            "\n".join(items)))
     return "\n".join(out)
 
 
