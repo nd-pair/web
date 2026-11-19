@@ -1,7 +1,7 @@
 [
   {
     "slug": "edgar-bolivar-nieto",
-    "name": "Edgar Bol\u00edvar-Nieto",
+    "name": "Edgar Bolívar-Nieto",
     "openalex_id": "A5076214359",
     "openalex_ids": [
       "A5076214359"
@@ -33,8 +33,8 @@
     ],
     "photo": "nikolaus-correll.webp",
     "affiliated": false,
-    "lab": null,
-    "lab_url": null
+    "lab": "Correll Laboratory",
+    "lab_url": "https://correlllab.nd.edu"
   },
   {
     "slug": "j-william-goodwine",
