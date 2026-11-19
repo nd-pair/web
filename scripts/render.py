@@ -207,6 +207,24 @@ def alumni_ms():
     return _alumni("ms")
 
 
+_WORDS = ("zero one two three four five six seven eight nine ten eleven twelve "
+          "thirteen fourteen fifteen sixteen seventeen eighteen nineteen twenty").split()
+
+
+def _word(n):
+    """Spell small numbers out; the prose reads 'Fourteen labs', not '14 labs'."""
+    return _WORDS[n] if n < len(_WORDS) else str(n)
+
+
+def count_labs():
+    """Capitalised, for the start of a sentence."""
+    return _word(len(load("labs.json") or [])).capitalize()
+
+
+def count_labs_lc():
+    return _word(len(load("labs.json") or []))
+
+
 def count_students():
     return str(len(load("students.json") or []))
 
@@ -335,6 +353,8 @@ TOKENS = {
     "STUDENTS": students_list,
     "ALUMNI_PHD": alumni_phd,
     "ALUMNI_MS": alumni_ms,
+    "COUNT_LABS": count_labs,
+    "COUNT_LABS_LC": count_labs_lc,
     "COUNT_STUDENTS": count_students,
     "COUNT_PHD": count_phd,
     "COUNT_MS": count_ms,
