@@ -1,0 +1,49 @@
+name: Commit and push a refresh
+description: >
+  Commit what a crawl changed, together with the pages built from it, and get
+  it onto the branch. Mirrors correll, the layout Notre Dame approved: the
+  built pages are committed alongside the data, so the tree never shows pages
+  that disagree with the data they came from.
+
+inputs:
+  paths:
+    description: What the crawl touched, as arguments to git add.
+    required: true
+  message:
+    description: Commit message.
+    required: true
+
+runs:
+  using: composite
+  steps:
+    - name: Commit and push
+      shell: bash
+      run: |
+        git config user.name  "github-actions[bot]"
+        git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        git add ${{ inputs.paths }} *.html sitemap.xml
+        if git diff --cached --quiet; then
+          echo "No changes to commit."
+          exit 0
+        fi
+        git commit -m "${{ inputs.message }}"
+        # The crawls take minutes, so the branch can move while they run. Rebase,
+        # rebuild on top of whatever landed, and try again.
+        for attempt in 1 2 3; do
+          git fetch origin "$GITHUB_REF_NAME"
+          if ! git rebase "origin/$GITHUB_REF_NAME"; then
+            git rebase --abort || true
+            echo "::error::Refresh conflicts with $GITHUB_REF_NAME. Re-run this workflow."
+            exit 1
+          fi
+          python scripts/build_site.py
+          git add -A
+          git diff --cached --quiet || git commit --amend --no-edit
+          if git push origin "HEAD:$GITHUB_REF_NAME"; then
+            exit 0
+          fi
+          echo "push rejected (attempt $attempt); someone pushed while we ran -- retrying"
+          sleep 5
+        done
+        echo "::error::Could not push the refresh after three attempts."
+        exit 1

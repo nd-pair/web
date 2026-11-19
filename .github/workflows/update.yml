@@ -45,31 +45,15 @@ jobs:
           PUBS_MIN_YEAR: "2016"
         run: python scripts/pull_publications.py
 
-      - name: Commit refreshed data
-        run: |
-          git config user.name  "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data assets
-          if git diff --cached --quiet; then
-            echo "No changes."
-          else
-            git commit -m "chore: refresh roster, imagery & publications [skip ci]"
-            # The crawls take minutes, so main can move while they run.
-            for attempt in 1 2 3; do
-              git fetch origin "$GITHUB_REF_NAME"
-              git rebase "origin/$GITHUB_REF_NAME" || { git rebase --abort || true; \
-                echo "::error::Refresh conflicts with $GITHUB_REF_NAME. Re-run this workflow."; exit 1; }
-              python scripts/build_site.py
-              git add -A
-              git diff --cached --quiet || git commit --amend --no-edit
-              git push origin "HEAD:$GITHUB_REF_NAME" && break
-              [ "$attempt" = 3 ] && { echo "::error::Could not push the refresh."; exit 1; }
-              sleep 5
-            done
-          fi
-
+      # Build first: the commit below takes the pages along with the data, so
+      # the two can never disagree in the tree.
       - name: Build the pages from partials/ and pages/
         run: python scripts/build_site.py
+
+      - uses: ./.github/actions/commit-refresh
+        with:
+          paths: data assets
+          message: "chore: refresh roster, imagery & publications [skip ci]"
 
       - name: Assemble static site
         run: |
