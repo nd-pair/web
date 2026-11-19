@@ -31,11 +31,6 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
-      - name: Install the checker's dependencies
-        run: |
-          npm install --no-save --no-audit --no-fund playwright axe-core
-          npx playwright install --with-deps chromium
-
       - name: Install dependencies
         run: pip install -r scripts/requirements.txt
 
@@ -87,16 +82,11 @@ jobs:
 
       # Blocking on a push (someone is there to fix it); advisory on a schedule,
       # because a site that stops updating is worse than one that updates and
-      # files a ticket. --session-storage answers the members' gate, so the sweep
-      # measures the pages rather than the modal sitting over them. The runner
-      # reaches conductor.nd.edu, so this is the real theme and the real fonts.
-      - name: Accessibility and design check
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
-        run: >
-          node scripts/a11y_check.js --root _site
-          --session-storage nd_pair_site=1
-          ${{ github.event_name == 'schedule' && '--warn-only' || '' }}
+      # files a ticket. The check itself lives in one place now; see
+      # .github/actions/a11y.
+      - uses: ./.github/actions/a11y
+        with:
+          warn-only: ${{ github.event_name == 'schedule' }}
 
       - uses: actions/upload-pages-artifact@v3
         with:

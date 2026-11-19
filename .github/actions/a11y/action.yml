@@ -1,0 +1,35 @@
+name: Accessibility and design check
+description: >
+  Install the checker's dependencies and sweep a staged site with axe-core plus
+  the project's own pixel-contrast measurements. One definition, so the pull
+  request gate, the deploy gate and the scheduled refresh cannot drift apart.
+
+inputs:
+  warn-only:
+    description: Report problems without failing the job.
+    default: "false"
+  root:
+    description: The staged site to check.
+    default: _site
+
+runs:
+  using: composite
+  steps:
+    - name: Install the checker's dependencies
+      shell: bash
+      run: |
+        npm install --no-save --no-audit --no-fund playwright axe-core
+        npx playwright install --with-deps chromium
+
+    # --session-storage answers the members' gate, so the sweep measures the
+    # pages rather than the modal sitting over them. The runner reaches
+    # conductor.nd.edu, so this is the real theme and the real brand fonts --
+    # what the University's own QA looks at. Do not set A11Y_THEME_DIR here.
+    - name: Check
+      shell: bash
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
+      run: >
+        node scripts/a11y_check.js --root ${{ inputs.root }}
+        --session-storage nd_pair_site=1
+        ${{ inputs.warn-only == 'true' && '--warn-only' || '' }}
