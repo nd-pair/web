@@ -5,14 +5,14 @@
     "url": "https://sites.google.com/a/nd.edu/discoverlab/"
   },
   {
-    "src": "assets/img/miniro-lab.jpg",
-    "lab": "MiNiRo-Lab",
-    "url": "https://minirolab.nd.edu"
-  },
-  {
     "src": "assets/img/roam-lab.jpg",
     "lab": "ROAM Lab",
     "url": "https://roamlab.nd.edu/"
+  },
+  {
+    "src": "assets/img/miniro-lab.jpg",
+    "lab": "MiNiRo-Lab",
+    "url": "https://minirolab.nd.edu"
   },
   {
     "src": "assets/img/iris-lab.jpg",
